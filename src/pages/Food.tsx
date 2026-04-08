@@ -56,11 +56,11 @@ const handlePageChange = (page) => {
   return (
     <div className="pt-20 bg-white min-h-screen">
       {/* Hero Section - Image 1 Style */}
-      <section className="py-24 max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
+<section className="py-5 max-w-7xl mx-auto px-6 lg:px-15">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           <div className="lg:w-1/3">
             <span className="text-terracotta text-sm font-bold uppercase tracking-[0.2em] mb-6 block">Explore Our Products</span>
-            <h1 className="text-5xl lg:text-6xl font-bold mb-10 leading-[1.1] text-nordic-black font-display">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-10 leading-[1.1] text-nordic-black font-display">
               Organic <br />
               Conventional <br />
               and Gluten-Free <br />
@@ -85,7 +85,7 @@ const handlePageChange = (page) => {
                 color: 'bg-[#D97757]',
                 desc: 'Organic raw materials undergo rigorous analysis in external laboratories, guaranteeing their organic origin.',
                 img: '/images/organic.jpg',
-                offset: 'mt-12'
+                offset: 'mt-10'
               },
               {
                 title: 'Gluten-Free Food Ingredients',
@@ -100,7 +100,7 @@ const handlePageChange = (page) => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className={cn("flex flex-col rounded-t-2xl rounded-b-[12rem] overflow-hidden shadow-xl", card.color, card.offset)}
+                className={cn("flex flex-col rounded-t-2xl rounded-b-[10rem] overflow-hidden shadow-xl", card.color, card.offset)}
               >
                 <div className="p-8 flex flex-col h-full text-white">
                   <h3 className="text-xl font-bold mb-6 leading-tight min-h-[3rem]">{card.title}</h3>
@@ -110,7 +110,7 @@ const handlePageChange = (page) => {
                   </button>
                 </div>
                 <div className="flex-1">
-                  <div className="h-72 overflow-hidden">
+                  <div className="h-60 overflow-hidden">
                     <img src={card.img} alt={card.title} className="w-full h-full object-cover" />
                   </div>
                 </div>
