@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Filter } from 'lucide-react';
 import { SOURCING_EXAMPLES } from '@/constants';
@@ -14,10 +14,21 @@ export const Food = () => {
   const [activeFilter, setActiveFilter] = useState<FoodType>('all');
 
   const [currentPage, setCurrentPage] = useState(1);
-
+const productsRef = useRef(null);
   useEffect(() => {
     setCurrentPage(1);
   }, [activeFilter]);
+
+const handlePageChange = (page) => {
+  setCurrentPage(page);
+
+  setTimeout(() => {
+    productsRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }, 0);
+};
 
   const foodProducts = SOURCING_EXAMPLES.filter(p => p.category === 'food');
 
@@ -110,8 +121,8 @@ export const Food = () => {
       </section>
 
       {/* Marketplace Section - Image 3 Style */}
-      <section className="py-24 bg-cream grainy-bg">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+<section ref={productsRef} className="py-24 bg-cream grainy-bg">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
             <span className="text-terracotta text-[10px] font-bold uppercase tracking-widest mb-4 block">Marketplace</span>
             <h2 className="text-4xl lg:text-5xl font-bold text-nordic-black font-display">Check our offers</h2>
@@ -160,7 +171,7 @@ export const Food = () => {
         {Array.from({ length: totalPages }, (_, i) => (
           <span
             key={i}
-            onClick={() => setCurrentPage(i + 1)}
+onClick={() => handlePageChange(i + 1)}
             className={`cursor-pointer text-lg ${currentPage === i + 1
               ? "text-black font-bold"
               : "text-gray-400"
@@ -173,9 +184,11 @@ export const Food = () => {
         {/* Next Button */}
         <div
           onClick={() =>
-            currentPage < totalPages && setCurrentPage(currentPage + 1)
-          }
-          className="w-10 h-10 flex items-center justify-center border border-black rounded-full cursor-pointer hover:bg-black hover:text-white transition"
+          currentPage < totalPages && handlePageChange(currentPage + 1)
+        }
+                  
+        
+        className="w-10 h-10 flex items-center justify-center border border-black rounded-full cursor-pointer hover:bg-black hover:text-white transition"
         >
           →
         </div>
