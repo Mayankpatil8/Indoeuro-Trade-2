@@ -1,7 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
-import { SOURCING_EXAMPLES, SourcingCategory } from '@/constants'; // ✅ ADD THIS
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { SOURCING_EXAMPLES, SourcingCategory } from '@/constants';
 import { FoodProductCard } from '@/components/FoodProductCard';
 import { FoodProductModal } from '@/components/FoodProductModal';
 import { cn } from '@/lib/utils';
@@ -26,6 +26,7 @@ export const Food = () => {
     : filteredByType.filter(p => p.subcategory === subFilter);
 
   const subCategories = ['All', 'Flours', 'Pseudocereals', 'Pulses', 'Seeds'];
+
   useEffect(() => {
     if (isModalOpen) {
       document.body.style.overflow = 'hidden';
@@ -35,102 +36,102 @@ export const Food = () => {
   }, [isModalOpen]);
 
   return (
-    <div className="pt-20 bg-cream min-h-screen font-sans grainy-bg">
-      {/* Hero Section - Editorial Split Style */}
-      <section className="relative flex flex-col lg:flex-row min-h-[90vh] border-b-2 border-nordic-black">
-        {/* Left Side - Massive Vertical Text */}
-        <div className="hidden lg:flex w-32 border-r-2 border-nordic-black items-center justify-center bg-sage text-white">
-          <h1 className="writing-mode-vertical rotate-270 text-6xl font-bold uppercase tracking-[0.2em] font-display">
-            Sourcing
+    <div className="pt-32 pb-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+
+        {/* Page Header */}
+        <header className="mb-16 text-center max-w-3xl mx-auto">
+          <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-4 block">
+            Premium Ingredients
+          </span>
+          <h1 className="text-5xl font-bold mb-6">
+            Premium Natural Food Ingredients Supplier.
           </h1>
-        </div>
+          <p className="text-lg text-nordic-grey leading-relaxed">
+            We supply high-quality natural, organic, and conventional food ingredients to global industries.
+            Reliable sourcing, sustainable farms, and premium-grade products delivered worldwide.
+          </p>
+        </header>
 
-        {/* Middle Content */}
-        <div className="flex-1 flex flex-col bg-beige/30">
-          <div className="flex-1 flex flex-col justify-center p-12 lg:p-24">
-            <motion.span
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-terracotta text-xs font-bold uppercase tracking-[0.4em] mb-8 block"
-            >
-              Premium Ingredients
-            </motion.span>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-5xl lg:text-[3rem] font-bold leading-[0.85] uppercase tracking-tighter font-display mb-12 text-nordic-black"
-            >
-              Premium  Natural  Food <br />
-              Ingredients  Supplier.
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-lg lg:text-xl text-nordic-grey max-w-xl leading-relaxed mb-12"
-            >
-              <p>
-                We supply high-quality natural, organic, and conventional food ingredients to global industries.
-                Reliable sourcing, sustainable farms, and premium-grade products delivered worldwide.
+        {/* Hero CTA Block — matches Mechanical dark card style */}
+        <section className="mb-24 bg-nordic-black rounded-[2rem] overflow-hidden text-white soft-shadow">
+          <div className="grid lg:grid-cols-2 items-center">
+            <div className="p-12 lg:p-20">
+              <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-4 block">
+                Bespoke Sourcing
+              </span>
+              <h2 className="text-4xl font-bold mb-6">Any Ingredient. Any Origin.</h2>
+              <p className="text-white/70 mb-10 leading-relaxed">
+                Our global sourcing network connects you to premium conventional, organic, and gluten-free
+                ingredients from certified farms across Europe and beyond. Tell us what you need — we handle
+                verification, packaging, and worldwide delivery.
               </p>
-            </motion.p>
-
-            <div className="flex flex-wrap gap-4">
-              {['conventional', 'organic', 'gluten-free'].map((type, i) => (
-                <button
-                  key={type}
-                  onClick={() => {
-                    const element = document.getElementById('marketplace');
-                    element?.scrollIntoView({ behavior: 'smooth' });
-                    setActiveFilter(type as any);
-                  }}
-                  className={cn(
-                    "px-8 py-4 border-2 border-nordic-black text-[10px] font-bold uppercase tracking-widest transition-all",
-                    activeFilter === type ? "bg-terracotta text-white border-terracotta" : "bg-white/50 hover:bg-nordic-black hover:text-white"
-                  )}
-                >
-                  {type}
-                </button>
-              ))}
+              <ul className="space-y-4 mb-10">
+                {[
+                  'Conventional & Organic Certified',
+                  'Gluten-Free Processing Lines',
+                  'Bulk & Custom Packaging',
+                  'EU & Non-EU Origin Options',
+                ].map(item => (
+                  <li key={item} className="flex items-center gap-3 text-sm">
+                    <CheckCircle2 size={18} className="text-sage" /> {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-4">
+                {(['conventional', 'organic', 'gluten-free'] as FoodType[]).map(type => (
+                  <button
+                    key={type}
+                    onClick={() => {
+                      const element = document.getElementById('marketplace');
+                      element?.scrollIntoView({ behavior: 'smooth' });
+                      setActiveFilter(type);
+                    }}
+                    className={cn(
+                      "px-6 py-3 text-xs font-bold uppercase tracking-widest rounded-full transition-all",
+                      activeFilter === type
+                        ? "bg-terracotta text-white"
+                        : "bg-white/10 text-white hover:bg-white/20"
+                    )}
+                  >
+                    {type}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="h-full min-h-[400px]">
+              <img
+                src="/food-hero.png"
+                alt="Premium Sourced Ingredients"
+                className="w-full h-full object-cover opacity-90"
+              />
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* Right Side - Large Image */}
-        <div className="lg:w-1/3 border-l-2 border-nordic-black relative overflow-hidden bg-sand">
-          <img
-            src="/food-hero.png"
-            alt="Premium Sourced Ingredients"
-            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
-          />
-        </div>
-      </section>
-
-      {/* Marketplace Section */}
-      <section id="marketplace" className="py-32 bg-cream">
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
+        {/* Marketplace / Products Section */}
+        <section id="marketplace">
           {/* Section Header */}
-          <div className="flex flex-col lg:flex-row items-baseline justify-between mb-24 gap-12 border-b-2 border-nordic-black pb-12">
+          <div className="flex flex-col lg:flex-row items-baseline justify-between mb-12 gap-8">
             <div>
-              <h2 className="text-6xl lg:text-8xl font-bold font-display uppercase tracking-tighter text-nordic-black">
-                Showcase
-              </h2>
-              <p className="text-nordic-grey mt-4 text-lg">Exploring our <span className="text-terracotta font-bold">{activeFilter}</span> collection</p>
+              <h2 className="text-3xl font-bold mb-2">Showcase</h2>
+              <p className="text-nordic-grey">
+                Exploring our{' '}
+                <span className="text-terracotta font-bold">{activeFilter}</span> collection
+              </p>
             </div>
 
             {/* Sub-Filter Bar */}
             <div className="flex flex-wrap gap-2">
-              {subCategories.map((f) => (
+              {subCategories.map(f => (
                 <button
                   key={f}
                   onClick={() => setSubFilter(f)}
                   className={cn(
-                    "px-6 py-2 text-[10px] font-bold uppercase tracking-widest transition-all border border-transparent",
+                    "px-5 py-2 text-xs font-bold uppercase tracking-widest rounded-full transition-all",
                     subFilter === f
-                      ? "bg-terracotta text-white"
-                      : "text-nordic-grey hover:text-nordic-black hover:border-nordic-black/20 rounded-full"
+                      ? "bg-nordic-black text-white"
+                      : "bg-cream text-nordic-grey border border-beige hover:border-nordic-black/30 hover:text-nordic-black"
                   )}
                 >
                   {f}
@@ -139,29 +140,28 @@ export const Food = () => {
             </div>
           </div>
 
-          {/* Products Grid - Staggered Masonry feel */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Products Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {filteredProducts.map((product, i) => (
               <motion.div
                 key={product.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}   // 🔥 CHANGE HERE
-                transition={{ delay: (i % 4) * 0.1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className={cn(i % 2 === 1 ? "lg:mt-12" : "")}
+                transition={{ delay: (i % 4) * 0.08 }}
               >
                 <FoodProductCard
                   product={product}
                   onClick={() => {
-                    setSelectedProduct(() => product);   // 🔥 important
+                    setSelectedProduct(product);
                     setIsModalOpen(true);
                   }}
                 />
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <FoodProductModal
         product={selectedProduct}
@@ -170,17 +170,23 @@ export const Food = () => {
       />
 
       {/* Custom Request Section */}
-      <section className="py-24 bg-beige/50">
+      <section className="mt-24 py-24 bg-beige/30 border-y border-beige">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h3 className="text-3xl font-bold mb-6 text-nordic-black">Can't find a specific ingredient?</h3>
-          <p className="text-nordic-grey mb-10 leading-relaxed">
-            Our sourcing network is vast. If you require a specific product, origin, or certification not listed here, our procurement team will find it for you.
+          <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-4 block">
+            Custom Procurement
+          </span>
+          <h3 className="text-4xl font-bold mb-6 text-nordic-black">
+            Can't find a specific ingredient?
+          </h3>
+          <p className="text-nordic-grey mb-10 leading-relaxed max-w-2xl mx-auto">
+            Our sourcing network is vast. If you require a specific product, origin, or certification not listed here,
+            our procurement team will find it for you.
           </p>
           <Link
             to="/contact"
-            className="inline-flex px-10 py-5 bg-terracotta text-white font-bold uppercase tracking-widest text-xs rounded-full hover:bg-nordic-black transition-all shadow-xl"
+            className="inline-flex items-center px-8 py-4 bg-terracotta text-white font-bold rounded-full hover:bg-terracotta/90 transition-all soft-shadow"
           >
-            Start Custom Sourcing Request
+            Start Custom Sourcing Request <ArrowRight size={18} className="ml-2" />
           </Link>
         </div>
       </section>
