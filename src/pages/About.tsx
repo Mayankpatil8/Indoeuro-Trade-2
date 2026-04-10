@@ -4,34 +4,31 @@ import { Globe, Search, Package, Truck, ShieldCheck, Target, Heart, Zap } from '
 
 export const About = () => {
   const stats = [
-    { label: 'Years Experience', value: '15+', icon: Target },
-    { label: 'EU Countries', value: '24', icon: Globe },
-    { label: 'Possibilities', value: '∞', icon: Zap },
   ];
 
   const values = [
-    { 
-      title: 'Integrity', 
-      desc: 'We do what we say. Our sourcing process is transparent, and our components are verified to meet the highest standards.',
-      icon: ShieldCheck 
+    {
+      title: 'Integrity',
+      desc: 'Built on trust, transparency, and consistent quality.',
+      icon: ShieldCheck
     },
-    { 
-      title: 'Sustainability', 
-      desc: 'We prioritize eco-friendly logistics and organic sourcing, respecting the pristine Nordic environment we call home.',
-      icon: Heart 
+    {
+      title: 'Sustainability',
+      desc: 'Committed to responsible sourcing and eco-friendly operations.',
+      icon: Heart
     },
-    { 
-      title: 'Precision', 
-      desc: 'Finnish precision isn\'t just a phrase; it\'s our standard. Every part, no matter how small, is handled with meticulous care.',
-      icon: Target 
+    {
+      title: 'Precision',
+      desc: 'Delivering accuracy and excellence in every detail.',
+      icon: Target
     },
   ];
 
   const steps = [
-    { title: 'Inquiry', desc: 'You tell us what you need, no matter how rare or specific.' },
-    { title: 'Sourcing', desc: 'We tap into our vast European network to find the perfect match.' },
-    { title: 'Verification', desc: 'Every item undergoes a rigorous quality check in our Finnish hub.' },
-    { title: 'Delivery', desc: 'Seamless logistics bring the product directly to your doorstep.' },
+    { title: 'Requirement Analysis', desc: 'You tell us what you need, no matter how rare or specific.' },
+    { title: 'Global Sourcing', desc: 'We tap into our vast European network to find the perfect match.' },
+    { title: 'Quality Verification', desc: 'Every item undergoes a rigorous quality check in our Finnish hub.' },
+    { title: 'Worldwide Delivery', desc: 'Seamless logistics bring the product directly to your doorstep.' },
   ];
 
   return (
@@ -50,11 +47,10 @@ export const About = () => {
             </span>
             <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
               The Bridge Between <br />
-              <span className="text-terracotta">Need & Delivery.</span>
+              <span className="text-terracotta">Needs & Global Delivery.</span>
             </h1>
             <p className="text-xl text-nordic-grey leading-relaxed">
-              Based in Helsinki, IndoEuro Trade Hub is more than a supplier. 
-              We are your dedicated sourcing partner, committed to finding exactly what you need with Finnish precision.
+              Headquartered in Finland, IndoEuro Trade Hub is more than a supplier — we are your global sourcing partner. We connect your requirements with trusted suppliers worldwide, delivering precision, reliability, and consistent quality at every step.
             </p>
           </motion.div>
         </div>
@@ -70,15 +66,15 @@ export const About = () => {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
               <div className="relative z-10 rounded-[3rem] overflow-hidden soft-shadow">
-                <img 
-                  src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Finnish Workspace" 
+                <img
+                  src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1200"
+                  alt="Finnish Workspace"
                   className="w-full aspect-[4/5] object-cover"
                   referrerPolicy="no-referrer"
                 />
               </div>
               <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-beige rounded-3xl -z-10" />
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 className="absolute -top-10 -right-10 p-8 bg-white rounded-3xl soft-shadow hidden md:block"
@@ -93,14 +89,14 @@ export const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold mb-8 leading-tight">Founded on Trust, <br />Driven by Sourcing.</h2>
+              <h2 className="text-4xl font-bold mb-8 leading-tight">Built on Trust, <br />Powered by Global Sourcing.</h2>
               <p className="text-lg text-nordic-grey mb-6 leading-relaxed">
-                IndoEuro Trade Hub was born from a simple observation: businesses often struggle to find specific, high-quality components without a trusted local partner. 
+                IndoEuro Trade Hub was founded to solve a critical challenge — helping businesses find high-quality products quickly and reliably.
               </p>
               <p className="text-lg text-nordic-grey mb-10 leading-relaxed">
-                We stepped in to fill that gap. By combining our deep roots in Finland with an extensive European network, we've become the "whole & sole" partner for companies that refuse to compromise on quality.
+                With a strong foundation in Finland and a global supplier network, we simplify sourcing, procurement, and delivery. Our mission is to provide seamless solutions for businesses that value quality, efficiency, and long-term partnerships.
               </p>
-              
+
               <div className="grid grid-cols-3 gap-6">
                 {stats.map((stat, i) => (
                   <div key={i} className="text-center p-4 rounded-2xl bg-cream border border-beige">
@@ -121,7 +117,7 @@ export const About = () => {
           <div className="text-center mb-20">
             <h2 className="text-4xl font-bold mb-6">The Sourcing Journey</h2>
             <p className="text-white/60 max-w-2xl mx-auto">
-              How we transform your requirement into a delivered reality.
+              From requirement to delivery — we ensure a seamless, transparent, and efficient sourcing experience worldwide.
             </p>
           </div>
 
@@ -176,12 +172,12 @@ export const About = () => {
         <div className="max-w-5xl mx-auto px-6 lg:px-12 text-center">
           <div className="p-12 lg:p-20 bg-beige/30 rounded-[3rem] border border-beige relative overflow-hidden">
             <div className="relative z-10">
-              <h2 className="text-4xl font-bold mb-8">Ready to find what you need?</h2>
+              <h2 className="text-4xl font-bold mb-8">Ready to Source Globally?</h2>
               <p className="text-lg text-nordic-grey mb-10 max-w-2xl mx-auto">
-                No request is too small or too complex. Let us put our network to work for you.
+                No requirement is too simple or too complex. Leverage our global network to source high-quality products and get them delivered with speed, precision, and reliability.
               </p>
               <button className="px-10 py-5 bg-terracotta text-white font-bold rounded-full hover:bg-terracotta/90 transition-all soft-shadow">
-                Start a Sourcing Inquiry
+                Request a Quote →
               </button>
             </div>
             <div className="absolute -top-20 -right-20 w-64 h-64 bg-terracotta/5 rounded-full blur-3xl" />

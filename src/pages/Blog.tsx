@@ -9,9 +9,9 @@ export const Blog = () => {
     <div className="pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <header className="mb-16 text-center">
-          <h1 className="text-5xl font-bold mb-6">Insights & Trends</h1>
+          <h1 className="text-5xl font-bold mb-6">Insights, Trends & Global Sourcing Intelligence</h1>
           <p className="text-lg text-nordic-grey max-w-2xl mx-auto leading-relaxed">
-            Exploring the intersection of Finnish manufacturing, food safety, and industrial innovation.
+            Explore expert insights on global sourcing, industrial trends, supply chain innovations, and digital growth strategies shaping businesses worldwide.
           </p>
         </header>
 
@@ -25,9 +25,9 @@ export const Blog = () => {
               className="group cursor-pointer"
             >
               <div className="aspect-[16/9] rounded-[2rem] overflow-hidden soft-shadow mb-8">
-                <img 
-                  src={post.image} 
-                  alt={post.title} 
+                <img
+                  src={post.image}
+                  alt={post.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"
                 />
@@ -41,11 +41,11 @@ export const Blog = () => {
               <p className="text-nordic-grey mb-6 leading-relaxed">
                 {post.excerpt}
               </p>
-              <Link 
+              <Link
                 to={`/blog/${post.id}`}
                 className="inline-flex items-center text-sm font-bold uppercase tracking-widest text-nordic-black group-hover:translate-x-2 transition-transform"
               >
-                Read Article <ArrowRight size={16} className="ml-2" />
+                Read Full Article → <ArrowRight size={16} className="ml-2" />
               </Link>
             </motion.article>
           ))}

@@ -12,32 +12,30 @@ export const Electronics = () => {
     <div className="pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <header className="mb-16 text-center max-w-3xl mx-auto">
-          <h1 className="text-5xl font-bold mb-6">Electronic Sourcing</h1>
+          <h1 className="text-5xl font-bold mb-6">Electronic Component Sourcing Worldwide</h1>
           <p className="text-lg text-nordic-grey leading-relaxed">
-            From microcontrollers to complex sensor arrays, we source any electronic component you need. 
-            If it exists, we can find it and deliver it to you.
+            From microcontrollers to advanced sensor systems, we source and deliver high-quality electronic components globally. If it exists, we’ll find it, verify it, and deliver it with precision and reliability.
           </p>
         </header>
 
         <div className="mb-24">
           <div className="bg-cream rounded-[3rem] p-12 lg:p-20 border border-beige flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1">
-              <h2 className="text-3xl font-bold mb-6">Need a specific part?</h2>
+              <h2 className="text-3xl font-bold mb-6">Need a Specific Component?</h2>
               <p className="text-nordic-grey mb-8 leading-relaxed">
-                Our extensive network of suppliers across Finland and Europe allows us to procure even the most specialized electronic components. 
-                Simply tell us your requirements, and we'll handle the rest.
+                Access our global supplier network to source even the most specialized electronic parts. Simply share your requirements, and we’ll handle sourcing, quality checks, and worldwide delivery — efficiently and reliably.
               </p>
-              <Link 
+              <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-terracotta text-white font-bold rounded-full hover:bg-terracotta/90 transition-all soft-shadow"
               >
-                Submit a Sourcing Request <ArrowRight size={18} className="ml-2" />
+                Request Electronic Components <ArrowRight size={18} className="ml-2" />
               </Link>
             </div>
             <div className="w-full lg:w-1/3 aspect-square rounded-3xl overflow-hidden soft-shadow">
-              <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800" 
-                alt="Electronics Sourcing" 
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
+                alt="Electronics Sourcing"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />

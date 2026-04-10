@@ -12,10 +12,9 @@ export const Mechanical = () => {
     <div className="pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <header className="mb-16 text-center max-w-3xl mx-auto">
-          <h1 className="text-5xl font-bold mb-6">Mechanical Sourcing</h1>
+          <h1 className="text-5xl font-bold mb-6">Mechanical Component Sourcing Worldwide</h1>
           <p className="text-lg text-nordic-grey leading-relaxed">
-            From CNC machined parts to aerospace-grade fasteners, we source any mechanical component you need. 
-            Our Finnish hub ensures precision and quality for every request.
+            From CNC-machined parts to high-performance industrial components, we source and deliver precision-engineered mechanical solutions globally. No matter the complexity, we ensure quality, accuracy, and reliability in every order.
           </p>
         </header>
 
@@ -24,10 +23,9 @@ export const Mechanical = () => {
           <div className="grid lg:grid-cols-2 items-center">
             <div className="p-12 lg:p-20">
               <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-4 block">Bespoke Sourcing</span>
-              <h2 className="text-4xl font-bold mb-6">Any Part, Any Spec</h2>
+              <h2 className="text-4xl font-bold mb-6">Any Part. Any Specification.</h2>
               <p className="text-white/70 mb-10 leading-relaxed">
-                We are not limited to a catalog. Our role is to find the exact mechanical parts you require through our extensive network of European manufacturers. 
-                Simply tell us what you need, and we will deliver.
+                We go beyond catalogs. Our global network of trusted manufacturers enables us to source exact mechanical components tailored to your requirements. Simply tell us what you need — we’ll handle sourcing, verification, and delivery worldwide.
               </p>
               <ul className="space-y-4 mb-10">
                 {[
@@ -41,19 +39,18 @@ export const Mechanical = () => {
                   </li>
                 ))}
               </ul>
-              <Link 
+              <Link
                 to="/contact"
                 className="px-8 py-4 bg-terracotta text-white font-bold rounded-full hover:bg-terracotta/90 transition-all flex items-center inline-flex"
               >
-                Request a Part <ArrowRight size={18} className="ml-2" />
+                Request a Quote <ArrowRight size={18} className="ml-2" />
               </Link>
             </div>
             <div className="h-full min-h-[400px]">
-              <img 
-                src="https://images.unsplash.com/photo-1565034946487-077786996e27?auto=format&fit=crop&q=80&w=1200" 
-                alt="Mechanical Sourcing" 
-                className="w-full h-full object-cover opacity-80"
-                referrerPolicy="no-referrer"
+              <img
+                src="/mechanical-hero.png"
+                alt="Mechanical Sourcing"
+                className="w-full h-full object-cover opacity-90"
               />
             </div>
           </div>

@@ -1,210 +1,184 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Filter } from 'lucide-react';
-import { SOURCING_EXAMPLES } from '@/constants';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { SOURCING_EXAMPLES, SourcingCategory } from '@/constants'; // ✅ ADD THIS
 import { FoodProductCard } from '@/components/FoodProductCard';
+import { FoodProductModal } from '@/components/FoodProductModal';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+
 type FoodType = 'all' | 'conventional' | 'organic' | 'gluten-free';
 
-const ITEMS_PER_PAGE = 8;
-
 export const Food = () => {
-  const [activeFilter, setActiveFilter] = useState<FoodType>('all');
-
-  const [currentPage, setCurrentPage] = useState(1);
-const productsRef = useRef(null);
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [activeFilter]);
-
-const handlePageChange = (page) => {
-  setCurrentPage(page);
-
-  setTimeout(() => {
-    productsRef.current?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
-  }, 0);
-};
+  const [activeFilter, setActiveFilter] = useState<FoodType>('conventional');
+  const [subFilter, setSubFilter] = useState<string>('All');
+  const [selectedProduct, setSelectedProduct] = useState<SourcingCategory | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const foodProducts = SOURCING_EXAMPLES.filter(p => p.category === 'food');
 
-  const filteredProducts = activeFilter === 'all'
+  const filteredByType = activeFilter === 'all'
     ? foodProducts
     : foodProducts.filter(p => p.type === activeFilter);
 
-  const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
+  const filteredProducts = subFilter === 'All'
+    ? filteredByType
+    : filteredByType.filter(p => p.subcategory === subFilter);
 
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-
-  const currentProducts = filteredProducts.slice(
-    startIndex,
-    startIndex + ITEMS_PER_PAGE
-  );
-
-  const filterOptions: { label: string; value: FoodType }[] = [
-    { label: 'All Products', value: 'all' },
-    { label: 'Conventional', value: 'conventional' },
-    { label: 'Organic', value: 'organic' },
-    { label: 'Gluten-Free', value: 'gluten-free' },
-  ];
-
+  const subCategories = ['All', 'Flours', 'Pseudocereals', 'Pulses', 'Seeds'];
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isModalOpen]);
 
   return (
-    <div className="pt-20 bg-white min-h-screen">
-      {/* Hero Section - Image 1 Style */}
-<section className="py-5 max-w-7xl mx-auto px-6 lg:px-15">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
-          <div className="lg:w-1/3">
-            <span className="text-terracotta text-sm font-bold uppercase tracking-[0.2em] mb-6 block">Explore Our Products</span>
-            <h1 className="text-4xl lg:text-5xl font-bold mb-10 leading-[1.1] text-nordic-black font-display">
-              Organic <br />
-              Conventional <br />
-              and Gluten-Free <br />
-              Food Ingredients
-            </h1>
-            <button className="px-10 py-4 border border-nordic-black text-nordic-black text-xs font-bold uppercase tracking-widest rounded-full hover:bg-nordic-black hover:text-white transition-all flex items-center group">
-              ALL PRODUCTS <ArrowRight size={16} className="ml-3 transition-transform group-hover:translate-x-1" />
-            </button>
+    <div className="pt-20 bg-cream min-h-screen font-sans grainy-bg">
+      {/* Hero Section - Editorial Split Style */}
+      <section className="relative flex flex-col lg:flex-row min-h-[90vh] border-b-2 border-nordic-black">
+        {/* Left Side - Massive Vertical Text */}
+        <div className="hidden lg:flex w-32 border-r-2 border-nordic-black items-center justify-center bg-sage text-white">
+          <h1 className="writing-mode-vertical rotate-270 text-6xl font-bold uppercase tracking-[0.2em] font-display">
+            Sourcing
+          </h1>
+        </div>
+
+        {/* Middle Content */}
+        <div className="flex-1 flex flex-col bg-beige/30">
+          <div className="flex-1 flex flex-col justify-center p-12 lg:p-24">
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-terracotta text-xs font-bold uppercase tracking-[0.4em] mb-8 block"
+            >
+              Premium Ingredients
+            </motion.span>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-5xl lg:text-[3rem] font-bold leading-[0.85] uppercase tracking-tighter font-display mb-12 text-nordic-black"
+            >
+              Premium  Natural  Food <br />
+              Ingredients  Supplier.
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-lg lg:text-xl text-nordic-grey max-w-xl leading-relaxed mb-12"
+            >
+              <p>
+                We supply high-quality natural, organic, and conventional food ingredients to global industries.
+                Reliable sourcing, sustainable farms, and premium-grade products delivered worldwide.
+              </p>
+            </motion.p>
+
+            <div className="flex flex-wrap gap-4">
+              {['conventional', 'organic', 'gluten-free'].map((type, i) => (
+                <button
+                  key={type}
+                  onClick={() => {
+                    const element = document.getElementById('marketplace');
+                    element?.scrollIntoView({ behavior: 'smooth' });
+                    setActiveFilter(type as any);
+                  }}
+                  className={cn(
+                    "px-8 py-4 border-2 border-nordic-black text-[10px] font-bold uppercase tracking-widest transition-all",
+                    activeFilter === type ? "bg-terracotta text-white border-terracotta" : "bg-white/50 hover:bg-nordic-black hover:text-white"
+                  )}
+                >
+                  {type}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side - Large Image */}
+        <div className="lg:w-1/3 border-l-2 border-nordic-black relative overflow-hidden bg-sand">
+          <img
+            src="/food-hero.png"
+            alt="Premium Sourced Ingredients"
+            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+          />
+        </div>
+      </section>
+
+      {/* Marketplace Section */}
+      <section id="marketplace" className="py-32 bg-cream">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
+          {/* Section Header */}
+          <div className="flex flex-col lg:flex-row items-baseline justify-between mb-24 gap-12 border-b-2 border-nordic-black pb-12">
+            <div>
+              <h2 className="text-6xl lg:text-8xl font-bold font-display uppercase tracking-tighter text-nordic-black">
+                Showcase
+              </h2>
+              <p className="text-nordic-grey mt-4 text-lg">Exploring our <span className="text-terracotta font-bold">{activeFilter}</span> collection</p>
+            </div>
+
+            {/* Sub-Filter Bar */}
+            <div className="flex flex-wrap gap-2">
+              {subCategories.map((f) => (
+                <button
+                  key={f}
+                  onClick={() => setSubFilter(f)}
+                  className={cn(
+                    "px-6 py-2 text-[10px] font-bold uppercase tracking-widest transition-all border border-transparent",
+                    subFilter === f
+                      ? "bg-terracotta text-white"
+                      : "text-nordic-grey hover:text-nordic-black hover:border-nordic-black/20 rounded-full"
+                  )}
+                >
+                  {f}
+                </button>
+              ))}
+            </div>
           </div>
 
-          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-            {[
-              {
-                title: 'Conventional Food Ingredients',
-                color: 'bg-[#3D2B1F]',
-                desc: 'We source all of our food ingredients directly from approved suppliers, ensuring the highest quality.',
-                img: '/images/conventional.jpg',
-                offset: 'mt-0'
-              },
-              {
-                title: 'Organic Food Ingredients',
-                color: 'bg-[#D97757]',
-                desc: 'Organic raw materials undergo rigorous analysis in external laboratories, guaranteeing their organic origin.',
-                img: '/images/organic.jpg',
-                offset: 'mt-10'
-              },
-              {
-                title: 'Gluten-Free Food Ingredients',
-                color: 'bg-[#9C8E7F]',
-                desc: 'Our range of products is carefully produced in dedicated gluten-free facilities, specialized in pseudocereals.',
-                img: '/images/gluten-free.jpg',
-                offset: 'mt-0'
-              },
-            ].map((card, i) => (
+          {/* Products Grid - Staggered Masonry feel */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {filteredProducts.map((product, i) => (
               <motion.div
-                key={i}
+                key={product.id}
                 initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                className={cn("flex flex-col rounded-t-2xl rounded-b-[10rem] overflow-hidden shadow-xl", card.color, card.offset)}
+                animate={{ opacity: 1, y: 0 }}   // 🔥 CHANGE HERE
+                transition={{ delay: (i % 4) * 0.1 }}
+                viewport={{ once: true }}
+                className={cn(i % 2 === 1 ? "lg:mt-12" : "")}
               >
-                <div className="p-8 flex flex-col h-full text-white">
-                  <h3 className="text-xl font-bold mb-6 leading-tight min-h-[3rem]">{card.title}</h3>
-                  <p className="text-xs leading-relaxed opacity-90 mb-8 min-h-[5rem]">{card.desc}</p>
-                  <button className="w-full py-4 border border-white/40 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center justify-center hover:bg-white hover:text-nordic-black transition-all group/btn mb-8">
-                    CHECK OUR PRODUCTS <ArrowRight size={14} className="ml-2 transition-transform group-hover/btn:translate-x-1" />
-                  </button>
-                </div>
-                <div className="flex-1">
-                  <div className="h-60 overflow-hidden">
-                    <img src={card.img} alt={card.title} className="w-full h-full object-cover" />
-                  </div>
-                </div>
+                <FoodProductCard
+                  product={product}
+                  onClick={() => {
+                    setSelectedProduct(() => product);   // 🔥 important
+                    setIsModalOpen(true);
+                  }}
+                />
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Marketplace Section - Image 3 Style */}
-<section ref={productsRef} className="py-24 bg-cream grainy-bg">
-          <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="text-center mb-16">
-            <span className="text-terracotta text-[10px] font-bold uppercase tracking-widest mb-4 block">Marketplace</span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-nordic-black font-display">Check our offers</h2>
-          </div>
-
-          {/* Filter Bar - Image 3 Style */}
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
-            {filterOptions.filter(o => o.value !== 'all').map((option) => (
-              <button
-                key={option.value}
-                onClick={() => setActiveFilter(option.value)}
-                className={cn(
-                  "px-8 py-3 border rounded-full text-[10px] font-bold uppercase tracking-widest transition-all flex items-center",
-                  activeFilter === option.value
-                    ? "bg-nordic-black text-white border-nordic-black"
-                    : "bg-white text-nordic-black border-nordic-black hover:bg-beige"
-                )}
-              >
-                {option.label} Products <ArrowRight size={14} className="ml-2" />
-              </button>
-            ))}
-          </div>
-
-          {/* Products Grid */}
-          <div className="grid gap-8">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeFilter}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="grid gap-8"
-              >
-                {currentProducts.map((product) => (
-                  <FoodProductCard key={product.id} product={product} />
-                ))}
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </div>
-      </section>
-
-      <div className="flex justify-center items-center gap-6 mt-16">
-
-        {/* Page Numbers */}
-        {Array.from({ length: totalPages }, (_, i) => (
-          <span
-            key={i}
-onClick={() => handlePageChange(i + 1)}
-            className={`cursor-pointer text-lg ${currentPage === i + 1
-              ? "text-black font-bold"
-              : "text-gray-400"
-              }`}
-          >
-            {i + 1}
-          </span>
-        ))}
-
-        {/* Next Button */}
-        <div
-          onClick={() =>
-          currentPage < totalPages && handlePageChange(currentPage + 1)
-        }
-                  
-        
-        className="w-10 h-10 flex items-center justify-center border border-black rounded-full cursor-pointer hover:bg-black hover:text-white transition"
-        >
-          →
-        </div>
-
-      </div>
+      <FoodProductModal
+        product={selectedProduct}
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
 
       {/* Custom Request Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-beige/50">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h3 className="text-3xl font-bold mb-6">Can't find a specific ingredient?</h3>
+          <h3 className="text-3xl font-bold mb-6 text-nordic-black">Can't find a specific ingredient?</h3>
           <p className="text-nordic-grey mb-10 leading-relaxed">
             Our sourcing network is vast. If you require a specific product, origin, or certification not listed here, our procurement team will find it for you.
           </p>
           <Link
             to="/contact"
-            className="inline-flex px-10 py-5 bg-terracotta text-white font-bold uppercase tracking-widest text-xs rounded-full hover:bg-terracotta/90 transition-all shadow-xl"
+            className="inline-flex px-10 py-5 bg-terracotta text-white font-bold uppercase tracking-widest text-xs rounded-full hover:bg-nordic-black transition-all shadow-xl"
           >
             Start Custom Sourcing Request
           </Link>

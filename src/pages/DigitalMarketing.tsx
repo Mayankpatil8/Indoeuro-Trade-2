@@ -13,10 +13,9 @@ export const DigitalMarketing = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <header className="mb-16 text-center max-w-3xl mx-auto">
           <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-4 block">Digital Excellence</span>
-          <h1 className="text-5xl font-bold mb-6">Digital Sourcing & Services</h1>
+          <h1 className="text-5xl font-bold mb-6">Digital Solutions & Growth Services Worldwide</h1>
           <p className="text-lg text-nordic-grey leading-relaxed">
-            From bespoke web applications to global social media strategies. 
-            We source the best digital talent and technologies to scale your business.
+            From custom web applications to global digital marketing strategies, we deliver scalable, high-performance digital solutions that help your business grow and succeed worldwide.
           </p>
         </header>
 
@@ -24,16 +23,15 @@ export const DigitalMarketing = () => {
         <section className="mb-24 bg-nordic-black rounded-[2rem] overflow-hidden text-white soft-shadow">
           <div className="grid lg:grid-cols-2 items-center">
             <div className="p-12 lg:p-20">
-              <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-4 block">Full-Stack Solutions</span>
-              <h2 className="text-4xl font-bold mb-6">Web & Social Growth</h2>
+              <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-4 block">Full-Stack Digital Solutions</span>
+              <h2 className="text-4xl font-bold mb-6">Web, Marketing & Growth - All in One</h2>
               <p className="text-white/70 mb-10 leading-relaxed">
-                Our digital hub in Helsinki connects you with top-tier developers, designers, and marketing specialists. 
-                Whether you need a new platform or a complete brand overhaul, we deliver results.
+                Our global digital network connects you with expert developers, designers, and marketing professionals. Whether you need a website, app, or full-scale brand growth strategy, we deliver results with precision and performance.
               </p>
               <ul className="space-y-4 mb-10">
                 {[
                   'Custom Web & App Development',
-                  'Social Media Management',
+                  'Social Media Management & Growth',
                   'SEO & Performance Marketing',
                   'UI/UX Design & Branding'
                 ].map(item => (
@@ -42,7 +40,7 @@ export const DigitalMarketing = () => {
                   </li>
                 ))}
               </ul>
-              <Link 
+              <Link
                 to="/contact"
                 className="px-8 py-4 bg-terracotta text-white font-bold rounded-full hover:bg-terracotta/90 transition-all flex items-center inline-flex"
               >
@@ -50,11 +48,10 @@ export const DigitalMarketing = () => {
               </Link>
             </div>
             <div className="h-full min-h-[400px]">
-              <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" 
-                alt="Digital Marketing Hub" 
-                className="w-full h-full object-cover opacity-80"
-                referrerPolicy="no-referrer"
+              <img
+                src="/digital-hero.png"
+                alt="Digital Marketing Hub"
+                className="w-full h-full object-cover opacity-90"
               />
             </div>
           </div>
@@ -79,7 +76,7 @@ export const DigitalMarketing = () => {
 
         {/* Sourcing Examples */}
         <div>
-          <h3 className="text-3xl font-bold mb-12">Examples of what we source</h3>
+          <h3 className="text-3xl font-bold mb-12">What We Source Globally</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {digital.map((product, i) => (
               <motion.div

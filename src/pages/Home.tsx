@@ -34,28 +34,26 @@ export const Home = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <span className="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-bold uppercase tracking-widest rounded-full mb-6">
-              Established in Finland
+              Established Globally • Trusted Worldwide
             </span>
             <h1 className="text-5xl lg:text-7xl font-bold leading-[1.1] mb-8">
-              Your Whole & Sole <br />
+              Your Complete Global <br />
               <span className="text-terracotta">Sourcing Partner.</span>
             </h1>
             <p className="text-lg text-nordic-grey mb-10 max-w-lg leading-relaxed">
-              Based in Finland, we are your direct link to any parts or products you need.
-              Tell us what you are looking for, and we will deliver it to your doorstep with Nordic precision.
-            </p>
+              We connect you to high-quality parts, products, and services worldwide. Tell us your requirements, and we deliver reliable, efficient, and precision-driven solutions — right to your doorstep.            </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-terracotta text-white font-bold rounded-full hover:bg-terracotta/90 transition-all soft-shadow flex items-center"
               >
-                Request Any Part <ArrowRight size={18} className="ml-2" />
+                Request a Quote → <ArrowRight size={18} className="ml-2" />
               </Link>
               <Link
                 to="/about"
                 className="px-8 py-4 bg-white text-nordic-black border border-beige font-bold rounded-full hover:bg-beige transition-all"
               >
-                Our Story
+                Explore Our Services
               </Link>
             </div>
           </motion.div>
@@ -86,7 +84,7 @@ export const Home = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-5xl font-bold mb-4">Our Specializations</h2>
             <p className="text-nordic-grey max-w-2xl mx-auto">
-              Four distinct pillars of quality, unified by Finnish precision and European standards.
+              Four distinct pillars of quality, unified by precision, reliability, and world-class standards.
             </p>
           </div>
 
@@ -171,15 +169,13 @@ export const Home = () => {
             </div>
             <div className="order-1 lg:order-2">
               <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-4 block">Our Identity</span>
-              <h2 className="text-4xl font-bold mb-8 leading-tight">Finnish Heritage, <br />European Reach.</h2>
+              <h2 className="text-4xl font-bold mb-8 leading-tight">Global Reach,<br />Trusted Quality.</h2>
               <p className="text-lg text-nordic-grey mb-8 leading-relaxed">
-                Based in the heart of Finland, we provide reliable industrial components and high-quality products across Europe with a focus on precision and consistency.
-                Our philosophy is simple: quality is not an act, it is a habit.
-              </p>
+                Based in Finland, we serve businesses worldwide by delivering high-quality industrial components and essential products with precision and consistency. Our philosophy is simple: quality is not an act — it’s a standard we live by every day.              </p>
               <div className="space-y-6">
                 {[
-                  { icon: ShieldCheck, title: 'European Quality Standards', desc: 'Every part is tested to meet strict EU regulations.' },
-                  { icon: Truck, title: 'Reliable Logistics', desc: 'Seamless distribution network across the continent.' },
+                  { icon: ShieldCheck, title: 'Global Quality Standards', desc: 'Every product is carefully tested to meet international quality and compliance standards.' },
+                  { icon: Truck, title: 'Reliable Global Logistics', desc: 'A seamless supply chain ensuring fast, secure, and efficient delivery across the world.' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-terracotta soft-shadow shrink-0">
@@ -207,16 +203,15 @@ export const Home = () => {
                 <span className="text-terracotta">we deliver it to you.</span>
               </h2>
               <p className="text-lg text-nordic-grey mb-8 leading-relaxed">
-                At IndoEuro Trade Hub, we pride ourselves on our versatile sourcing capabilities. From complex industrial components and organic provisions to cutting-edge digital marketing and web development, we ensure that your specific requirements are met with Finnish precision.
-              </p>
+                IndoEuro Trade Hub provides end-to-end sourcing and delivery solutions across industries. Whether it’s industrial components, organic products, or digital services, we ensure high-quality results backed by precision and global standards.              </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="p-6 bg-cream rounded-2xl border border-beige">
-                  <h4 className="font-bold text-nordic-black mb-2">Custom Sourcing</h4>
-                  <p className="text-sm text-nordic-grey">If you don't see it, we'll find it for you through our extensive network.</p>
+                  <h4 className="font-bold text-nordic-black mb-2">Flexible Sourcing Solutions</h4>
+                  <p className="text-sm text-nordic-grey">We identify, verify, and procure products through our trusted international network.</p>
                 </div>
                 <div className="p-6 bg-cream rounded-2xl border border-beige">
-                  <h4 className="font-bold text-nordic-black mb-2">Direct Delivery</h4>
-                  <p className="text-sm text-nordic-grey">Seamless logistics from our Finnish hub straight to your doorstep.</p>
+                  <h4 className="font-bold text-nordic-black mb-2">Reliable International Logistics</h4>
+                  <p className="text-sm text-nordic-grey">From sourcing to delivery, we manage the entire supply chain with speed, transparency, and efficiency.</p>
                 </div>
               </div>
             </div>
@@ -238,10 +233,10 @@ export const Home = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
             {[
-              { icon: ShieldCheck, title: 'Quality Assurance', desc: 'Rigorous testing for every single component.' },
-              { icon: Truck, title: 'Global Logistics', desc: 'Fast and reliable shipping across Europe.' },
-              { icon: Settings, title: 'Custom Solutions', desc: 'Tailored engineering and digital services.' },
-              { icon: Users, title: 'Partnerships', desc: 'Long-term relationships built on trust.' },
+              { icon: ShieldCheck, title: 'Quality Assurance', desc: 'Strict quality control processes ensure every component meets international standards and performance benchmarks.' },
+              { icon: Truck, title: 'Worldwide Logistics', desc: 'Efficient global shipping and supply chain solutions for timely and reliable delivery.' },
+              { icon: Settings, title: 'Customized Solutions', desc: 'End-to-end solutions including product sourcing, engineering support, and digital services.' },
+              { icon: Users, title: 'Trusted Partnerships', desc: 'Building strong, long-term business relationships through reliability and excellence.' },
             ].map((item, i) => (
               <div key={i} className="text-center">
                 <div className="w-16 h-16 rounded-2xl bg-white mx-auto flex items-center justify-center text-terracotta soft-shadow mb-6">
