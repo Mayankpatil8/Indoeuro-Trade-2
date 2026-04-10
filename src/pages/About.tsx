@@ -1,8 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Globe, Search, Package, Truck, ShieldCheck, Target, Heart, Zap } from 'lucide-react';
+import { useSEO } from '@/lib/useSEO';
 
 export const About = () => {
+  useSEO({
+    title: 'About IndoEuro Trade Hub – Global Sourcing from Finland',
+    description: 'Based in Helsinki, Finland, IndoEuro Trade Hub connects businesses with trusted global suppliers. Discover our story, values, sourcing process & reliability standards.',
+    keywords: 'about IndoEuro Trade Hub, global sourcing company Finland, Helsinki sourcing partner, industrial supply chain company',
+  });
   const stats = [
   ];
 
@@ -68,9 +74,11 @@ export const About = () => {
               <div className="relative z-10 rounded-[3rem] overflow-hidden soft-shadow">
                 <img
                   src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1200"
-                  alt="Finnish Workspace"
+                  alt="IndoEuro Trade Hub Helsinki office and team collaboration"
                   className="w-full aspect-[4/5] object-cover"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-beige rounded-3xl -z-10" />

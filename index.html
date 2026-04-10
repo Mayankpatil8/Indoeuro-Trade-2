@@ -4,10 +4,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IndoEuro Hub</title>
+
+  <!-- Primary Meta Tags -->
+  <title>IndoEuro Trade Hub – Global Sourcing Partner</title>
+  <meta name="title" content="IndoEuro Trade Hub – Global Sourcing Partner" />
+  <meta name="description" content="Your complete global sourcing partner based in Finland. Electronics, mechanical parts, premium food ingredients & digital services — reliably delivered worldwide." />
+  <meta name="keywords" content="global sourcing, industrial components, electronic parts, mechanical components, organic food ingredients, digital marketing, Finland, IndoEuro Trade Hub" />
+  <meta name="author" content="IndoEuro Trade Hub" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#D97757" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://indoeuro-trade-2.vercel.app/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://indoeuro-trade-2.vercel.app/" />
+  <meta property="og:site_name" content="IndoEuro Trade Hub" />
+  <meta property="og:title" content="IndoEuro Trade Hub – Global Sourcing Partner" />
+  <meta property="og:description" content="Your complete global sourcing partner based in Finland. Electronics, mechanical parts, premium food ingredients & digital services — reliably delivered worldwide." />
+  <meta property="og:image" content="https://indoeuro-trade-2.vercel.app/og-image.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@IndoEuroHub" />
+  <meta name="twitter:title" content="IndoEuro Trade Hub – Global Sourcing Partner" />
+  <meta name="twitter:description" content="Your complete global sourcing partner based in Finland. Electronics, mechanical parts, premium food ingredients & digital services — reliably delivered worldwide." />
+  <meta name="twitter:image" content="https://indoeuro-trade-2.vercel.app/og-image.png" />
+
+  <!-- Preconnect for external resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+
+  <!-- DNS Prefetch -->
+  <link rel="dns-prefetch" href="https://images.unsplash.com" />
+
+  <!-- JSON-LD: Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "IndoEuro Trade Hub",
+    "url": "https://indoeuro-trade-2.vercel.app",
+    "logo": "https://indoeuro-trade-2.vercel.app/og-image.png",
+    "description": "Global sourcing partner headquartered in Helsinki, Finland. We connect businesses worldwide with high-quality electronics, mechanical components, food ingredients, and digital services.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Mannerheimintie 12",
+      "addressLocality": "Helsinki",
+      "postalCode": "00100",
+      "addressCountry": "FI"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+358-9-123-4567",
+      "contactType": "customer service",
+      "email": "contact@nordicprecision.fi",
+      "availableLanguage": ["English"]
+    },
+    "areaServed": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Global Sourcing Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electronic Component Sourcing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mechanical Component Sourcing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Food Ingredient Sourcing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Marketing Services" } }
+      ]
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: WebSite Schema with SearchAction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "IndoEuro Trade Hub",
+    "url": "https://indoeuro-trade-2.vercel.app",
+    "description": "Global sourcing partner for electronics, mechanical parts, food ingredients and digital services.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://indoeuro-trade-2.vercel.app/contact?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 
 <body>
+  <!-- Skip to main content (accessibility + SEO) -->
+  <a
+    href="#main-content"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-white focus:text-nordic-black focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold"
+  >
+    Skip to main content
+  </a>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>

@@ -12,12 +12,35 @@ export default defineConfig(({ mode }) => {
     },
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, './src'), // ✅ FIXED
+        '@': path.resolve(__dirname, './src'),
       },
     },
     server: {
       host: 'localhost',
       port: 5173,
+    },
+    build: {
+      // Enable CSS code splitting
+      cssCodeSplit: true,
+      // Source maps for debugging (disable in production if needed)
+      sourcemap: false,
+      // Chunk size warning limit
+      chunkSizeWarningLimit: 600,
+      rollupOptions: {
+        output: {
+          // Manual code splitting for better caching
+          manualChunks: {
+            // React core
+            'react-vendor': ['react', 'react-dom'],
+            // Router
+            'router': ['react-router-dom'],
+            // Animation library
+            'framer': ['framer-motion'],
+            // Icons
+            'icons': ['lucide-react'],
+          },
+        },
+      },
     },
   };
 });

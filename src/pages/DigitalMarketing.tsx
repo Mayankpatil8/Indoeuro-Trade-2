@@ -4,8 +4,15 @@ import { Monitor, Share2, Search, Code, CheckCircle2, ArrowRight } from 'lucide-
 import { Link } from 'react-router-dom';
 import { SOURCING_EXAMPLES } from '@/constants';
 import { ProductCard } from '@/components/ProductCard';
+import { useSEO } from '@/lib/useSEO';
 
 export const DigitalMarketing = () => {
+  useSEO({
+    title: 'Digital Marketing & Web Development – IndoEuro Trade Hub',
+    description: 'Custom web development, SEO, social media management & UI/UX design services worldwide. Full-stack digital growth solutions from IndoEuro Trade Hub.',
+    keywords: 'digital marketing, web development, SEO services, social media management, UI UX design, digital growth, Finland digital agency',
+  });
+
   const digital = SOURCING_EXAMPLES.filter(p => p.category === 'digital');
 
   return (
@@ -50,8 +57,10 @@ export const DigitalMarketing = () => {
             <div className="h-full min-h-[400px]">
               <img
                 src="/digital-hero.png"
-                alt="Digital Marketing Hub"
+                alt="Digital marketing and web development services hub"
                 className="w-full h-full object-cover opacity-90"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { BreadcrumbSchema } from './components/BreadcrumbSchema';
 import { Home } from './pages/Home';
 import { Electronics } from './pages/Electronics';
 import { Mechanical } from './pages/Mechanical';
@@ -23,9 +24,10 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
+      <BreadcrumbSchema />
       <div className="min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-grow">
+        <main id="main-content" className="flex-grow" role="main" aria-label="Main content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/electronics" element={<Electronics />} />

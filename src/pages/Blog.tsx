@@ -3,8 +3,14 @@ import { motion } from 'framer-motion';
 import { BLOG_POSTS } from '@/constants';
 import { ArrowRight, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useSEO } from '@/lib/useSEO';
 
 export const Blog = () => {
+  useSEO({
+    title: 'Insights & Global Sourcing Intelligence – IndoEuro Trade Hub',
+    description: 'Expert articles on global sourcing, industrial trends, supply chain innovations & digital growth strategies. Stay informed with IndoEuro Trade Hub.',
+    keywords: 'sourcing insights, industrial blog, supply chain trends, CNC machining, organic food sourcing, semiconductor supply chain, digital marketing blog',
+  });
   return (
     <div className="pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -30,6 +36,8 @@ export const Blog = () => {
                   alt={post.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-terracotta mb-4">

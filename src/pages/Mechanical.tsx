@@ -4,8 +4,15 @@ import { CheckCircle2, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SOURCING_EXAMPLES } from '@/constants';
 import { ProductCard } from '@/components/ProductCard';
+import { useSEO } from '@/lib/useSEO';
 
 export const Mechanical = () => {
+  useSEO({
+    title: 'Mechanical Component Sourcing – IndoEuro Trade Hub',
+    description: 'CNC components, aerospace fasteners, hydraulic actuators, precision bearings & conveyor rollers. Global mechanical parts sourcing by IndoEuro Trade Hub.',
+    keywords: 'mechanical component sourcing, CNC machining, aerospace fasteners, hydraulic actuators, precision bearings, industrial parts Finland',
+  });
+
   const mechanical = SOURCING_EXAMPLES.filter(p => p.category === 'mechanical');
 
   return (
@@ -49,8 +56,10 @@ export const Mechanical = () => {
             <div className="h-full min-h-[400px]">
               <img
                 src="/mechanical-hero.png"
-                alt="Mechanical Sourcing"
+                alt="Precision mechanical components and industrial parts sourcing"
                 className="w-full h-full object-cover opacity-90"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

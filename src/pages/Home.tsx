@@ -6,8 +6,15 @@ import { SOURCING_EXAMPLES } from '@/constants';
 import { ProductCard } from '@/components/ProductCard';
 import { FoodProductCard } from '@/components/FoodProductCard';
 import { cn } from '@/lib/utils';
+import { useSEO } from '@/lib/useSEO';
 
 export const Home = () => {
+  useSEO({
+    title: 'IndoEuro Trade Hub – Global Sourcing Partner',
+    description: 'Your complete global sourcing partner based in Finland. Electronics, mechanical parts, premium food ingredients & digital services — reliably delivered worldwide.',
+    keywords: 'global sourcing, industrial components, electronic parts, mechanical components, food ingredients, digital marketing, Finland sourcing partner',
+    ogImage: 'https://indoeuro-trade-2.vercel.app/og-image.png',
+  });
   const [activeFilter, setActiveFilter] = useState<'all' | 'conventional' | 'organic' | 'gluten-free'>('all');
 
   const foodProducts = SOURCING_EXAMPLES.filter(p => p.category === 'food');
@@ -67,9 +74,11 @@ export const Home = () => {
             <div className="relative z-10 rounded-3xl overflow-hidden soft-shadow aspect-square">
               <img
                 src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200"
-                alt="Precision Engineering"
+                alt="Global trade and precision engineering headquarters"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
             <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-beige rounded-3xl -z-10" />
@@ -155,15 +164,19 @@ export const Home = () => {
               <div className="grid grid-cols-2 gap-4">
                 <img
                   src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=600"
-                  alt="Quality Control"
+                  alt="Quality control inspection at IndoEuro Trade Hub"
                   className="rounded-2xl soft-shadow aspect-square object-cover"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=600"
-                  alt="Manufacturing"
+                  alt="Global manufacturing and industrial production facility"
                   className="rounded-2xl soft-shadow aspect-square object-cover mt-8"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -218,9 +231,11 @@ export const Home = () => {
             <div className="relative">
               <img
                 src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200"
-                alt="Global Logistics"
+                alt="Global logistics and supply chain operations"
                 className="rounded-3xl soft-shadow aspect-video object-cover"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-terracotta/10 rounded-full blur-2xl -z-10" />
             </div>

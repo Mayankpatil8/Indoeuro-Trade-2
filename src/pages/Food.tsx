@@ -6,10 +6,16 @@ import { FoodProductCard } from '@/components/FoodProductCard';
 import { FoodProductModal } from '@/components/FoodProductModal';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
+import { useSEO } from '@/lib/useSEO';
 
 type FoodType = 'all' | 'conventional' | 'organic' | 'gluten-free';
 
 export const Food = () => {
+  useSEO({
+    title: 'Premium Food Ingredients Supplier – IndoEuro Trade Hub',
+    description: 'Organic & conventional food ingredients: seeds, pulses, pseudocereals & flours. Certified global food sourcing — flaxseed, lentils, buckwheat, chia & more from IndoEuro Trade Hub.',
+    keywords: 'food ingredient sourcing, organic food, conventional food, gluten-free ingredients, flaxseed, lentils, buckwheat, chia seeds, food supplier Finland',
+  });
   const [activeFilter, setActiveFilter] = useState<FoodType>('conventional');
   const [subFilter, setSubFilter] = useState<string>('All');
   const [selectedProduct, setSelectedProduct] = useState<SourcingCategory | null>(null);
@@ -102,8 +108,10 @@ export const Food = () => {
             <div className="h-full min-h-[400px]">
               <img
                 src="/food-hero.png"
-                alt="Premium Sourced Ingredients"
+                alt="Premium natural food ingredients sourced globally"
                 className="w-full h-full object-cover opacity-90"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

@@ -4,8 +4,15 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SOURCING_EXAMPLES } from '@/constants';
 import { ProductCard } from '@/components/ProductCard';
+import { useSEO } from '@/lib/useSEO';
 
 export const Electronics = () => {
+  useSEO({
+    title: 'Electronic Component Sourcing – IndoEuro Trade Hub',
+    description: 'Source industrial microcontrollers, precision sensors, FPGA boards, custom PCBs & RF modules globally. Reliable electronic parts procurement by IndoEuro Trade Hub.',
+    keywords: 'electronic component sourcing, industrial microcontrollers, FPGA boards, custom PCB, sensors, electronic parts Finland',
+  });
+
   const electronics = SOURCING_EXAMPLES.filter(p => p.category === 'electronics');
 
   return (
@@ -35,9 +42,11 @@ export const Electronics = () => {
             <div className="w-full lg:w-1/3 aspect-square rounded-3xl overflow-hidden soft-shadow">
               <img
                 src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
-                alt="Electronics Sourcing"
+                alt="High-precision electronic components and circuit boards"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

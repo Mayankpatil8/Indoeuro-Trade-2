@@ -1,8 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { useSEO } from '@/lib/useSEO';
 
 export const Contact = () => {
+  useSEO({
+    title: 'Contact IndoEuro Trade Hub – Get a Custom Quote',
+    description: 'Reach our global sourcing team in Helsinki, Finland. Request quotes, sourcing assistance for electronics, mechanical parts, food ingredients & digital services.',
+    keywords: 'contact IndoEuro Trade Hub, sourcing quote, request quote Finland, Helsinki industrial supplier contact',
+  });
   return (
     <div className="pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
