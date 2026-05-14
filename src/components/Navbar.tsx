@@ -29,10 +29,14 @@ export const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           <Link
             to="/"
-            className="font-display text-xl font-bold tracking-tighter text-nordic-black"
+            className="flex items-center"
             aria-label="IndoEuro Trade Hub — Home"
           >
-            INDOEURO <span className="text-terracotta">TRADE HUB</span>
+            <img
+              src="/logo@.png"
+              alt="IndoEuro Hub"
+              className="h-25 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Nav */}
