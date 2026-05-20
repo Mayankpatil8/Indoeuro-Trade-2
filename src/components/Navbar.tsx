@@ -58,7 +58,7 @@ export const Navbar = () => {
               alt="IndoEuro Hub"
               className={cn(
                 "w-auto object-contain transition-all duration-500",
-                scrolled ? "h-12" : "h-16"
+                scrolled ? "h-16" : "h-19"
               )}
             />
           </Link>
