@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 
 const NAV_LINKS = [
   { name: 'Home', path: '/' },
-  { name: 'About Us', path: '/about' },
+  { name: 'About', path: '/about' },
   { name: 'Food', path: '/food' },
   { name: 'Digital', path: '/digital' },
   { name: 'Mechanical', path: '/mechanical' },
@@ -117,7 +117,7 @@ export const Navbar = () => {
                 to="/contact"
                 className="px-5 py-2.5 bg-terracotta text-white text-xs font-bold uppercase tracking-wider rounded-full hover:bg-terracotta/90 hover:scale-103 active:scale-98 transition-all shadow-sm shrink-0"
               >
-                Request Quote
+                Connect Now
               </Link>
             </div>
           </div>

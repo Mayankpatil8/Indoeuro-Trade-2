@@ -138,8 +138,7 @@ export const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-nordic-grey leading-relaxed"
           >
-            Headquartered in Finland , Finland, IndoEuro Core Oy is more than a supplier — we are your global sourcing partner. We coordinate complex requirements with verified suppliers worldwide, delivering precision, compliance, and consistent quality at every stage.
-          </motion.p>
+            Based in Finland, IndoEuro Core Oy serves as a strategic global sourcing and enterprise solutions partner for modern industries. Through a network of verified international suppliers and operational partners, we deliver reliable procurement, technical precision, regulatory compliance, and consistent execution tailored to European business standards.          </motion.p>
         </header>
 
         {/* Story & Stats Section */}
@@ -206,8 +205,7 @@ export const About = () => {
               <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-2 block">Institutional Integrity</span>
               <h3 className="text-2xl font-bold text-nordic-black mb-4">Official Finnish Trade Registration</h3>
               <p className="text-nordic-grey text-sm max-w-2xl leading-relaxed">
-                IndoEuro Core Oy is a fully registered limited liability corporation (Osakeyhtiö) incorporated in Finland , Finland. We operate in absolute alignment with European commerce rules, offering comprehensive fiscal transparency and trade security to all enterprise partners.
-              </p>
+IndoEuro Core Oy is a legally registered Finnish limited liability company (Osakeyhtiö), operating in full alignment with European commercial standards and trade regulations. We deliver transparent, secure, and reliable business operations tailored for long-term enterprise partnerships across Europe.              </p>
             </div>
             <div className="w-full md:w-auto shrink-0 grid grid-cols-2 gap-4 bg-cream/50 p-6 rounded-2xl border border-beige/40 z-10">
               <div>
@@ -219,12 +217,16 @@ export const About = () => {
                 <div className="text-sm font-bold text-nordic-black">3620039-7</div>
               </div>
               <div>
-                <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">Registered Office</div>
-                <div className="text-sm font-bold text-nordic-black">Turku, Finland</div>
-              </div>
-              <div>
                 <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">Tax Registration</div>
                 <div className="text-sm font-bold text-nordic-black">EU VAT Compliant</div>
+              </div>
+              <div>
+                <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">
+                  Partnership Focus
+                </div>
+                <div className="text-sm font-bold text-nordic-black">
+                  Strategic EU Partnerships
+                </div>
               </div>
             </div>
           </div>

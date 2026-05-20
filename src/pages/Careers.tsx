@@ -28,9 +28,9 @@ interface Job {
   title: string;
   department: 'sourcing' | 'tech' | 'marketing' | 'quality';
   deptLabel: string;
-  location: string;
+  //location: string;
   type: string;
-  salary: string;
+  //salary: string;
   overview: string;
   responsibilities: string[];
   requirements: string[];
@@ -43,9 +43,9 @@ const JOBS_DATA: Job[] = [
     title: 'Global Sourcing Specialist',
     department: 'sourcing',
     deptLabel: 'Sourcing & Logistics',
-    location: 'Helsinki, Finland (Hybrid)',
+    //location: 'Helsinki, Finland (Hybrid)',
     type: 'Full-time',
-    salary: '€4,200 – €5,600 / month',
+    //salary: '€4,200 – €5,600 / month',
     overview:
       'Coordinate complex B2B procurement specifications with our vetted manufacturers in Southeast Asia & India. Validate custom CNC components, castings, and raw materials against strict European industrial standards.',
     responsibilities: [
@@ -72,9 +72,9 @@ const JOBS_DATA: Job[] = [
     title: 'B2B Integration Platform Engineer',
     department: 'tech',
     deptLabel: 'Engineering & Tech',
-    location: 'Helsinki, Finland / Remote',
+    //location: 'Helsinki, Finland / Remote',
     type: 'Full-time',
-    salary: '€5,000 – €6,800 / month',
+    //salary: '€5,000 – €6,800 / month',
     overview:
       'Architect and scale the IndoEuro Trade Portal — our core enterprise coordination platform. Develop high-fidelity dashboards, secure API layers, and automated supplier request systems to eliminate friction in international sourcing.',
     responsibilities: [
@@ -101,9 +101,9 @@ const JOBS_DATA: Job[] = [
     title: 'Enterprise B2B Growth Lead',
     department: 'marketing',
     deptLabel: 'Marketing & Growth',
-    location: 'Helsinki, Finland (Hybrid)',
+    //location: 'Helsinki, Finland (Hybrid)',
     type: 'Full-time',
-    salary: '€4,000 – €5,200 / month',
+    //salary: '€4,000 – €5,200 / month',
     overview:
       "Take full ownership of IndoEuro Hub's digital presence, B2B lead generation infrastructure, and industrial authority funnels across Northern Europe.",
     responsibilities: [
@@ -130,9 +130,9 @@ const JOBS_DATA: Job[] = [
     title: 'Senior Quality & Material Auditor',
     department: 'quality',
     deptLabel: 'Quality Assurance',
-    location: 'Helsinki Hub / Travel',
+    //location: 'Helsinki Hub / Travel',
     type: 'Full-time',
-    salary: '€4,800 – €6,200 / month',
+    //salary: '€4,800 – €6,200 / month',
     overview:
       "Enforce IndoEuro's absolute zero-defect guarantee. Direct physical factory audits, material testing verifications, and compliance programs globally to shield European SMEs from supply disruptions.",
     responsibilities: [
@@ -266,7 +266,7 @@ const ApplicationDrawer: React.FC<DrawerProps> = ({ job, onClose }) => {
                 <span className="font-medium text-nordic-black/70">{job.deptLabel}</span>
                 <span className="text-beige">•</span>
                 <MapPin size={11} className="shrink-0" />
-                {job.location}
+                {/* {job.location} */}
               </p>
             </div>
             <button
@@ -797,10 +797,10 @@ export const Careers = () => {
                               <h3 className="text-xl font-bold text-nordic-black">{job.title}</h3>
                               <div className="flex flex-wrap items-center gap-4 text-sm text-nordic-grey">
                                 <span className="flex items-center gap-1">
-                                  <MapPin size={13} /> {job.location}
+                                  {/* <MapPin size={13} /> {job.location} */}
                                 </span>
                                 <span className="text-terracotta font-semibold text-sm">
-                                  {job.salary}
+                                  {/* {job.salary} */}
                                 </span>
                               </div>
                             </div>

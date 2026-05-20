@@ -21,26 +21,19 @@ export const Blog = () => {
     { id: 'manufacturing', label: 'Manufacturing & CNC' },
     { id: 'semiconductors', label: 'Semiconductors' },
     { id: 'provisions', label: 'Provisions' },
-    { id: 'digital', label: 'Digital Sourcing' }
+    { id: 'digital', label: 'Digital Sourcing' },
+    { id: 'analytics', label: 'Trade Analytics' },
+    { id: 'trade', label: 'Global Trade' },
   ];
 
-  const getPostCategory = (id: string) => {
-    if (id === 'b1' || id === 'b5') return 'manufacturing';
-    if (id === 'b3') return 'semiconductors';
-    if (id === 'b2' || id === 'b6') return 'provisions';
-    if (id === 'b4') return 'digital';
-    return 'all';
-  };
-
-  const getPostCategoryLabel = (id: string) => {
-    const cat = getPostCategory(id);
+  const getCategoryLabel = (cat: string) => {
     const found = categories.find(c => c.id === cat);
     return found ? found.label : 'Intelligence';
   };
 
   const filteredPosts = BLOG_POSTS.filter(post => {
     if (activeCategory === 'all') return true;
-    return getPostCategory(post.id) === activeCategory;
+    return post.category === activeCategory;
   });
 
   const featuredPost = filteredPosts[0];
@@ -184,7 +177,7 @@ export const Blog = () => {
                 <div>
                   <div className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-terracotta mb-6">
                     <span className="px-3 py-1 bg-terracotta/10 rounded-full text-terracotta">
-                      {getPostCategoryLabel(featuredPost.id)}
+                      {getCategoryLabel(featuredPost.category)}
                     </span>
                     <span className="flex items-center gap-1.5 text-nordic-grey">
                       <Calendar size={12} /> {featuredPost.date}
@@ -239,7 +232,7 @@ export const Blog = () => {
                       decoding="async"
                     />
                     <span className="absolute top-4 left-4 px-3 py-1 bg-white/95 backdrop-blur-sm text-nordic-black text-[9px] font-bold uppercase tracking-wider rounded-full shadow-sm border border-beige/20">
-                      {getPostCategoryLabel(post.id)}
+                       {getCategoryLabel(post.category)}
                     </span>
                   </div>
                   

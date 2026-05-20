@@ -26,15 +26,26 @@ export const Food = () => {
 
   const foodProducts = SOURCING_EXAMPLES.filter(p => p.category === 'food');
 
+  // Filter by type tab
   const filteredByType = activeFilter === 'all'
     ? foodProducts
     : foodProducts.filter(p => p.type === activeFilter);
 
+  // Build available sub-categories dynamically from what actually exists in current type
+  const availableSubcats = ['All', ...Array.from(
+    new Set(filteredByType.map(p => p.subcategory).filter(Boolean) as string[])
+  ).sort()];
+
+  // Filter by subcategory
   const filteredProducts = subFilter === 'All'
     ? filteredByType
     : filteredByType.filter(p => p.subcategory === subFilter);
 
-  const subCategories = ['All', 'Flours', 'Pseudocereals', 'Pulses', 'Seeds'];
+  // When active type changes: reset subcategory to 'All'
+  const handleTypeChange = (type: FoodType) => {
+    setActiveFilter(type);
+    setSubFilter('All');
+  };
 
   useEffect(() => {
     if (isModalOpen) {
@@ -171,13 +182,13 @@ export const Food = () => {
               </ul>
               
               <div className="flex flex-wrap gap-3 mb-6">
-                {(['conventional', 'organic', 'gluten-free'] as FoodType[]).map(type => (
+                {(['all', 'conventional', 'organic', 'gluten-free'] as FoodType[]).map(type => (
                   <button
                     key={type}
                     onClick={() => {
                       const element = document.getElementById('marketplace');
                       element?.scrollIntoView({ behavior: 'smooth' });
-                      setActiveFilter(type);
+                      handleTypeChange(type);
                     }}
                     className={cn(
                       "px-5 py-2.5 text-[10px] font-bold uppercase tracking-widest rounded-full transition-all border",
@@ -186,7 +197,7 @@ export const Food = () => {
                         : "bg-white text-nordic-black border-beige hover:bg-beige/40"
                     )}
                   >
-                    {type}
+                    {type === 'all' ? 'All Products' : type}
                   </button>
                 ))}
               </div>
@@ -244,57 +255,93 @@ export const Food = () => {
         {/* Marketplace / Products Section */}
         <section id="marketplace" className="scroll-mt-24">
           {/* Section Header */}
-          <div className="flex flex-col lg:flex-row items-baseline justify-between mb-12 gap-8 border-b border-beige pb-6">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-10 gap-6 border-b border-beige pb-6">
             <div>
-              <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-3 block">Catalog Collection</span>
+              <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-2 block">Catalog Collection</span>
               <h2 className="text-3xl font-bold">
                 Exploring{' '}
-                <span className="text-terracotta font-extrabold capitalize">{activeFilter}</span> Sourcing
+                <span className="text-terracotta font-extrabold capitalize">
+                  {activeFilter === 'all' ? 'All' : activeFilter}
+                </span>{' '}Sourcing
               </h2>
+              <p className="text-sm text-nordic-grey mt-1">
+                {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''} found
+              </p>
             </div>
 
-            {/* Sub-Filter Bar */}
-            <div className="flex flex-wrap gap-2">
-              {subCategories.map(f => (
-                <button
-                  key={f}
-                  onClick={() => setSubFilter(f)}
-                  className={cn(
-                    "px-5 py-2.5 text-xs font-bold uppercase tracking-widest rounded-full transition-all border",
-                    subFilter === f
-                      ? "bg-nordic-black text-white border-nordic-black shadow-sm"
-                      : "bg-white text-nordic-grey border-beige hover:border-nordic-black/20 hover:text-nordic-black"
-                  )}
-                >
-                  {f}
-                </button>
-              ))}
+            {/* Sub-Filter Pill Bar — animated active indicator */}
+            <div className="overflow-x-auto pb-0.5 -mx-1 px-1">
+              <div className="flex items-center gap-1.5 bg-beige/30 p-1.5 rounded-full border border-beige/60 w-max">
+                {availableSubcats.map(f => {
+                  const isActive = subFilter === f;
+                  return (
+                    <button
+                      key={f}
+                      onClick={() => setSubFilter(f)}
+                      className={cn(
+                        'relative whitespace-nowrap px-4 py-2 text-[11px] font-bold uppercase tracking-wider rounded-full transition-colors duration-200',
+                        isActive ? 'text-white' : 'text-nordic-grey hover:text-nordic-black'
+                      )}
+                    >
+                      {isActive && (
+                        <motion.span
+                          layoutId="foodSubFilterBg"
+                          className="absolute inset-0 bg-nordic-black rounded-full -z-10"
+                          transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                        />
+                      )}
+                      <span className="relative z-10">{f}</span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
 
-          {/* Products Grid */}
-          <motion.div 
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
-          >
-            {filteredProducts.map((product) => (
+          {/* Products Grid — re-animates on every filter change */}
+          <AnimatePresence mode="wait">
+            {filteredProducts.length > 0 ? (
               <motion.div
-                key={product.id}
-                variants={itemVariants}
+                key={`${activeFilter}-${subFilter}`}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.3 }}
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
               >
-                <FoodProductCard
-                  product={product}
-                  onClick={() => {
-                    setSelectedProduct(product);
-                    setIsModalOpen(true);
-                  }}
-                />
+                {filteredProducts.map((product, idx) => (
+                  <motion.div
+                    key={product.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.35, delay: idx * 0.05 }}
+                  >
+                    <FoodProductCard
+                      product={product}
+                      onClick={() => {
+                        setSelectedProduct(product);
+                        setIsModalOpen(true);
+                      }}
+                    />
+                  </motion.div>
+                ))}
               </motion.div>
-            ))}
-          </motion.div>
+            ) : (
+              <motion.div
+                key="empty"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="text-center py-20 bg-white rounded-3xl border border-beige"
+              >
+                <div className="text-5xl mb-4">🌾</div>
+                <h4 className="text-lg font-bold text-nordic-black mb-2">No products in this category</h4>
+                <p className="text-sm text-nordic-grey max-w-xs mx-auto">
+                  Try selecting a different type or subcategory above.
+                </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </section>
       </div>
 

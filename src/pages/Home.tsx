@@ -224,39 +224,7 @@ export const Home = () => {
                 />
               </div>
 
-              {/* Floating Trust Badge A: Top-Left HQ locator */}
-              <div
-                className="absolute -top-6 -left-10 z-20 pointer-events-none"
-                style={{ transform: "translateZ(60px)", transformStyle: "preserve-3d" }}
-              >
-                <motion.div
-                  animate={{
-                    y: [0, -8, 0],
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  style={{ willChange: "transform" }}
-                  className="bg-white/80 backdrop-blur-md border border-beige/60 shadow-lg rounded-2xl p-4 flex items-center gap-3"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-terracotta/10 flex items-center justify-center text-terracotta">
-                    <MapPin size={20} />
-                  </div>
-                  <div>
-                    <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">HQ Hub</div>
-                    <div className="text-xs font-extrabold text-nordic-black flex items-center gap-1.5">
-                      Finland , Finland
-                      <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sage opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-sage"></span>
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-
+         
               {/* Floating Trust Badge B: Bottom-Right Compliance ring */}
               <div
                 className="absolute -bottom-4 -right-8 z-20 pointer-events-none"
