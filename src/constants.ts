@@ -786,7 +786,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'b2',
     title: 'Sustainable Food Sourcing: From Farm to Global Markets',
-    excerpt: 'How direct-farm partnerships, FSSC 22000 audits, and traceable supply chains ensure quality, safety, and environmental responsibility in bulk food procurement.',
+    excerpt: 'How direct-farm Partnership, FSSC 22000 audits, and traceable supply chains ensure quality, safety, and environmental responsibility in bulk food procurement.',
     date: 'April 02, 2026',
     image: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&q=80&w=1200',
     category: 'provisions',

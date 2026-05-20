@@ -105,8 +105,7 @@ export const Mechanical = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-nordic-grey leading-relaxed"
           >
-            From custom CNC machined parts and structural castings to heavy-duty actuators, we coordinate rigorous ISO audits, material certification checks, and secure supply lines for European assembly floors.
-          </motion.p>
+From industrial components and custom mechanical parts to sourcing coordination, we help businesses connect with reliable suppliers and efficient procurement solutions.          </motion.p>
         </header>
 
         {/* Custom Sourcing Section (Bespoke / MPN Focus) */}
@@ -175,11 +174,29 @@ export const Mechanical = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: ShieldCheck, title: 'Dimensional Accuracy', desc: 'Pre-shipment verification using coordinate measuring machines (CMM) for strict tolerance matches.' },
-              { icon: Settings, title: 'Material Certification', desc: 'Providing full Material Test Reports (MTR) and chemical analysis documentation for all casting/machined batches.' },
-              { icon: Compass, title: 'Corrosion Prevention', desc: 'Secure anti-corrosion oils, heat-sealed barrier wrapping, and heavy-duty structural packaging for sea/air transport.' },
-              { icon: Anchor, title: 'Global Port Logistics', desc: 'Centralized warehousing in Finland with ready dispatch setups, customs clearance, and DDP shipping configurations.' }
-            ].map((feature, i) => (
+{ 
+  icon: ShieldCheck, 
+  title: 'Project Tracking', 
+  desc: 'Clear communication and regular project updates throughout sourcing, production, and delivery coordination.' 
+},
+
+{ 
+  icon: Settings, 
+  title: 'Supplier Verification', 
+  desc: 'Working with carefully selected suppliers and manufacturing partners based on quality and reliability.' 
+},
+
+{ 
+  icon: Compass, 
+  title: 'Ethical Operations', 
+  desc: 'Professional business practices focused on transparency, responsible sourcing, and long-term partnerships.' 
+},
+
+{ 
+  icon: Anchor, 
+  title: 'Sustainable Solutions', 
+  desc: 'Supporting efficient sourcing and operational practices aligned with modern sustainability expectations.' 
+}            ].map((feature, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}

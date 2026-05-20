@@ -68,7 +68,7 @@ export const Electronics = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-nordic-grey leading-relaxed"
           >
-            From specialized microcontrollers and precision sensors to complex RF components, we secure, vet, and deliver high-performance semiconductor components for European manufacturers.
+From microcontrollers and precision sensors to RF and industrial electronic components, we help businesses connect with reliable suppliers and efficient sourcing solutions.
           </motion.p>
         </header>
 
@@ -126,7 +126,7 @@ export const Electronics = () => {
               { icon: ShieldCheck, title: 'Full Traceability', desc: 'Secure original factory documentation, including Certificates of Conformance (CoC).' },
               { icon: Zap, title: 'RoHS & CE Verification', desc: 'Strict compliance with European safety regulations and heavy-metal environmental standards.' },
               { icon: Layers, title: 'ESD Protective Packaging', desc: 'Components packed and handled under rigorous electrostatic discharge safety specifications.' },
-              { icon: Cpu, title: 'Lifespan Monitoring', desc: 'Continuous updates on component lifecycle status, active production, or impending EOL phases.' }
+              { icon: Cpu, title: 'Compliance-Focused Operations', desc: 'Supporting sourcing and business operations aligned with local industry standards and requirements.' }
             ].map((feature, i) => (
               <motion.div
                 key={i}

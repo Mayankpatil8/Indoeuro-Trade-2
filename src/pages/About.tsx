@@ -19,11 +19,11 @@ export const About = () => {
       label: 'Vetted Factories',
       icon: Globe
     },
-    {
-      value: '100%',
-      label: 'ISO 9001 Audited',
-      icon: ShieldCheck
-    },
+ {
+  value: 'EU',
+  label: 'Standards Compliant',
+  icon: ShieldCheck
+},
     {
       value: '12,500T',
       label: 'Annual Tonnage',
@@ -53,7 +53,7 @@ export const About = () => {
     { title: 'Requirement Analysis', desc: 'You share your exact engineering specifications, drawings, or targeted delivery requirements.' },
     { title: 'Global Sourcing', desc: 'We tap into our vetted manufacturing networks to discover the ideal supplier match.' },
     { title: 'Quality Verification', desc: 'Every dispatch undergoes strict quality checks, compliance vetting, and certificate verification.' },
-    { title: 'Worldwide Delivery', desc: 'Secure custom clearance, centralized warehousing in Finland, and seamless DDP shipping directly to your docks.' },
+    { title: 'Worldwide Delivery', desc: 'International shipping, customs coordination, and delivery solutions managed through trusted global logistics and supply partners.' },
   ];
 
   // Framer Motion Animation Variants
@@ -180,8 +180,7 @@ export const About = () => {
                 IndoEuro Core Oy was established to address a persistent supply chain vulnerability — connecting specialized European assembly demands with highly reliable and fully-audited global fabrications.
               </p>
               <p className="text-nordic-grey mb-10 leading-relaxed">
-                With centralized project administration in Finland and an expansive international database of suppliers, we simplify logistics, quality oversight, and duty-paid delivery setups so you can procure components with complete confidence.
-              </p>
+With centralized project coordination in Finland and a trusted global supplier network, we streamline procurement, quality control, logistics, and duty-paid delivery solutions for seamless and reliable sourcing.              </p>
 
               {/* Populated Stats Grid with Visibility & High Contrast */}
               <div className="grid grid-cols-3 gap-4">
@@ -194,41 +193,6 @@ export const About = () => {
                 ))}
               </div>
             </motion.div>
-          </div>
-        </section>
-
-        {/* Corporate Credentials Panel */}
-        <section className="mb-24">
-          <div className="bg-white rounded-[2.5rem] border border-beige/60 p-8 lg:p-12 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 pointer-events-none" style={{ background: "radial-gradient(circle, rgba(197, 102, 79, 0.05) 0%, rgba(197, 102, 79, 0) 70%)", willChange: "transform" }} />
-            <div className="flex-1 z-10">
-              <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-2 block">Institutional Integrity</span>
-              <h3 className="text-2xl font-bold text-nordic-black mb-4">Official Finnish Trade Registration</h3>
-              <p className="text-nordic-grey text-sm max-w-2xl leading-relaxed">
-IndoEuro Core Oy is a legally registered Finnish limited liability company (Osakeyhtiö), operating in full alignment with European commercial standards and trade regulations. We deliver transparent, secure, and reliable business operations tailored for long-term enterprise partnerships across Europe.              </p>
-            </div>
-            <div className="w-full md:w-auto shrink-0 grid grid-cols-2 gap-4 bg-cream/50 p-6 rounded-2xl border border-beige/40 z-10">
-              <div>
-                <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">Registered Name</div>
-                <div className="text-sm font-bold text-nordic-black">IndoEuro Core Oy</div>
-              </div>
-              <div>
-                <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">Finnish Business ID</div>
-                <div className="text-sm font-bold text-nordic-black">3620039-7</div>
-              </div>
-              <div>
-                <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">Tax Registration</div>
-                <div className="text-sm font-bold text-nordic-black">EU VAT Compliant</div>
-              </div>
-              <div>
-                <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">
-                  Partnership Focus
-                </div>
-                <div className="text-sm font-bold text-nordic-black">
-                  Strategic EU Partnerships
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -246,8 +210,8 @@ IndoEuro Core Oy is a legally registered Finnish limited liability company (Osak
             {[
               {
                 icon: Lock,
-                title: 'Encrypted CAD Vaults',
-                desc: 'All engineering drawings (.step, .dwg, .pdf) are transferred over TLS 1.3 encrypted lines and kept in sandboxed vaults protected by strict B2B non-disclosure agreements.'
+                title: 'Secure Engineering Files',
+                desc: 'Technical drawings and project documents are securely managed with protected business access and strict confidentiality.'
               },
               {
                 icon: ShieldCheck,
@@ -261,8 +225,8 @@ IndoEuro Core Oy is a legally registered Finnish limited liability company (Osak
               },
               {
                 icon: Award,
-                title: 'Incoterms DDP Logistics',
-                desc: 'Absolute risk transfer. We manage all transit logistics, custom clearance, tariffs, and duty payments, handing over shipments directly at your designated assembly center.'
+                title: 'Flexible Logistics Support',
+                desc: 'Custom logistics, customs handling, and delivery coordination solutions available based on project and client requirements.'
               }
             ].map((framework, i) => (
               <motion.div

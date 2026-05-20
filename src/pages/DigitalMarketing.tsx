@@ -121,20 +121,23 @@ export const DigitalMarketing = () => {
             <div className="p-10 lg:p-16 relative">
               <div className="absolute top-0 right-0 w-64 h-64 pointer-events-none" style={{ background: "radial-gradient(circle, rgba(197, 102, 79, 0.05) 0%, rgba(197, 102, 79, 0) 70%)", willChange: "transform" }} />
               
-              <span className="text-xs font-bold uppercase tracking-widest text-terracotta mb-4 block">Bespoke Enterprise Systems</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-terracotta mb-4 block">AI & Digital Solutions</span>
               <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-nordic-black">Enterprise Architecture. Made Seamless.</h2>
               <p className="text-nordic-grey mb-8 leading-relaxed">
-                We design and integrate custom digital environments that bridge the gap between technical manufacturers and modern global buyers. From highly optimized web front-ends to synchronized back-end CRM pipelines, we build high-converting B2B channels.
-              </p>
+We build SEO-driven digital solutions that improve brand visibility  
+and strengthen online presence through modern websites, branding,  
+and growth-focused digital marketing strategies.              </p>
               
               <ul className="grid grid-cols-2 gap-4 mb-8">
                 {[
-                  'B2B Portal Development',
-                  'HubSpot & Salesforce Sync',
+                  'Business Website Development',
+                  'AI-Powered Business Solutions',
+                  'Advanced SEO Optimization',
                   'High-Performance React/Next.js',
-                  'ISO Data Vetting Pipelines',
-                  'GDPR-Compliant Portals',
-                  'Real-Time Analytics Integration'
+                  'Digital Brand Positioning',
+                  'LinkedIn Growth Solutions',
+                  'Smart Workflow Automation',
+                  'AI Content Optimization'
                 ].map(item => (
                   <li key={item} className="flex items-center gap-2.5 text-sm text-nordic-black font-semibold">
                     <CheckCircle2 size={16} className="text-sage shrink-0" /> {item}
@@ -170,17 +173,35 @@ export const DigitalMarketing = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-3 block">Digital Operations</span>
-            <h3 className="text-3xl font-bold">Rigorous Sourcing Safeguards</h3>
+            <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-3 block">Digital Enterprise Solutions</span>
+            <h3 className="text-3xl font-bold">Modern Digital Infrastructure for Business Growth</h3>
           </motion.div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Database, title: 'CRM & ERP Alignment', desc: 'Seamless synchronization with Salesforce, HubSpot, SAP, and custom industrial product databases.' },
-              { icon: UserCheck, title: 'Lead Verification Audits', desc: 'Thorough data and identity vetting to filter low-intent inquiries and supply highly-qualified B2B leads.' },
-              { icon: Lock, title: 'GDPR & Enterprise Security', desc: 'Multi-layer access controls, secure encryption, GDPR compliance, and shielded client database portals.' },
-              { icon: BarChart3, title: 'Performance Analytics', desc: 'Live monitoring, clear KPI dashboards, and conversion tracking showing exact pipeline performance.' }
-            ].map((feature, i) => (
+{ 
+  icon: Database, 
+  title: 'Business Website Solutions', 
+  desc: 'Professional business websites designed for strong branding, modern performance, and better online visibility.' 
+},
+
+{ 
+  icon: UserCheck, 
+  title: 'LinkedIn & Branding', 
+  desc: 'Profile optimization, business branding, and digital presence solutions tailored for modern companies.' 
+},
+
+{ 
+  icon: Lock, 
+  title: 'Reliable Business Support', 
+  desc: 'Transparent communication, secure project handling, and dependable support throughout every stage.' 
+},
+
+{ 
+  icon: BarChart3, 
+  title: 'Growth & Visibility', 
+  desc: 'SEO-focused strategies, digital marketing support, and performance-driven solutions for business growth.' 
+}            ].map((feature, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}

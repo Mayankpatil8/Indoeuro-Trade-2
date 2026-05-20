@@ -156,7 +156,7 @@ export const Home = () => {
             </h1>
 
             <p className="text-base lg:text-lg text-nordic-grey mb-8 max-w-lg leading-relaxed">
-              Helping European SMEs streamline procurement, strengthen digital presence, and scale with reliable execution. Operations backed by Nordic professionalism and transparency.
+Helping European SMEs and enterprise teams streamline procurement, strengthen digital infrastructure, and scale operations through reliable sourcing, precision execution, and Nordic-standard business practices.
             </p>
 
 <div className="flex items-center gap-4 flex-nowrap">
@@ -207,8 +207,7 @@ export const Home = () => {
               style={{ transformStyle: "preserve-3d" }}
             >
               {/* Solid Offset Background Plate */}
-              <div className="absolute -bottom-6 -left-6 w-full h-full bg-beige/60 rounded-3xl -z-10" />
-
+<div className="absolute -bottom-6 -left-6 w-full h-full bg-[#d8d0c4]/80 rounded-3xl -z-10" />
               {/* Main Photo Container */}
               <div 
                 className="w-full h-full rounded-3xl overflow-hidden shadow-xl border border-beige/40"
@@ -246,14 +245,13 @@ export const Home = () => {
                   <div className="w-10 h-10 rounded-xl bg-sage/10 flex items-center justify-center text-sage">
                     <ShieldCheck size={20} />
                   </div>
-                  <div>
-                    <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">Compliance</div>
-                    <div className="text-xs font-extrabold text-nordic-black">100% ISO Audited</div>
+                   <div>
+                    <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">SLA Response</div>
+                    <div className="text-xs font-extrabold text-nordic-black">24h Direct Line</div>
                   </div>
                 </motion.div>
               </div>
 
-              {/* Floating Trust Badge C: Middle-Right SLA Speed */}
               <div
                 className="absolute top-1/3 -right-12 z-20 pointer-events-none"
                 style={{ transform: "translateZ(30px)", transformStyle: "preserve-3d" }}
@@ -275,8 +273,8 @@ export const Home = () => {
                     <Compass size={20} />
                   </div>
                   <div>
-                    <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">SLA Response</div>
-                    <div className="text-xs font-extrabold text-nordic-black">24h Direct Line</div>
+                    <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">GLOBAL SOURCING</div>
+                    <div className="text-xs font-extrabold text-nordic-black">European Standards</div>
                   </div>
                 </motion.div>
               </div>
@@ -296,19 +294,19 @@ export const Home = () => {
         >
           {[
             { label: 'Finland-Based', sub: 'European-focused operations' },
-            { label: 'Reliable Partnerships', sub: 'Procurement expertise' },
+            { label: 'Reliable Partnership', sub: 'Procurement expertise' },
             { label: 'Fast Response', sub: '24h response time' },
             { label: 'Business-Driven', sub: 'Growth-focused systems' },
             { label: 'Finland-Based', sub: 'European-focused operations' },
-            { label: 'Reliable Partnerships', sub: 'Procurement expertise' },
+            { label: 'Reliable Partnership', sub: 'Procurement expertise' },
             { label: 'Fast Response', sub: '24h response time' },
             { label: 'Business-Driven', sub: 'Growth-focused systems' },
             { label: 'Finland-Based', sub: 'European-focused operations' },
-            { label: 'Reliable Partnerships', sub: 'Procurement expertise' },
+            { label: 'Reliable Partnership', sub: 'Procurement expertise' },
             { label: 'Fast Response', sub: '24h response time' },
             { label: 'Business-Driven', sub: 'Growth-focused systems' },
             { label: 'Finland-Based', sub: 'European-focused operations' },
-            { label: 'Reliable Partnerships', sub: 'Procurement expertise' },
+            { label: 'Reliable Partnership', sub: 'Procurement expertise' },
             { label: 'Fast Response', sub: '24h response time' },
             { label: 'Business-Driven', sub: 'Growth-focused systems' }
           ].map((stat, i) => (
@@ -441,7 +439,7 @@ export const Home = () => {
               <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-4 block">The Finland Advantage</span>
               <h2 className="text-4xl lg:text-5xl font-bold mb-8 leading-tight">Nordic Reliability,<br />European Excellence.</h2>
               <p className="text-lg text-nordic-grey mb-8 leading-relaxed">
-                Operating from Finland, we bring Nordic professionalism, transparency, and operational efficiency to B2B procurement across Europe. We build long-term partnerships rooted in trust and rigorous European business standards.
+                Operating from Finland, we bring Nordic professionalism, transparency, and operational efficiency to B2B procurement across Europe. We build long-term partnership rooted in trust and rigorous European business standards.
               </p>
               <div className="space-y-6">
                 {[
@@ -493,7 +491,7 @@ export const Home = () => {
                 {[
                   { step: '01', title: 'Requirement Analysis', desc: 'Deep dive into your operational and technical specifications.' },
                   { step: '02', title: 'Supplier Verification', desc: 'Rigorous vetting of European and global manufacturing partners.' },
-                  { step: '03', title: 'Quality & Compliance Check', desc: 'Ensuring all components meet strict industry standards.' },
+                  { step: '03', title: 'Built to Your Requirements', desc: 'Ensuring all components meet your industry standards.' },
                   { step: '04', title: 'Delivery Coordination', desc: 'Seamless logistics and transparent supply chain management.' },
                   { step: '05', title: 'Long-Term Partnership', desc: 'Ongoing support, continuous optimization, and strategic alignment.' },
                 ].map((item, i) => (
@@ -551,7 +549,7 @@ export const Home = () => {
               How we resolve complex operational and procurement challenges for European industrial businesses.
             </p>
           </motion.div>
-          <div className="grid lg:grid-cols-2 gap-10">
+          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
             {[
               {
                 title: 'Component Procurement Optimization',
@@ -564,6 +562,12 @@ export const Home = () => {
                 problem: 'Difficulty securing a reliable supply chain for high-precision CNC mechanical fasteners.',
                 solution: 'Vetted and partnered with top-tier industrial manufacturers meeting strict European ISO standards.',
                 outcome: 'Established a continuous, high-volume supply chain with a 15% cost efficiency improvement.'
+              },
+              {
+                title: 'Semiconductor Supply Continuity',
+                problem: 'Critical production halts due to global microchip shortages and untrustworthy secondary market electronics.',
+                solution: 'Leveraged vetted OEM supplier networks to secure traceable, RoHS-compliant microcontrollers with strict escrow QA testing.',
+                outcome: 'Eliminated line-down events for 18 months while reducing spot-market premium costs by 45%.'
               }
             ].map((caseStudy, i) => (
               <motion.div 
@@ -617,7 +621,7 @@ export const Home = () => {
               { icon: Filter, title: 'Transparency', desc: 'Clear communication at every stage.' },
               { icon: Settings, title: 'Operational Excellence', desc: 'Precision in every transaction.' },
               { icon: Truck, title: 'Fast Communication', desc: '24h response guarantee.' },
-              { icon: Users, title: 'Long-Term Partnerships', desc: 'Built on trust and mutual growth.' },
+              { icon: Users, title: 'Long-Term Partnership', desc: 'Built on trust and mutual growth.' },
             ].map((item, i) => (
               <motion.div 
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}

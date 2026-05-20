@@ -160,7 +160,7 @@ export const Food = () => {
             <div className="p-10 lg:p-16 relative">
               <div className="absolute top-0 right-0 w-64 h-64 pointer-events-none" style={{ background: "radial-gradient(circle, rgba(197, 102, 79, 0.05) 0%, rgba(197, 102, 79, 0) 70%)", willChange: "transform" }} />
               
-              <span className="text-xs font-bold uppercase tracking-widest text-terracotta mb-4 block">Bulk Sourcing Partnerships</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-terracotta mb-4 block">Bulk Sourcing Partnership</span>
               <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-nordic-black">Any Origin. Vetted Quality.</h2>
               <p className="text-nordic-grey mb-8 leading-relaxed">
                 Connect directly with verified growers. Our direct farm integration and central quality checking setups enable food production lines to source stable bulk supplies without handling raw origin complex trade issues.
