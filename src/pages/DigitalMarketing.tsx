@@ -1,105 +1,236 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Monitor, Share2, Search, Code, CheckCircle2, ArrowRight } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Database, UserCheck, Lock, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SOURCING_EXAMPLES } from '@/constants';
 import { ProductCard } from '@/components/ProductCard';
 import { useSEO } from '@/lib/useSEO';
+import { PageTransition } from '@/components/PageTransition';
+
 
 export const DigitalMarketing = () => {
   useSEO({
-    title: 'Digital Marketing & Web Development – IndoEuro Core Oy',
-    description: 'Custom web development, SEO, social media management & UI/UX design services worldwide. Full-stack digital growth solutions from IndoEuro Core Oy.',
-    keywords: 'digital marketing, web development, SEO services, social media management, UI UX design, digital growth, Finland digital agency',
+    title: 'Industrial Digital Sourcing & Enterprise Web Solutions | IndoEuro Core Oy',
+    description: 'Scale your B2B enterprise with custom web systems, industrial lead generation, CRM pipelines, and digital expansion strategies in Europe.',
+    keywords: 'industrial digital sourcing, B2B lead generation, manufacturer web development, industrial CRM integrations, Europe B2B growth agency',
   });
 
   const digital = SOURCING_EXAMPLES.filter(p => p.category === 'digital');
 
+  // Framer Motion Animation Variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 15 } }
+  };
+
+  // Structured Technical SEO Schema (JSON-LD)
+  const schemaMarkup = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Industrial Digital Sourcing & Enterprise Web Integration",
+    "description": "Enterprise-grade web systems, bespoke B2B portals, custom industrial CRM integrations, and data-driven B2B lead generation platforms for European manufacturing supply lines.",
+    "provider": {
+      "@type": "Organization",
+      "name": "IndoEuro Core Oy",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mannerheimintie 12",
+        "addressLocality": "Helsinki",
+        "postalCode": "00100",
+        "addressCountry": "FI"
+      }
+    },
+    "areaServed": "Europe",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Digital Integration Services Catalog",
+      "itemListElement": digital.map((item) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": item.name,
+          "description": item.description
+        }
+      }))
+    }
+  };
+
   return (
-    <div className="pt-32 pb-24">
+    <PageTransition>
+      <div className="pt-24 pb-24 bg-cream grainy-bg min-h-screen">
+      {/* Inject Structured Technical SEO Schema */}
+      <script type="application/ld+json">
+        {JSON.stringify(schemaMarkup)}
+      </script>
+
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <header className="mb-16 text-center max-w-3xl mx-auto">
-          <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-4 block">Digital Excellence</span>
-          <h1 className="text-5xl font-bold mb-6">Digital Solutions & Growth Services Worldwide</h1>
-          <p className="text-lg text-nordic-grey leading-relaxed">
-            From custom web applications to global digital marketing strategies, we deliver scalable, high-performance digital solutions that help your business grow and succeed worldwide.
-          </p>
+        
+        {/* Header Section */}
+        <header className="mb-20 text-center max-w-4xl mx-auto">
+          <motion.div 
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2.5 px-5 py-2 bg-white text-nordic-black text-xs font-bold uppercase tracking-[0.15em] rounded-full mb-6 shadow-sm border border-beige"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-600 hover:bg-emerald-700 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600 hover:bg-emerald-700"></span>
+            </span>
+            Global Digital Integration
+          </motion.div>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-4xl lg:text-6xl font-bold mb-6 tracking-tight text-nordic-black"
+          >
+            Industrial Digital <span className="text-terracotta">Sourcing & Systems.</span>
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg text-nordic-grey leading-relaxed"
+          >
+            Connecting industrial suppliers and manufacturers with high-performance digital ecosystems, robust ERP/CRM database pipelines, and strategic European enterprise expansion.
+          </motion.p>
         </header>
 
-        {/* Services Overview */}
-        <section className="mb-24 bg-nordic-black rounded-[2rem] overflow-hidden text-white soft-shadow">
-          <div className="grid lg:grid-cols-2 items-center">
-            <div className="p-12 lg:p-20">
-              <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-4 block">Full-Stack Digital Solutions</span>
-              <h2 className="text-4xl font-bold mb-6">Web, Marketing & Growth - All in One</h2>
-              <p className="text-white/70 mb-10 leading-relaxed">
-                Our global digital network connects you with expert developers, designers, and marketing professionals. Whether you need a website, app, or full-scale brand growth strategy, we deliver results with precision and performance.
+        {/* Custom Sourcing Section (Web, CRM, Portals Focus) */}
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mb-24"
+        >
+          <div className="bg-white rounded-[2.5rem] border border-beige shadow-sm overflow-hidden grid lg:grid-cols-2 items-center gap-0">
+            <div className="p-10 lg:p-16 relative">
+              <div className="absolute top-0 right-0 w-64 h-64 pointer-events-none" style={{ background: "radial-gradient(circle, rgba(197, 102, 79, 0.05) 0%, rgba(197, 102, 79, 0) 70%)", willChange: "transform" }} />
+              
+              <span className="text-xs font-bold uppercase tracking-widest text-terracotta mb-4 block">Bespoke Enterprise Systems</span>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-nordic-black">Enterprise Architecture. Made Seamless.</h2>
+              <p className="text-nordic-grey mb-8 leading-relaxed">
+                We design and integrate custom digital environments that bridge the gap between technical manufacturers and modern global buyers. From highly optimized web front-ends to synchronized back-end CRM pipelines, we build high-converting B2B channels.
               </p>
-              <ul className="space-y-4 mb-10">
+              
+              <ul className="grid grid-cols-2 gap-4 mb-8">
                 {[
-                  'Custom Web & App Development',
-                  'Social Media Management & Growth',
-                  'SEO & Performance Marketing',
-                  'UI/UX Design & Branding'
+                  'B2B Portal Development',
+                  'HubSpot & Salesforce Sync',
+                  'High-Performance React/Next.js',
+                  'ISO Data Vetting Pipelines',
+                  'GDPR-Compliant Portals',
+                  'Real-Time Analytics Integration'
                 ].map(item => (
-                  <li key={item} className="flex items-center gap-3 text-sm">
-                    <CheckCircle2 size={18} className="text-sage" /> {item}
+                  <li key={item} className="flex items-center gap-2.5 text-sm text-nordic-black font-semibold">
+                    <CheckCircle2 size={16} className="text-sage shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
+              
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-terracotta text-white font-bold rounded-full hover:bg-terracotta/90 transition-all flex items-center inline-flex"
+                className="px-8 py-4 bg-terracotta text-white font-bold rounded-full hover:bg-terracotta/90 transition-all flex items-center justify-center inline-flex soft-shadow group"
               >
-                Start Your Project <ArrowRight size={18} className="ml-2" />
+                Inquire About Systems <ArrowRight size={18} className="ml-3 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
-            <div className="h-full min-h-[400px]">
+            
+            <div className="h-full min-h-[430px] relative">
               <img
-                src="/digital-hero.png"
-                alt="Digital marketing and web development services hub"
-                className="w-full h-full object-cover opacity-90"
+                src="digital!.png"
+                alt="Industrial CRM dashboards and high-performance digital marketing systems"
+                className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
                 decoding="async"
               />
             </div>
           </div>
-        </section>
+        </motion.div>
 
-        {/* Service Pillars */}
-        <section className="mb-24 grid md:grid-cols-3 gap-8">
-          {[
-            { icon: Code, title: 'Web Development', desc: 'Modern, scalable, and secure web applications built with the latest technologies.' },
-            { icon: Share2, title: 'Social Media', desc: 'Data-driven social strategies to grow your audience and engagement globally.' },
-            { icon: Search, title: 'SEO & Growth', desc: 'Comprehensive search engine optimization to ensure your brand is found by the right people.' },
-          ].map((item, i) => (
-            <div key={i} className="p-8 bg-beige rounded-3xl border border-beige text-center soft-shadow">
-              <div className="w-12 h-12 rounded-full bg-cream mx-auto flex items-center justify-center text-terracotta mb-4">
-                <item.icon size={24} />
-              </div>
-              <h4 className="font-bold mb-2">{item.title}</h4>
-              <p className="text-sm text-nordic-grey">{item.desc}</p>
-            </div>
-          ))}
-        </section>
-
-        {/* Sourcing Examples */}
-        <div>
-          <h3 className="text-3xl font-bold mb-12">What We Source Globally</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {digital.map((product, i) => (
+        {/* Bento Technical Validation Grid */}
+        <div className="mb-24">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-3 block">Digital Operations</span>
+            <h3 className="text-3xl font-bold">Rigorous Sourcing Safeguards</h3>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: Database, title: 'CRM & ERP Alignment', desc: 'Seamless synchronization with Salesforce, HubSpot, SAP, and custom industrial product databases.' },
+              { icon: UserCheck, title: 'Lead Verification Audits', desc: 'Thorough data and identity vetting to filter low-intent inquiries and supply highly-qualified B2B leads.' },
+              { icon: Lock, title: 'GDPR & Enterprise Security', desc: 'Multi-layer access controls, secure encryption, GDPR compliance, and shielded client database portals.' },
+              { icon: BarChart3, title: 'Performance Analytics', desc: 'Live monitoring, clear KPI dashboards, and conversion tracking showing exact pipeline performance.' }
+            ].map((feature, i) => (
               <motion.div
-                key={product.id}
+                key={i}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="p-8 bg-nordic-black text-white rounded-3xl border border-white/5 soft-shadow hover:border-terracotta/30 transition-all duration-300 group"
               >
-                <ProductCard product={product} />
+                <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-terracotta mb-6 group-hover:scale-105 transition-transform duration-300">
+                  <feature.icon size={24} />
+                </div>
+                <h4 className="text-lg font-bold mb-3">{feature.title}</h4>
+                <p className="text-sm text-white/70 leading-relaxed">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
+
+        {/* Component Showcase */}
+        <div>
+          <div className="mb-12 flex items-end justify-between border-b border-beige pb-6">
+            <div>
+              <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-3 block">Integration Portfolio</span>
+              <h3 className="text-3xl font-bold">Standard Sourced Categories</h3>
+            </div>
+            <p className="text-nordic-grey max-w-sm text-sm hidden md:block">
+              Examples of enterprise digital capabilities and web solutions set up for European market operations.
+            </p>
+          </div>
+          
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {digital.map((product) => (
+              <motion.div
+                key={product.id}
+                variants={itemVariants}
+              >
+                <ProductCard product={product} />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+
       </div>
     </div>
+    </PageTransition>
   );
 };

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, ShieldCheck, Truck, Settings, Users, Filter } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Truck, Settings, Users, Filter, MapPin, Compass } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { PageTransition } from '@/components/PageTransition';
 import { SOURCING_EXAMPLES } from '@/constants';
 import { ProductCard } from '@/components/ProductCard';
 import { FoodProductCard } from '@/components/FoodProductCard';
@@ -17,6 +18,17 @@ export const Home = () => {
   });
   const [activeFilter, setActiveFilter] = useState<'all' | 'conventional' | 'organic' | 'gluten-free'>('all');
 
+  // 3D Parallax Tracking States
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    setMousePosition({ x, y });
+  };
+
   const foodProducts = SOURCING_EXAMPLES.filter(p => p.category === 'food');
 
   const filteredProducts = activeFilter === 'all'
@@ -31,59 +43,278 @@ export const Home = () => {
   ];
 
   return (
-    <div className="pt-20">
+    <PageTransition>
+      <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] py-16 lg:py-0 flex items-center overflow-hidden grainy-bg">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full grid lg:grid-cols-2 gap-10 items-center">
+      <section className="relative min-h-[90vh] py-16 lg:py-0 flex items-center overflow-hidden grainy-bg z-10">
+        
+        {/* Dynamic Aurora Ambient Glows */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            animate={{
+              x: [0, 40, -20, 0],
+              y: [0, -30, 20, 0],
+              scale: [1, 1.15, 0.9, 1],
+            }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            style={{
+              background: 'radial-gradient(circle, rgba(156, 175, 136, 0.2) 0%, rgba(156, 175, 136, 0) 70%)',
+              willChange: 'transform',
+            }}
+            className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full"
+          />
+          <motion.div
+            animate={{
+              x: [0, -30, 30, 0],
+              y: [0, 40, -20, 0],
+              scale: [1, 1.2, 0.95, 1],
+            }}
+            transition={{
+              duration: 18,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2,
+            }}
+            style={{
+              background: 'radial-gradient(circle, rgba(217, 119, 87, 0.1) 0%, rgba(217, 119, 87, 0) 70%)',
+              willChange: 'transform',
+            }}
+            className="absolute top-10 -right-20 w-[600px] h-[600px] rounded-full"
+          />
+          <motion.div
+            animate={{
+              x: [0, 20, -30, 0],
+              y: [0, 30, -30, 0],
+              scale: [0.9, 1.1, 0.85, 0.9],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 4,
+            }}
+            style={{
+              background: 'radial-gradient(circle, rgba(223, 216, 206, 0.5) 0%, rgba(223, 216, 206, 0) 70%)',
+              willChange: 'transform',
+            }}
+            className="absolute top-1/2 left-1/3 w-96 h-96 rounded-full"
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
+            className="relative z-10"
           >
-            <span className="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-bold uppercase tracking-widest rounded-full mb-4">
-              Finland-Based • European B2B Enterprise Solutions
+            {/* Pulsing Active Badge */}
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white border border-beige/60 text-nordic-grey text-[10px] font-bold uppercase tracking-widest rounded-full mb-6 shadow-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-800 hover:bg-emerald-700 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600 hover:bg-emerald-900"></span>
+              </span>
+              Finland-Based / European B2B Enterprise Solutions
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.15] mb-6 text-nordic-black tracking-tight">
-              European Supply & Growth <span className="text-terracotta">Solutions for Modern Businesses.</span>
+
+            {/* Premium Split-Text Reveal H1 */}
+            <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.15] mb-6 text-nordic-black tracking-tight flex flex-col gap-1">
+              <span className="block overflow-hidden h-fit relative py-0.5">
+                <motion.span
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  transition={{ type: "spring", stiffness: 120, damping: 15, delay: 0.1 }}
+                  className="block"
+                >
+                  European Supply & Growth
+                </motion.span>
+              </span>
+              <span className="block overflow-hidden h-fit relative py-0.5 text-terracotta">
+                <motion.span
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  transition={{ type: "spring", stiffness: 120, damping: 15, delay: 0.25 }}
+                  className="block"
+                >
+                  Solutions for
+                </motion.span>
+              </span>
+              <span className="block overflow-hidden h-fit relative py-0.5 text-terracotta">
+                <motion.span
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  transition={{ type: "spring", stiffness: 120, damping: 15, delay: 0.4 }}
+                  className="block"
+                >
+                  Modern Businesses.
+                </motion.span>
+              </span>
             </h1>
+
             <p className="text-base lg:text-lg text-nordic-grey mb-8 max-w-lg leading-relaxed">
               Helping European SMEs streamline procurement, strengthen digital presence, and scale with reliable execution. Operations backed by Nordic professionalism and transparency.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                to="/contact"
-                className="px-6 py-3 lg:px-8 lg:py-4 bg-terracotta text-white font-bold rounded-full hover:bg-terracotta/90 transition-all soft-shadow flex items-center"
-              >
-                Book Consultation <ArrowRight size={18} className="ml-2" />
-              </Link>
-              <Link
-                to="/contact"
-                className="px-6 py-3 lg:px-8 lg:py-4 bg-white text-nordic-black border border-beige font-bold rounded-full hover:bg-beige transition-all"
-              >
-                Request Free Audit
-              </Link>
-            </div>
+
+<div className="flex items-center gap-4 flex-nowrap">
+  <motion.div
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.98 }}
+    transition={{ type: "spring", stiffness: 400, damping: 15 }}
+  >
+    <Link
+      to="/contact"
+      className="px-6 py-3 lg:px-8 lg:py-4 bg-terracotta text-white font-bold rounded-full hover:bg-terracotta/90 transition-all soft-shadow flex items-center group/btn whitespace-nowrap"
+    >
+      Book Consultation
+      <ArrowRight
+        size={18}
+        className="ml-2 group-hover/btn:translate-x-1 transition-transform duration-300"
+      />
+    </Link>
+  </motion.div>
+
+  <motion.div
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.98 }}
+    transition={{ type: "spring", stiffness: 400, damping: 15 }}
+  >
+
+  </motion.div>
+</div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="relative hidden lg:block"
+          {/* Interactive 3D Parallax Photo Wrapper */}
+          <div
+            className="relative hidden lg:block perspective-1000 z-10 w-full"
+            onMouseMove={handleMouseMove}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => {
+              setIsHovered(false);
+              setMousePosition({ x: 0, y: 0 });
+            }}
           >
-            <div className="relative z-10 rounded-3xl overflow-hidden soft-shadow aspect-square">
-              <img
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200"
-                alt="Global trade and precision engineering headquarters"
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-                fetchPriority="high"
-                decoding="async"
-              />
-            </div>
-            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-beige rounded-3xl -z-10" />
-            <div className="absolute -top-10 -right-10 w-48 h-48 bg-sage/20 rounded-full blur-3xl -z-10" />
-          </motion.div>
+            <motion.div
+              animate={{
+                rotateX: isHovered ? mousePosition.y * -20 : 0,
+                rotateY: isHovered ? mousePosition.x * 20 : 0,
+              }}
+              transition={{ type: "spring", stiffness: 150, damping: 20, mass: 0.5 }}
+              className="relative w-full aspect-square"
+              style={{ transformStyle: "preserve-3d" }}
+            >
+              {/* Solid Offset Background Plate */}
+              <div className="absolute -bottom-6 -left-6 w-full h-full bg-beige/60 rounded-3xl -z-10" />
+
+              {/* Main Photo Container */}
+              <div 
+                className="w-full h-full rounded-3xl overflow-hidden shadow-xl border border-beige/40"
+                style={{ transform: "translateZ(10px)", transformStyle: "preserve-3d" }}
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200"
+                  alt="Global trade and precision engineering headquarters"
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              </div>
+
+              {/* Floating Trust Badge A: Top-Left HQ locator */}
+              <div
+                className="absolute -top-6 -left-10 z-20 pointer-events-none"
+                style={{ transform: "translateZ(60px)", transformStyle: "preserve-3d" }}
+              >
+                <motion.div
+                  animate={{
+                    y: [0, -8, 0],
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  style={{ willChange: "transform" }}
+                  className="bg-white/80 backdrop-blur-md border border-beige/60 shadow-lg rounded-2xl p-4 flex items-center gap-3"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-terracotta/10 flex items-center justify-center text-terracotta">
+                    <MapPin size={20} />
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">HQ Hub</div>
+                    <div className="text-xs font-extrabold text-nordic-black flex items-center gap-1.5">
+                      Helsinki, Finland
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sage opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-sage"></span>
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Floating Trust Badge B: Bottom-Right Compliance ring */}
+              <div
+                className="absolute -bottom-4 -right-8 z-20 pointer-events-none"
+                style={{ transform: "translateZ(45px)", transformStyle: "preserve-3d" }}
+              >
+                <motion.div
+                  animate={{
+                    y: [0, 8, 0],
+                  }}
+                  transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5,
+                  }}
+                  style={{ willChange: "transform" }}
+                  className="bg-white/80 backdrop-blur-md border border-beige/60 shadow-lg rounded-2xl p-4 flex items-center gap-3"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-sage/10 flex items-center justify-center text-sage">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">Compliance</div>
+                    <div className="text-xs font-extrabold text-nordic-black">100% ISO Audited</div>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Floating Trust Badge C: Middle-Right SLA Speed */}
+              <div
+                className="absolute top-1/3 -right-12 z-20 pointer-events-none"
+                style={{ transform: "translateZ(30px)", transformStyle: "preserve-3d" }}
+              >
+                <motion.div
+                  animate={{
+                    y: [0, -6, 0],
+                  }}
+                  transition={{
+                    duration: 4.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1,
+                  }}
+                  style={{ willChange: "transform" }}
+                  className="bg-white/80 backdrop-blur-md border border-beige/60 shadow-lg rounded-2xl p-4 flex items-center gap-3"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-terracotta/10 flex items-center justify-center text-terracotta">
+                    <Compass size={20} />
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">SLA Response</div>
+                    <div className="text-xs font-extrabold text-nordic-black">24h Direct Line</div>
+                  </div>
+                </motion.div>
+              </div>
+
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -92,6 +323,7 @@ export const Home = () => {
         <motion.div
           animate={{ x: ["-50%", "0%"] }}
           transition={{ ease: "linear", duration: 30, repeat: Infinity }}
+          style={{ willChange: "transform" }}
           className="flex flex-nowrap items-center gap-16 px-8 w-fit"
         >
           {[
@@ -203,7 +435,7 @@ export const Home = () => {
               className="group relative h-[400px] rounded-3xl overflow-hidden soft-shadow"
             >
               <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600"
+                src="digital..png"
                 alt="Digital Marketing"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"
@@ -355,7 +587,7 @@ export const Home = () => {
                 loading="lazy"
                 decoding="async"
               />
-              <div className="absolute -top-10 -right-10 w-48 h-48 bg-terracotta/20 rounded-full blur-3xl -z-10" />
+              <div className="absolute -top-10 -right-10 w-48 h-48 -z-10 pointer-events-none" style={{ background: "radial-gradient(circle, rgba(197, 102, 79, 0.2) 0%, rgba(197, 102, 79, 0) 70%)", willChange: "transform" }} />
             </motion.div>
           </div>
         </div>
@@ -463,6 +695,7 @@ export const Home = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </PageTransition>
   );
 };

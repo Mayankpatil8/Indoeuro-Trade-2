@@ -7,6 +7,8 @@ import { FoodProductModal } from '@/components/FoodProductModal';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
 import { useSEO } from '@/lib/useSEO';
+import { PageTransition } from '@/components/PageTransition';
+
 
 type FoodType = 'all' | 'conventional' | 'organic' | 'gluten-free';
 
@@ -93,7 +95,8 @@ export const Food = () => {
   };
 
   return (
-    <div className="pt-24 pb-24 bg-cream grainy-bg min-h-screen">
+    <PageTransition>
+      <div className="pt-24 pb-24 bg-cream grainy-bg min-h-screen">
       {/* Inject Structured Technical SEO Schema */}
       <script type="application/ld+json">
         {JSON.stringify(foodSchemaMarkup)}
@@ -110,8 +113,8 @@ export const Food = () => {
             className="inline-flex items-center gap-2.5 px-5 py-2 bg-white text-nordic-black text-xs font-bold uppercase tracking-[0.15em] rounded-full mb-6 shadow-sm border border-beige"
           >
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-terracotta opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-terracotta"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-600 hover:bg-emerald-700 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600 hover:bg-emerald-700"></span>
             </span>
             Global Agriculture Supply
           </motion.div>
@@ -144,7 +147,7 @@ export const Food = () => {
         >
           <div className="bg-white rounded-[2.5rem] border border-beige shadow-sm overflow-hidden grid lg:grid-cols-2 items-center gap-0">
             <div className="p-10 lg:p-16 relative">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-terracotta/5 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute top-0 right-0 w-64 h-64 pointer-events-none" style={{ background: "radial-gradient(circle, rgba(197, 102, 79, 0.05) 0%, rgba(197, 102, 79, 0) 70%)", willChange: "transform" }} />
               
               <span className="text-xs font-bold uppercase tracking-widest text-terracotta mb-4 block">Bulk Sourcing Partnerships</span>
               <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-nordic-black">Any Origin. Vetted Quality.</h2>
@@ -191,7 +194,7 @@ export const Food = () => {
             
             <div className="h-full min-h-[450px] relative">
               <img
-                src="https://images.unsplash.com/photo-1574325131876-a7999d3d5182?auto=format&fit=crop&q=80&w=1200"
+                src="food-hero.png"
                 alt="Organic farming and premium bulk grain agricultural sourcing"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -303,7 +306,7 @@ export const Food = () => {
 
       {/* Custom Request Section */}
       <section className="mt-24 py-24 bg-white border-y border-beige relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-terracotta/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-0 w-96 h-96 pointer-events-none" style={{ background: "radial-gradient(circle, rgba(197, 102, 79, 0.05) 0%, rgba(197, 102, 79, 0) 70%)", willChange: "transform" }} />
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-4 block">
             Bespoke Procurement
@@ -323,5 +326,6 @@ export const Food = () => {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 };

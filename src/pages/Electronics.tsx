@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Cpu, ShieldCheck, Zap, Layers, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { PageTransition } from '@/components/PageTransition';
 import { SOURCING_EXAMPLES } from '@/constants';
 import { ProductCard } from '@/components/ProductCard';
 import { useSEO } from '@/lib/useSEO';
@@ -33,7 +34,8 @@ export const Electronics = () => {
   };
 
   return (
-    <div className="pt-24 pb-24 bg-cream grainy-bg min-h-screen">
+    <PageTransition>
+      <div className="pt-24 pb-24 bg-cream grainy-bg min-h-screen">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         
         {/* Header Section */}
@@ -45,8 +47,8 @@ export const Electronics = () => {
             className="inline-flex items-center gap-2.5 px-5 py-2 bg-white text-nordic-black text-xs font-bold uppercase tracking-[0.15em] rounded-full mb-6 shadow-sm border border-beige"
           >
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-terracotta opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-terracotta"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-600 hover:bg-emerald-700 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600 hover:bg-emerald-700"></span>
             </span>
             Enterprise Semiconductor Supply
           </motion.div>
@@ -78,7 +80,7 @@ export const Electronics = () => {
           className="mb-24"
         >
           <div className="bg-white rounded-[2.5rem] p-10 lg:p-16 border border-beige shadow-sm flex flex-col lg:flex-row items-center gap-12 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-terracotta/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-96 h-96 pointer-events-none" style={{ background: "radial-gradient(circle, rgba(197, 102, 79, 0.05) 0%, rgba(197, 102, 79, 0) 70%)", willChange: "transform" }} />
             
             <div className="flex-1 z-10">
               <span className="text-xs font-bold uppercase tracking-widest text-terracotta mb-4 block">Custom Component Inquiry</span>
@@ -175,6 +177,7 @@ export const Electronics = () => {
         </div>
 
       </div>
-    </div>
+      </div>
+    </PageTransition>
   );
 };

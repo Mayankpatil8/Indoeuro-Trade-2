@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Clock, ShieldCheck, ChevronDown } from 'lucide-react';
 import { useSEO } from '@/lib/useSEO';
+import { PageTransition } from '@/components/PageTransition';
+
 
 export const Contact = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -25,7 +27,8 @@ export const Contact = () => {
   });
 
   return (
-    <div className="pt-24 pb-24 bg-cream grainy-bg min-h-screen">
+    <PageTransition>
+      <div className="pt-24 pb-24 bg-cream grainy-bg min-h-screen">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
         {/* Header Section */}
@@ -64,7 +67,7 @@ export const Contact = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-5 bg-nordic-black text-white p-10 lg:p-12 rounded-[2.5rem] soft-shadow border border-white/5 relative overflow-hidden"
           >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-terracotta/10 rounded-full blur-3xl -z-0 pointer-events-none" />
+            <div className="absolute top-0 right-0 w-64 h-64 -z-0 pointer-events-none" style={{ background: "radial-gradient(circle, rgba(197, 102, 79, 0.1) 0%, rgba(197, 102, 79, 0) 70%)", willChange: "transform" }} />
 
             <h3 className="text-3xl font-bold mb-8 relative z-10">Direct Access</h3>
 
@@ -237,5 +240,6 @@ export const Contact = () => {
 
       </div>
     </div>
+    </PageTransition>
   );
 };

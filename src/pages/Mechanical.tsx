@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, ArrowRight, Settings, ShieldCheck, Compass, Anchor } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { PageTransition } from '@/components/PageTransition';
 import { SOURCING_EXAMPLES } from '@/constants';
 import { ProductCard } from '@/components/ProductCard';
 import { useSEO } from '@/lib/useSEO';
@@ -65,7 +66,8 @@ export const Mechanical = () => {
   };
 
   return (
-    <div className="pt-24 pb-24 bg-cream grainy-bg min-h-screen">
+    <PageTransition>
+      <div className="pt-24 pb-24 bg-cream grainy-bg min-h-screen">
       {/* Inject Structured Technical SEO Schema */}
       <script type="application/ld+json">
         {JSON.stringify(schemaMarkup)}
@@ -82,8 +84,8 @@ export const Mechanical = () => {
             className="inline-flex items-center gap-2.5 px-5 py-2 bg-white text-nordic-black text-xs font-bold uppercase tracking-[0.15em] rounded-full mb-6 shadow-sm border border-beige"
           >
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-terracotta opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-terracotta"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-600 hover:bg-emerald-700 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600 hover:bg-emerald-700"></span>
             </span>
             Precision Engineering Supply
           </motion.div>
@@ -116,7 +118,7 @@ export const Mechanical = () => {
         >
           <div className="bg-white rounded-[2.5rem] border border-beige shadow-sm overflow-hidden grid lg:grid-cols-2 items-center gap-0">
             <div className="p-10 lg:p-16 relative">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-terracotta/5 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute top-0 right-0 w-64 h-64 pointer-events-none" style={{ background: "radial-gradient(circle, rgba(197, 102, 79, 0.05) 0%, rgba(197, 102, 79, 0) 70%)", willChange: "transform" }} />
               
               <span className="text-xs font-bold uppercase tracking-widest text-terracotta mb-4 block">Bespoke Fabrication Sourcing</span>
               <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-nordic-black">Any Part. To Any Tolerance.</h2>
@@ -149,7 +151,7 @@ export const Mechanical = () => {
             
             <div className="h-full min-h-[450px] relative">
               <img
-                src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=1200"
+                src="mechanical-hero.png"
                 alt="Precision mechanical engineering and custom CNC machined components"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
@@ -227,6 +229,7 @@ export const Mechanical = () => {
         </div>
 
       </div>
-    </div>
+      </div>
+    </PageTransition>
   );
 };

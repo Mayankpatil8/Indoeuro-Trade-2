@@ -16,7 +16,7 @@ export const Footer = () => {
               className="font-display text-xl font-bold tracking-tighter"
               aria-label="IndoEuro Trade Hub — Home"
             >
-              INDOEURO <span className="text-terracotta">TRADE HUB</span>
+              INDOEURO <span className="text-terracotta">CORE OY</span>
             </Link>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
               Your whole &amp; sole sourcing partner in Finland.
@@ -75,7 +75,7 @@ export const Footer = () => {
 
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-white/30 text-xs">
-            &copy; 2026 IndoEuro Trade Hub Oy. All rights reserved.
+            &copy; 2026 IndoEuro Core Oy. All rights reserved.
           </p>
           <nav aria-label="Legal navigation" className="flex gap-8 text-white/30 text-xs">
             <Link to="#" className="hover:text-white transition-colors">Privacy Policy</Link>
