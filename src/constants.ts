@@ -81,70 +81,166 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     image: 'https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&q=80&w=800',
     tags: ['PCB', 'Custom']
   },
+  {
+    id: 'e9',
+    name: 'UAV Drone Flight Controllers',
+    description: 'F7 and H7 dual-IMU autopilot boards running ArduPilot / PX4, with redundant barometers, CAN-FD bus, 8× UART, and black-box data-logging for fixed-wing, multirotor, and VTOL platforms.',
+    category: 'electronics',
+    image: 'https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&q=80&w=800',
+    tags: ['Drone', 'Autopilot']
+  },
+  {
+    id: 'e10',
+    name: 'Brushless ESC Units',
+    description: 'High-voltage 60A–120A BLHeli32 and AM32 electronic speed controllers with active freewheeling, DShot 1200, telemetry output, and conformal-coated PCBs for harsh outdoor UAV operations.',
+    category: 'electronics',
+    image: 'https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&q=80&w=800',
+    tags: ['ESC', 'UAV Power']
+  },
+  {
+    id: 'e11',
+    name: 'Thermal Imaging Camera Modules',
+    description: 'Uncooled VOx microbolometer cores at 320×256 and 640×512 resolution, NETD <50 mK, LVDS / USB3 output — suited for border surveillance, search-and-rescue, and industrial thermography payloads.',
+    category: 'electronics',
+    image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&q=80&w=800',
+    tags: ['Thermal', 'Defence']
+  },
+  {
+    id: 'e12',
+    name: 'Gimbal Stabilisation Systems',
+    description: '3-axis brushless gimbal systems with 0.01° encoder resolution, vibration isolation damper mounts, and CAN / PWM input for full Sony, GoPro, and custom payload integration on enterprise UAVs.',
+    category: 'electronics',
+    image: 'https://images.unsplash.com/photo-1598196767498-1b7e0e44e2d7?auto=format&fit=crop&q=80&w=800',
+    tags: ['Gimbal', 'Stabilisation']
+  },
+  {
+    id: 'e13',
+    name: 'RTK GNSS Positioning Modules',
+    description: 'Multi-band L1/L2/L5 RTK receivers achieving ±1 cm horizontal accuracy, supporting GPS, GLONASS, Galileo, and BeiDou simultaneously for precision agriculture, mapping, and defence-grade navigation.',
+    category: 'electronics',
+    image: 'https://images.unsplash.com/photo-1569429593410-b498b3fb3387?auto=format&fit=crop&q=80&w=800',
+    tags: ['RTK', 'GNSS']
+  },
+  {
+    id: 'e14',
+    name: 'AI Edge Vision Processors',
+    description: 'NVIDIA Jetson Orin NX and Hailo-8L AI accelerator modules delivering up to 40 TOPS on-board inference for real-time object detection, target tracking, and autonomous navigation pipelines.',
+    category: 'electronics',
+    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&q=80&w=800',
+    tags: ['AI', 'Edge Compute']
+  },
+  {
+    id: 'e15',
+    name: 'FPV & HD Video Transmission',
+    description: 'Digital HD FPV systems with 1080p / 60 fps low-latency (<28 ms) transmission up to 12 km, 8-channel diversity, AES-128 encrypted video links, and OFDM frequency-hopping anti-jamming.',
+    category: 'electronics',
+    image: 'https://images.unsplash.com/photo-1625014618427-fbc980b974f5?auto=format&fit=crop&q=80&w=800',
+    tags: ['FPV', 'Video Link']
+  },
   // Mechanical
   {
     id: 'm1',
-    name: 'Custom CNC Gear Sets',
-    description: 'Hardened steel gears with micron-level tolerance for heavy machinery.',
+    name: 'Servo Motor Components',
+    description: 'High-torque AC/DC servo motors with encoder feedback and IP65 protection, sourced for precision motion control across CNC, robotics, and industrial automation lines.',
     category: 'mechanical',
-    image: 'images/gearset.png',
-    tags: ['Steel', 'CNC']
+    image: 'https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&q=80&w=800',
+    tags: ['Servo', 'Motion Control']
   },
   {
     id: 'm2',
-    name: 'Aerospace Fasteners',
-    description: 'Lightweight, aerospace-grade titanium bolts and nuts for critical applications.',
+    name: 'Precision CNC Parts',
+    description: 'Custom-machined aluminum, stainless-steel, and hardened-tool-steel components held to ±0.005 mm tolerances, with full dimensional inspection reports and surface finish certificates.',
     category: 'mechanical',
-    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800',
-    tags: ['Titanium', 'Aerospace']
+    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=800',
+    tags: ['CNC', 'Precision']
   },
   {
     id: 'm3',
-    name: 'Hydraulic Actuators',
-    description: 'Heavy-duty hydraulic systems for industrial movement and control.',
+    name: 'Mechanical Couplings',
+    description: 'Rigid, flexible, and jaw-type shaft couplings in stainless steel and polyurethane for direct-drive and vibration-dampened power transmission up to 5,000 Nm.',
     category: 'mechanical',
-    image: 'images/hydro.png',
-    tags: ['Hydraulic', 'Industrial']
+    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800',
+    tags: ['Couplings', 'Drive']
   },
   {
     id: 'm4',
-    name: 'Precision Bearings',
-    description: 'High-speed ceramic and steel bearings for rotating machinery.',
+    name: 'Industrial Housings',
+    description: 'Cast-iron and die-cast aluminum bearing housings, pillow blocks, and flange units engineered to EN ISO 9001 standards for heavy-duty rotating shaft applications.',
     category: 'mechanical',
-    image: 'images/bearing.png',
-    tags: ['Bearings', 'Precision']
+    image: 'https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?auto=format&fit=crop&q=80&w=800',
+    tags: ['Housings', 'Industrial']
   },
   {
     id: 'm5',
-    name: 'Pneumatic Control Valves',
-    description: 'High-precision valves for automated pneumatic systems and fluid control.',
+    name: 'Automation Brackets',
+    description: 'Laser-cut and press-brake-formed steel and aluminum mounting brackets for robot end-effectors, linear guides, and automation frame assemblies with zinc-plated finish.',
     category: 'mechanical',
-    image: 'images/controller.png',
-    tags: ['Pneumatic', 'Valves']
+    image: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&q=80&w=800',
+    tags: ['Automation', 'Brackets']
   },
   {
     id: 'm6',
-    name: 'Heavy-Duty Conveyor Rollers',
-    description: 'Durable, high-load capacity rollers for industrial material handling systems.',
+    name: 'Robotic Assembly Parts',
+    description: 'Structural wrist plates, forearm links, and joint actuator mounts for 6-axis collaborative and industrial robots, manufactured in 7075-T6 aluminium with anodized coating.',
     category: 'mechanical',
-    image: 'images/conveyor_rollers.png',
-    tags: ['Conveyor', 'Industrial']
+    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800',
+    tags: ['Robotics', 'Assembly']
   },
   {
     id: 'm7',
-    name: 'Precision Optical Mounts',
-    description: 'Stable and adjustable mounting solutions for high-precision optical systems.',
+    name: 'Sensor Components',
+    description: 'Industrial-grade proximity, pressure, temperature, and flow sensors with M12 connectors, IO-Link compatibility, and IP67-rated stainless-steel housings for harsh environments.',
     category: 'mechanical',
-    image: 'images/optical_mounts.png',
-    tags: ['Optical', 'Precision']
+    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=800',
+    tags: ['Sensors', 'IO-Link']
   },
   {
     id: 'm8',
-    name: 'Custom Aluminum Extrusions',
-    description: 'Tailored aluminum profiles for structural and architectural applications.',
+    name: 'Titanium Machined Parts',
+    description: 'Grade-5 (Ti-6Al-4V) and Grade-2 commercially pure titanium components machined to aerospace and medical tolerances with MTR certificates and passivation finish.',
     category: 'mechanical',
-    image: 'images/sheet.png',
-    tags: ['Aluminum', 'Structural']
+    image: 'https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?auto=format&fit=crop&q=80&w=800',
+    tags: ['Titanium', 'Aerospace']
+  },
+  {
+    id: 'm9',
+    name: 'Precision Ball Screws',
+    description: 'Ground-class C3 and C5 ball screws with rolled or ground leads in 5–25 mm pitch, featuring preloaded double-nut assemblies for zero-backlash CNC and semiconductor stage positioning.',
+    category: 'mechanical',
+    image: 'https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&q=80&w=800',
+    tags: ['Ball Screws', 'Linear Motion']
+  },
+  {
+    id: 'm10',
+    name: 'Industrial Linear Rails',
+    description: 'HG and EG series profiled rail systems with carriages rated to 70 kN dynamic load, available in stainless-steel and hard-chrome finishes for cleanroom and washdown environments.',
+    category: 'mechanical',
+    image: 'https://images.unsplash.com/photo-1565791380713-1756b9a05343?auto=format&fit=crop&q=80&w=800',
+    tags: ['Linear Rails', 'Guides']
+  },
+  {
+    id: 'm11',
+    name: 'Hydraulic Cylinders',
+    description: 'Tie-rod and welded mill-type hydraulic cylinders up to 350 bar operating pressure, with chrome-plated bores, Hallite seals, and custom stroke lengths for press, clamp, and push applications.',
+    category: 'mechanical',
+    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800',
+    tags: ['Hydraulic', 'Actuation']
+  },
+  {
+    id: 'm12',
+    name: 'Planetary Gearboxes',
+    description: 'Inline and right-angle planetary gearboxes in 3–512:1 ratio range, hardened-steel planet gears, torsional backlash <3 arcmin, for servo, stepper, and direct-drive torque multiplication.',
+    category: 'mechanical',
+    image: 'https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&q=80&w=800',
+    tags: ['Gearboxes', 'Planetary']
+  },
+  {
+    id: 'm13',
+    name: 'Steel Structural Castings',
+    description: 'Sand-cast and investment-cast carbon-steel and ductile-iron structural parts from 0.5 kg to 500 kg, heat-treated to DIN EN 10293, with 3D-scan inspection and radiographic testing.',
+    category: 'mechanical',
+    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800',
+    tags: ['Castings', 'Structural']
   },
   // Food - Conventional
   {

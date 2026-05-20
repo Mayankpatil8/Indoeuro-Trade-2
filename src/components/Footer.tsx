@@ -11,18 +11,32 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
           <div className="space-y-8">
-            <Link
-              to="/"
-              className="font-display text-xl font-bold tracking-tighter"
-              aria-label="IndoEuro Trade Hub — Home"
-            >
-              INDOEURO <span className="text-terracotta">CORE OY</span>
-            </Link>
-            <p className="text-white/50 text-sm leading-relaxed max-w-xs">
-              Your whole &amp; sole sourcing partner in Finland.
-              Ask for any parts and we will deliver.
-            </p>
-          </div>
+  
+  {/* Logo + Text */}
+  <Link
+    to="/"
+    className="flex items-center gap-3 hover:opacity-90 transition-opacity"
+    aria-label="IndoEuro Trade Hub — Home"
+  >
+    <img
+      src="/looo.png"
+      alt="IndoEuro Core Oy"
+      className="h-30 w-auto object-contain"
+    />
+
+    {/* <div className="font-display text-xl font-bold tracking-tight leading-none">
+      <span className="text-white">INDOEURO</span>{" "}
+      <span className="text-terracotta">CORE OY</span>
+    </div> */}
+  </Link>
+
+  {/* Description */}
+  <p className="text-white/50 text-sm leading-relaxed max-w-xs">
+    Your trusted sourcing and business growth partner in Finland.
+    Delivering industrial procurement and digital solutions for modern European businesses.
+  </p>
+
+</div>
 
           <nav aria-label="Solutions navigation">
             <h4 className="font-bold mb-8 text-sm uppercase tracking-widest">Solutions</h4>
@@ -41,7 +55,7 @@ export const Footer = () => {
               <li><Link to="/about" className="hover:text-white transition-colors">Our Story</Link></li>
               <li><Link to="/blog" className="hover:text-white transition-colors">Insights &amp; Blog</Link></li>
               <li><Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
-              <li><Link to="/careers" className="hover:text-white transition-colors">Careers</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Careers</Link></li>
             </ul>
           </nav>
 
