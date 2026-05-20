@@ -385,14 +385,14 @@ export const Home = () => {
               {
                 title: 'Food-Grade Materials',
                 path: '/food',
-                img: 'https://images.unsplash.com/photo-1600431521340-491eca880813?auto=format&fit=crop&q=80&w=800',
+                img: 'food.png',
                 desc: 'Compliant food-grade materials and premium ingredients sourced with strict quality control.',
                 linkText: 'View Specifications'
               },
               {
                 title: 'Digital Marketing',
                 path: '/digital',
-                img: 'digital..png',
+                img: 'digital1.png',
                 desc: 'Comprehensive business growth systems, LinkedIn authority strategies, founder branding, and robust lead-generation infrastructure.',
                 linkText: 'Explore Growth Systems'
               }

@@ -11,6 +11,7 @@ import { DigitalMarketing } from './pages/DigitalMarketing';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { Blog } from './pages/Blog';
+import { Careers } from './pages/Careers';
 
 function AnimatedAppContent() {
   const location = useLocation();
@@ -29,6 +30,7 @@ function AnimatedAppContent() {
             <Route path="/electronics" element={<Electronics />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/careers" element={<Careers />} />
           </Routes>
         </AnimatePresence>
       </main>

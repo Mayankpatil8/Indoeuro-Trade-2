@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { name: 'Mechanical', path: '/mechanical' },
   { name: 'Electronic', path: '/electronics' },
   { name: 'Insights', path: '/blog' },
+  { name: 'Careers', path: '/careers' },
 ];
 
 export const Navbar = () => {
