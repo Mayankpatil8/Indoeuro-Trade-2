@@ -730,8 +730,8 @@ export const Careers = () => {
               </div>
 
               {/* ── Single-row scrollable filter strip ── */}
-              <div className="overflow-x-auto pb-0.5 -mx-1 px-1">
-                <div className="flex items-center gap-1.5 bg-beige/30 p-1.5 rounded-full border border-beige/60 w-max">
+              <div className="-mx-1 px-1">
+                <div className="flex flex-wrap md:flex-nowrap items-center gap-1.5 bg-beige/30 p-1.5 rounded-[1.5rem] md:rounded-full border border-beige/60 w-full md:w-max">
                   {filterCategories.map((cat) => {
                     const isActive = activeCategory === cat.value;
                     return (

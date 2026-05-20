@@ -10,28 +10,23 @@ export const Footer = () => {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
-          <div className="space-y-8">
+          <div className="flex flex-row md:flex-col items-center md:items-start gap-6 md:gap-0 md:space-y-8">
   
   {/* Logo + Text */}
   <Link
     to="/"
-    className="flex items-center gap-3 hover:opacity-90 transition-opacity"
+    className="flex items-center gap-3 hover:opacity-90 transition-opacity shrink-0"
     aria-label="IndoEuro Trade Hub — Home"
   >
     <img
       src="/looo.png"
       alt="IndoEuro Core Oy"
-      className="h-30 w-auto object-contain"
+      className="h-20 md:h-28 w-auto object-contain"
     />
-
-    {/* <div className="font-display text-xl font-bold tracking-tight leading-none">
-      <span className="text-white">INDOEURO</span>{" "}
-      <span className="text-terracotta">CORE OY</span>
-    </div> */}
   </Link>
 
   {/* Description */}
-  <p className="text-white/50 text-sm leading-relaxed max-w-xs">
+  <p className="text-white/50 text-xs md:text-sm leading-relaxed max-w-xs">
     Your trusted sourcing and business growth partner in Finland.
     Delivering industrial procurement and digital solutions for modern European businesses.
   </p>
