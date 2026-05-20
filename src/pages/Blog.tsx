@@ -130,7 +130,7 @@ export const Blog = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-nordic-grey leading-relaxed"
           >
-            Stay informed with verified trade studies, supply chain forecasts, CNC machining standards, and bulk provisions strategies managed by our Helsinki bureau.
+            Stay informed with verified trade studies, supply chain forecasts, CNC machining standards, and bulk provisions strategies managed by our Finland  bureau.
           </motion.p>
         </header>
 

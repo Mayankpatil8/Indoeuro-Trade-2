@@ -73,7 +73,7 @@ export const Food = () => {
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Mannerheimintie 12",
-        "addressLocality": "Helsinki",
+        "addressLocality": "Finland ",
         "postalCode": "00100",
         "addressCountry": "FI"
       }
@@ -315,7 +315,7 @@ export const Food = () => {
             Can't find a specific ingredient?
           </h3>
           <p className="text-nordic-grey mb-10 leading-relaxed max-w-2xl mx-auto">
-            Our agricultural network is vast. If you require a specific crop, unique origin, or specialized food certification not listed in our standard catalogue, our Helsinki procurement team will secure a custom batch for you.
+            Our agricultural network is vast. If you require a specific crop, unique origin, or specialized food certification not listed in our standard catalogue, our Finland  procurement team will secure a custom batch for you.
           </p>
           <Link
             to="/contact"

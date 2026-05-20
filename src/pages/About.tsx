@@ -9,8 +9,8 @@ import { PageTransition } from '@/components/PageTransition';
 export const About = () => {
   useSEO({
     title: 'About IndoEuro Core Oy – Global Sourcing from Finland',
-    description: 'Based in Helsinki, Finland, IndoEuro Core Oy connects businesses with trusted global suppliers. Discover our story, values, sourcing process & reliability standards.',
-    keywords: 'about IndoEuro Core Oy, global sourcing company Finland, Helsinki sourcing partner, industrial supply chain company',
+    description: 'Based in Finland , Finland, IndoEuro Core Oy connects businesses with trusted global suppliers. Discover our story, values, sourcing process & reliability standards.',
+    keywords: 'about IndoEuro Core Oy, global sourcing company Finland, Finland  sourcing partner, industrial supply chain company',
   });
 
   const stats = [
@@ -78,13 +78,13 @@ export const About = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "IndoEuro Core Oy",
-    "description": "Headquartered in Helsinki, Finland, IndoEuro Core Oy is an enterprise B2B global sourcing and integration partner connecting manufacturers with trusted worldwide suppliers.",
+    "description": "Headquartered in Finland , Finland, IndoEuro Core Oy is an enterprise B2B global sourcing and integration partner connecting manufacturers with trusted worldwide suppliers.",
     "url": "https://indoeuro.co",
     "logo": "https://indoeuro.co/logo.png",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Mannerheimintie 12",
-      "addressLocality": "Helsinki",
+      "addressLocality": "Finland ",
       "postalCode": "00100",
       "addressCountry": "FI"
     },
@@ -138,7 +138,7 @@ export const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-nordic-grey leading-relaxed"
           >
-            Headquartered in Helsinki, Finland, IndoEuro Core Oy is more than a supplier — we are your global sourcing partner. We coordinate complex requirements with verified suppliers worldwide, delivering precision, compliance, and consistent quality at every stage.
+            Headquartered in Finland , Finland, IndoEuro Core Oy is more than a supplier — we are your global sourcing partner. We coordinate complex requirements with verified suppliers worldwide, delivering precision, compliance, and consistent quality at every stage.
           </motion.p>
         </header>
 
@@ -149,7 +149,7 @@ export const About = () => {
               <div className="relative z-10 rounded-[3rem] overflow-hidden border border-beige/60 shadow-sm aspect-[4/5] lg:aspect-[4/3.5] max-h-[500px]">
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200"
-                  alt="IndoEuro Core Oy Helsinki procurement team and supplier collaboration room"
+                  alt="IndoEuro Core Oy Finland  procurement team and supplier collaboration room"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                   loading="lazy"
@@ -206,7 +206,7 @@ export const About = () => {
               <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-2 block">Institutional Integrity</span>
               <h3 className="text-2xl font-bold text-nordic-black mb-4">Official Finnish Trade Registration</h3>
               <p className="text-nordic-grey text-sm max-w-2xl leading-relaxed">
-                IndoEuro Core Oy is a fully registered limited liability corporation (Osakeyhtiö) incorporated in Helsinki, Finland. We operate in absolute alignment with European commerce rules, offering comprehensive fiscal transparency and trade security to all enterprise partners.
+                IndoEuro Core Oy is a fully registered limited liability corporation (Osakeyhtiö) incorporated in Finland , Finland. We operate in absolute alignment with European commerce rules, offering comprehensive fiscal transparency and trade security to all enterprise partners.
               </p>
             </div>
             <div className="w-full md:w-auto shrink-0 grid grid-cols-2 gap-4 bg-cream/50 p-6 rounded-2xl border border-beige/40 z-10">
@@ -216,11 +216,11 @@ export const About = () => {
               </div>
               <div>
                 <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">Finnish Business ID</div>
-                <div className="text-sm font-bold text-nordic-black">FI3409182-7</div>
+                <div className="text-sm font-bold text-nordic-black">3620039-7</div>
               </div>
               <div>
                 <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">Registered Office</div>
-                <div className="text-sm font-bold text-nordic-black">Helsinki, Finland</div>
+                <div className="text-sm font-bold text-nordic-black">Turku, Finland</div>
               </div>
               <div>
                 <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">Tax Registration</div>

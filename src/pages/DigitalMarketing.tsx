@@ -46,7 +46,7 @@ export const DigitalMarketing = () => {
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Mannerheimintie 12",
-        "addressLocality": "Helsinki",
+        "addressLocality": "Finland ",
         "postalCode": "00100",
         "addressCountry": "FI"
       }

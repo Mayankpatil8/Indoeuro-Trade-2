@@ -76,7 +76,7 @@ export const Contact = () => {
                 {
                   icon: MapPin,
                   title: 'Finland Headquarters',
-                  content: 'Mannerheimintie 12, 00100 Helsinki, Finland',
+                  content: 'Mannerheimintie 12, 00100 Finland , Finland',
                   sub: 'Central hub for European operations'
                 },
                 {
@@ -151,9 +151,12 @@ export const Contact = () => {
                 <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Department</label>
                 <select className="w-full px-5 py-4 bg-beige/50 border border-beige rounded-xl focus:outline-none focus:border-terracotta focus:bg-white transition-all text-nordic-black appearance-none">
                   <option>Industrial Procurement & Sourcing</option>
+                  <option>Food-Grade Industrial Materials</option>
                   <option>Digital Growth & SEO Strategy</option>
                   <option>Mechanical / Electronic Component Specs</option>
                   <option>General Enterprise Partnership</option>
+                  <option>Strategic Partnership & Consulting</option>
+                  <option>Other</option>
                 </select>
               </div>
 

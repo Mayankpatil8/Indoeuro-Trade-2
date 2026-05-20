@@ -22,13 +22,13 @@ function AnimatedAppContent() {
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
-            <Route path="/electronics" element={<Electronics />} />
-            <Route path="/mechanical" element={<Mechanical />} />
+            <Route path="/about" element={<About />} />
             <Route path="/food" element={<Food />} />
             <Route path="/digital" element={<DigitalMarketing />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/mechanical" element={<Mechanical />} />
+            <Route path="/electronics" element={<Electronics />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </AnimatePresence>
       </main>

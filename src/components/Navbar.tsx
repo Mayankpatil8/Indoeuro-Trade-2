@@ -6,12 +6,12 @@ import { cn } from '@/lib/utils';
 
 const NAV_LINKS = [
   { name: 'Home', path: '/' },
-  { name: 'Electronics', path: '/electronics' },
-  { name: 'Mechanical', path: '/mechanical' },
+  { name: 'About Us', path: '/about' },
   { name: 'Food', path: '/food' },
   { name: 'Digital', path: '/digital' },
-  { name: 'About', path: '/about' },
-  { name: 'Blog', path: '/blog' },
+  { name: 'Mechanical', path: '/mechanical' },
+  { name: 'Electronic', path: '/electronics' },
+  { name: 'Insights', path: '/blog' },
 ];
 
 export const Navbar = () => {
@@ -123,12 +123,7 @@ export const Navbar = () => {
 
           {/* Mobile Toggle */}
           <div className="md:hidden flex items-center space-x-3 pointer-events-auto">
-            <button
-              className="p-2 text-nordic-black hover:text-terracotta transition-colors"
-              aria-label="View shopping bag"
-            >
-              <ShoppingBag size={18} aria-hidden="true" />
-            </button>
+          
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 text-nordic-black hover:text-terracotta transition-colors rounded-full bg-white/20 border border-beige/30"
@@ -217,7 +212,7 @@ export const Navbar = () => {
                 </Link>
                 
                 <div className="text-[10px] text-center text-nordic-grey tracking-wider uppercase font-bold">
-                  IndoEuro Core Oy • Helsinki
+                  IndoEuro Core Oy • Finland 
                 </div>
               </div>
             </motion.div>

@@ -247,7 +247,7 @@ export const Home = () => {
                   <div>
                     <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">HQ Hub</div>
                     <div className="text-xs font-extrabold text-nordic-black flex items-center gap-1.5">
-                      Helsinki, Finland
+                      Finland , Finland
                       <span className="relative flex h-2 w-2">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sage opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-sage"></span>
@@ -357,34 +357,44 @@ export const Home = () => {
 
       {/* Service Sections */}
       <section className="py-24 bg-beige">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="mb-12">
-            <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-4 block">Core Operations</span>
-            <h2 className="text-3xl lg:text-5xl font-bold mb-4">Industrial Supply Solutions</h2>
-            <p className="text-nordic-grey max-w-2xl text-lg">
-              Reliable, operational, and industrial-grade procurement for European enterprises.
+            <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-4 block">Core Operations & Strategic Growth</span>
+            <h2 className="text-3xl lg:text-5xl font-bold mb-4">Industrial Supply & Digital Solutions</h2>
+            <p className="text-nordic-grey max-w-3xl text-lg">
+              Reliable, operational procurement and authority-driven B2B growth systems tailored for European enterprises.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 title: 'Electronic Parts',
                 path: '/electronics',
                 img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800',
-                desc: 'PCB Components, Sensors & Relays, and advanced power systems for reliable operations.'
+                desc: 'PCB Components, Sensors & Relays, and advanced power systems for reliable operations.',
+                linkText: 'View Specifications'
               },
               {
                 title: 'Mechanical Parts',
                 path: '/mechanical',
                 img: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=800',
-                desc: 'CNC Machined Components, Industrial Fasteners, Bearings & Couplings, and Stainless Steel Components.'
+                desc: 'CNC Machined Components, Industrial Fasteners, Bearings & Couplings, and Stainless Steel Components.',
+                linkText: 'View Specifications'
               },
               {
                 title: 'Food-Grade Materials',
                 path: '/food',
                 img: 'https://images.unsplash.com/photo-1600431521340-491eca880813?auto=format&fit=crop&q=80&w=800',
-                desc: 'Compliant food-grade materials and premium ingredients sourced with strict quality control.'
+                desc: 'Compliant food-grade materials and premium ingredients sourced with strict quality control.',
+                linkText: 'View Specifications'
+              },
+              {
+                title: 'Digital Marketing',
+                path: '/digital',
+                img: 'digital..png',
+                desc: 'Comprehensive business growth systems, LinkedIn authority strategies, founder branding, and robust lead-generation infrastructure.',
+                linkText: 'Explore Growth Systems'
               }
             ].map((cat, i) => (
               <motion.div
@@ -393,67 +403,31 @@ export const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative h-[450px] rounded-3xl overflow-hidden soft-shadow"
+                className="group relative h-[450px] rounded-3xl overflow-hidden soft-shadow flex flex-col justify-end"
               >
                 <img
                   src={cat.img}
                   alt={cat.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-nordic-black/90 via-nordic-black/40 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{cat.title}</h3>
-                  <p className="text-white/80 text-sm mb-6 leading-relaxed">{cat.desc}</p>
+                <div className="absolute bottom-0 left-0 right-0 p-8 z-10 flex flex-col h-[55%] justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{cat.title}</h3>
+                    <p className="text-white/80 text-xs leading-relaxed line-clamp-3">{cat.desc}</p>
+                  </div>
                   <Link
                     to={cat.path}
-                    className="inline-flex items-center text-white text-xs font-bold uppercase tracking-widest hover:text-terracotta transition-colors"
+                    className="inline-flex items-center text-white text-xs font-bold uppercase tracking-widest hover:text-terracotta transition-colors mt-auto"
                   >
-                    View Specifications <ArrowRight size={14} className="ml-2" />
+                    {cat.linkText} <ArrowRight size={14} className="ml-2" />
                   </Link>
                 </div>
               </motion.div>
             ))}
-          </div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="mb-12">
-            <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-4 block">Strategic Growth</span>
-            <h2 className="text-3xl lg:text-5xl font-bold mb-4">Digital Growth Solutions</h2>
-            <p className="text-nordic-grey max-w-2xl text-lg">
-              Authority-driven digital infrastructure and lead-generation systems for B2B scale.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              viewport={{ once: true }}
-              className="group relative h-[400px] rounded-3xl overflow-hidden soft-shadow"
-            >
-              <img
-                src="digital..png"
-                alt="Digital Marketing"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-nordic-black/90 via-nordic-black/50 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
-                <h3 className="text-3xl font-bold text-white mb-3">Digital Marketing</h3>
-                <p className="text-white/80 text-lg mb-8 max-w-3xl leading-relaxed">
-                  Comprehensive business growth systems, LinkedIn authority strategies, founder branding, and robust lead-generation infrastructure tailored for European enterprises.
-                </p>
-                <Link
-                  to="/digital"
-                  className="inline-flex items-center text-white text-sm font-bold uppercase tracking-widest hover:text-terracotta transition-colors"
-                >
-                  Explore Growth Systems <ArrowRight size={16} className="ml-2" />
-                </Link>
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
