@@ -7,8 +7,8 @@ import { useSEO } from '@/lib/useSEO';
 
 export const Blog = () => {
   useSEO({
-    title: 'Insights & Global Sourcing Intelligence – IndoEuro Trade Hub',
-    description: 'Expert articles on global sourcing, industrial trends, supply chain innovations & digital growth strategies. Stay informed with IndoEuro Trade Hub.',
+    title: 'Insights & Global Sourcing Intelligence – IndoEuro Core Oy',
+    description: 'Expert articles on global sourcing, industrial trends, supply chain innovations & digital growth strategies. Stay informed with IndoEuro Core Oy.',
     keywords: 'sourcing insights, industrial blog, supply chain trends, CNC machining, organic food sourcing, semiconductor supply chain, digital marketing blog',
   });
   return (
@@ -51,7 +51,7 @@ export const Blog = () => {
               </p>
               <Link
                 to={`/blog/${post.id}`}
-                className="inline-flex items-center text-sm font-bold uppercase tracking-widest text-nordic-black group-hover:translate-x-2 transition-transform"
+                className="inline-flex items-center text-sm font-bold uppercase tracking-widest text-white group-hover:translate-x-2 transition-transform"
               >
                 Read Full Article → <ArrowRight size={16} className="ml-2" />
               </Link>

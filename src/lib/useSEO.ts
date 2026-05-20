@@ -46,7 +46,7 @@ export function useSEO({ title, description, keywords, ogImage, ogType = 'websit
     upsertMeta('description', description);
     if (keywords) upsertMeta('keywords', keywords);
     upsertMeta('robots', 'index, follow');
-    upsertMeta('author', 'IndoEuro Trade Hub');
+    upsertMeta('author', 'IndoEuro Core Oy');
 
     // Canonical
     upsertLink('canonical', canonicalUrl);
@@ -57,7 +57,7 @@ export function useSEO({ title, description, keywords, ogImage, ogType = 'websit
     upsertMeta('og:description', description, true);
     upsertMeta('og:url', canonicalUrl, true);
     upsertMeta('og:image', image, true);
-    upsertMeta('og:site_name', 'IndoEuro Trade Hub', true);
+    upsertMeta('og:site_name', 'IndoEuro Core Oy', true);
     upsertMeta('og:locale', 'en_US', true);
 
     // Twitter / X Card

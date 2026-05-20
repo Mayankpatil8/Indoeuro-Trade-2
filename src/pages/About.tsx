@@ -5,9 +5,9 @@ import { useSEO } from '@/lib/useSEO';
 
 export const About = () => {
   useSEO({
-    title: 'About IndoEuro Trade Hub – Global Sourcing from Finland',
-    description: 'Based in Helsinki, Finland, IndoEuro Trade Hub connects businesses with trusted global suppliers. Discover our story, values, sourcing process & reliability standards.',
-    keywords: 'about IndoEuro Trade Hub, global sourcing company Finland, Helsinki sourcing partner, industrial supply chain company',
+    title: 'About IndoEuro Core Oy – Global Sourcing from Finland',
+    description: 'Based in Helsinki, Finland, IndoEuro Core Oy connects businesses with trusted global suppliers. Discover our story, values, sourcing process & reliability standards.',
+    keywords: 'about IndoEuro Core Oy, global sourcing company Finland, Helsinki sourcing partner, industrial supply chain company',
   });
   const stats = [
   ];
@@ -56,7 +56,7 @@ export const About = () => {
               <span className="text-terracotta">Needs & Global Delivery.</span>
             </h1>
             <p className="text-xl text-nordic-grey leading-relaxed">
-              Headquartered in Finland, IndoEuro Trade Hub is more than a supplier — we are your global sourcing partner. We connect your requirements with trusted suppliers worldwide, delivering precision, reliability, and consistent quality at every step.
+              Headquartered in Finland, IndoEuro Core Oy is more than a supplier — we are your global sourcing partner. We connect your requirements with trusted suppliers worldwide, delivering precision, reliability, and consistent quality at every step.
             </p>
           </motion.div>
         </div>
@@ -67,14 +67,14 @@ export const About = () => {
       </section>
 
       {/* Story Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-beige">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
               <div className="relative z-10 rounded-[3rem] overflow-hidden soft-shadow">
                 <img
                   src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1200"
-                  alt="IndoEuro Trade Hub Helsinki office and team collaboration"
+                  alt="IndoEuro Core Oy Helsinki office and team collaboration"
                   className="w-full aspect-[4/5] object-cover"
                   referrerPolicy="no-referrer"
                   loading="lazy"
@@ -85,7 +85,7 @@ export const About = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                className="absolute -top-10 -right-10 p-8 bg-white rounded-3xl soft-shadow hidden md:block"
+                className="absolute -top-10 -right-10 p-8 bg-beige rounded-3xl soft-shadow hidden md:block"
               >
                 <div className="text-4xl font-bold text-terracotta mb-1">100%</div>
                 <div className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Reliability Rate</div>
@@ -99,7 +99,7 @@ export const About = () => {
             >
               <h2 className="text-4xl font-bold mb-8 leading-tight">Built on Trust, <br />Powered by Global Sourcing.</h2>
               <p className="text-lg text-nordic-grey mb-6 leading-relaxed">
-                IndoEuro Trade Hub was founded to solve a critical challenge — helping businesses find high-quality products quickly and reliably.
+                IndoEuro Core Oy was founded to solve a critical challenge — helping businesses find high-quality products quickly and reliably.
               </p>
               <p className="text-lg text-nordic-grey mb-10 leading-relaxed">
                 With a strong foundation in Finland and a global supplier network, we simplify sourcing, procurement, and delivery. Our mission is to provide seamless solutions for businesses that value quality, efficiency, and long-term partnerships.
@@ -109,7 +109,7 @@ export const About = () => {
                 {stats.map((stat, i) => (
                   <div key={i} className="text-center p-4 rounded-2xl bg-cream border border-beige">
                     <stat.icon size={20} className="mx-auto mb-3 text-terracotta" />
-                    <div className="text-2xl font-bold text-nordic-black mb-1">{stat.value}</div>
+                    <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                     <div className="text-[10px] font-bold uppercase tracking-widest text-nordic-grey">{stat.label}</div>
                   </div>
                 ))}
@@ -130,7 +130,7 @@ export const About = () => {
           </div>
 
           <div className="grid md:grid-cols-4 gap-8 relative">
-            <div className="absolute top-1/2 left-0 w-full h-px bg-white/10 hidden md:block -translate-y-1/2" />
+            <div className="absolute top-1/2 left-0 w-full h-px bg-beige/10 hidden md:block -translate-y-1/2" />
             {steps.map((step, i) => (
               <motion.div
                 key={i}
@@ -162,7 +162,7 @@ export const About = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="p-10 bg-white rounded-[2.5rem] soft-shadow border border-beige group hover:-translate-y-2 transition-all duration-300"
+                className="p-10 bg-beige rounded-[2.5rem] soft-shadow border border-beige group hover:-translate-y-2 transition-all duration-300"
               >
                 <div className="w-14 h-14 rounded-2xl bg-sage/10 flex items-center justify-center text-sage mb-8 group-hover:bg-terracotta group-hover:text-white transition-colors">
                   <value.icon size={28} />
@@ -176,7 +176,7 @@ export const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-beige">
         <div className="max-w-5xl mx-auto px-6 lg:px-12 text-center">
           <div className="p-12 lg:p-20 bg-beige/30 rounded-[3rem] border border-beige relative overflow-hidden">
             <div className="relative z-10">

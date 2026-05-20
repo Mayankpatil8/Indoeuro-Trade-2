@@ -8,8 +8,8 @@ import { useSEO } from '@/lib/useSEO';
 
 export const DigitalMarketing = () => {
   useSEO({
-    title: 'Digital Marketing & Web Development – IndoEuro Trade Hub',
-    description: 'Custom web development, SEO, social media management & UI/UX design services worldwide. Full-stack digital growth solutions from IndoEuro Trade Hub.',
+    title: 'Digital Marketing & Web Development – IndoEuro Core Oy',
+    description: 'Custom web development, SEO, social media management & UI/UX design services worldwide. Full-stack digital growth solutions from IndoEuro Core Oy.',
     keywords: 'digital marketing, web development, SEO services, social media management, UI UX design, digital growth, Finland digital agency',
   });
 
@@ -73,7 +73,7 @@ export const DigitalMarketing = () => {
             { icon: Share2, title: 'Social Media', desc: 'Data-driven social strategies to grow your audience and engagement globally.' },
             { icon: Search, title: 'SEO & Growth', desc: 'Comprehensive search engine optimization to ensure your brand is found by the right people.' },
           ].map((item, i) => (
-            <div key={i} className="p-8 bg-white rounded-3xl border border-beige text-center soft-shadow">
+            <div key={i} className="p-8 bg-beige rounded-3xl border border-beige text-center soft-shadow">
               <div className="w-12 h-12 rounded-full bg-cream mx-auto flex items-center justify-center text-terracotta mb-4">
                 <item.icon size={24} />
               </div>

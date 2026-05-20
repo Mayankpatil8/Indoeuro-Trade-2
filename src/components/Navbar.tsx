@@ -33,7 +33,7 @@ export const Navbar = () => {
             aria-label="IndoEuro Trade Hub — Home"
           >
             <img
-              src="/logo@.png"
+              src="/logo_3.png"
               alt="IndoEuro Hub"
               className="h-25 w-auto object-contain"
             />
