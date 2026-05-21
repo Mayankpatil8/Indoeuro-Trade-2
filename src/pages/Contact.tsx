@@ -159,9 +159,9 @@ export const Contact = () => {
               </motion.div>
             ) : (
             <form method="POST" onSubmit={handleSubmit} className="space-y-6">
-              <p className="text-sm font-bold text-terracotta mb-2 bg-terracotta/10 px-4 py-2 rounded-lg inline-block">
+              {/* <p className="text-sm font-bold text-terracotta mb-2 bg-terracotta/10 px-4 py-2 rounded-lg inline-block">
                 * Please note that all fields are required to submit this form.
-              </p>
+              </p> */}
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">

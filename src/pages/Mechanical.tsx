@@ -150,7 +150,7 @@ From industrial components and custom mechanical parts to sourcing coordination,
             
             <div className="h-full min-h-[450px] relative">
               <img
-                src="mechanical-hero.png"
+                src="https://res.cloudinary.com/dyelfz2ku/image/upload/v1779359271/mechanical-her_nnvqas.webp"
                 alt="Precision mechanical engineering and custom CNC machined components"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"

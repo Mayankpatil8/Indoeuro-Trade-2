@@ -205,7 +205,7 @@ export const Food = () => {
             
             <div className="h-full min-h-[450px] relative">
               <img
-                src="food-hero.png"
+                src="https://res.cloudinary.com/dyelfz2ku/image/upload/v1779359270/food-her_nqj499.webp"
                 alt="Organic farming and premium bulk grain agricultural sourcing"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"

@@ -155,7 +155,7 @@ and growth-focused digital marketing strategies.              </p>
             
             <div className="h-full min-h-[430px] relative">
               <img
-                src="digital!.png"
+                src="https://res.cloudinary.com/dyelfz2ku/image/upload/v1779359270/digita_ieatru.webp"
                 alt="Industrial CRM dashboards and high-performance digital marketing systems"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"

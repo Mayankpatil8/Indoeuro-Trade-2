@@ -78,7 +78,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     name: 'Semiconductor Wafers',
     description: 'High-purity silicon wafers for advanced chip manufacturing.',
     category: 'electronics',
-    image: 'images/semiconductor.png',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779365648/semiconducto_m2lwgx.webp',
     tags: ['Semiconductor', 'Silicon']
   },
   {
@@ -94,7 +94,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     name: 'Industrial PLC Units',
     description: 'Programmable Logic Controllers for robust industrial automation and control.',
     category: 'electronics',
-    image: 'images/unit.png',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779365648/uni_ohthlb.webp',
     tags: ['PLC', 'Automation']
   },
   {
@@ -297,7 +297,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     packaging: '25 KG BAGS',
     type: 'conventional',
     isOrganic: false,
-    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779358420/ca_uz6plh.webp',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779364636/carro_icem4u.webp',
     tags: ['Vegetables', 'Granules']
   },
   {
@@ -311,7 +311,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     packaging: '25 KG BAGS',
     type: 'conventional',
     isOrganic: false,
-    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779358420/drie_aarwqp.webp',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779365183/Parsnip1_bfhckx.png',
     tags: ['Vegetables', 'Granules']
   },
   {
@@ -325,7 +325,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     packaging: '25 KG BAGS',
     type: 'conventional',
     isOrganic: false,
-    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779358420/pumki_pvua08.webp',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779364637/pumki_aubquc.webp',
     tags: ['Vegetables', 'Granules']
   },
   // Food - Conventional
@@ -341,7 +341,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'conventional',
     isOrganic: false,
     isGlutenFree: true,
-    image: '/images/millet_hulled.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779366630/millet_hulled_ixj6fw.webp',
     tags: ['Pseudocereals', 'Gluten-Free']
   },
     {
@@ -356,7 +356,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'organic',
     isOrganic: true,
     isGlutenFree: true,
-    image: 'images/organic.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779366631/organic_nlqvv7.webp',
     tags: ['Organic', 'Pseudocereals']
   },
     {
@@ -371,7 +371,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'gluten-free',
     isOrganic: false,
     isGlutenFree: true,
-    image: 'images/222.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779366629/222_n3gfym.webp',
     tags: ['Gluten-Free', 'Pseudocereals']
   },
     {
@@ -386,7 +386,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'conventional',
     isOrganic: false,
     isGlutenFree: true,
-    image: 'images/sunflower.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779366631/sunflower_w3pynd.webp',
     tags: ['Seeds', 'Conventional']
   },
     {
@@ -401,7 +401,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'organic',
     isOrganic: true,
     isGlutenFree: true,
-    image: 'images/sunflower.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779366631/sunflower_w3pynd.webp',
     tags: ['Organic', 'Seeds']
   },
   {
@@ -415,7 +415,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     packaging: '25/50 KG PP BAGS OR BIG BAGS',
     type: 'conventional',
     isOrganic: false,
-    image: '/images/coriander_seeds_split.png',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779366629/coriander_seeds_split_mst7cx.webp',
     tags: ['Seeds', 'Conventional']
   },
   {
@@ -429,7 +429,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     packaging: '25/50 KG PP BAGS OR BIG BAGS',
     type: 'conventional',
     isOrganic: false,
-    image: '/images/coriander_seeds.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779366629/coriander_seeds_gvddbx.webp',
     tags: ['Seeds', 'Conventional']
   },
   {
@@ -443,7 +443,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     packaging: '1000 KG BIG BAGS',
     type: 'conventional',
     isOrganic: false,
-    image: '/images/green_lentils.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779366630/green_lentils_gaotzh.webp',
     tags: ['Pulses', 'Conventional']
   },
   {
@@ -457,7 +457,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     packaging: '25 KG PP BAGS',
     type: 'conventional',
     isOrganic: false,
-    image: '/images/yellow_split_peas.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779366631/yellow_split_peas_vj16qe.webp',
     tags: ['Pulses', 'Conventional']
   },
   {
@@ -471,7 +471,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     packaging: '1000 KG BIG BAGS',
     type: 'conventional',
     isOrganic: false,
-    image: '/images/pumpkin_gws.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779366631/pumpkin_gws_v51sll.webp',
     tags: ['Seeds', 'Conventional']
   },
   {
@@ -486,7 +486,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'conventional',
     isOrganic: false,
     isGlutenFree: true,
-    image: '/images/flaxseed_brown.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779366629/flaxseed_brown_vrekbk.webp',
     tags: ['Seeds', 'Gluten-Free']
   },
   {
@@ -501,7 +501,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'conventional',
     isOrganic: false,
     isGlutenFree: true,
-    image: '/images/flaxseed_golden.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779366630/flaxseed_golden_jblugo.webp',
     tags: ['Seeds', 'Gluten-Free']
   },
 
@@ -517,7 +517,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'conventional',
     isOrganic: true,
     isGlutenFree: true,
-    image: 'images/pease.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779366631/pease_xxxmkp.webp',
     tags: ['Flours', 'Organic']
   },
   {
@@ -532,7 +532,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'conventional',
     isOrganic: true,
     isGlutenFree: true,
-    image: 'images/beanflour.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779366629/beanflour_lgcpn5.webp',
     tags: ['Flours', 'Organic']
   },
   {
@@ -547,7 +547,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'conventional',
     isOrganic: true,
     isGlutenFree: true,
-    image: 'images/yellowpeaflor.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779366631/yellowpeaflor_n9kx7u.webp',
     tags: ['Flours', 'Organic']
   },
   {
@@ -562,9 +562,11 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'conventional',
     isOrganic: false,
     isGlutenFree: true,
-    image: 'images/Yellowlentilflor.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779366631/Yellowlentilflor_mnxcj9.webp',
     tags: ['Flours', 'Gluten-Free']
   },
+  //------------------------------------------------------------------wait here
+
   {
     id: 'f-c13',
     name: 'Quinoa Seeds White',
@@ -577,7 +579,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'conventional',
     isOrganic: false,
     isGlutenFree: true,
-    image: 'images/QuinoaWhite.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779367544/QuinoaWhite_zj6oit.webp',
     tags: ['Pseudocereals', 'Seeds']
   },
 
@@ -593,7 +595,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'conventional',
     isOrganic: false,
     isGlutenFree: true,
-    image: 'images/cheaseeds.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779367541/cheaseeds_qazm57.webp',
     tags: ['Pseudocereals', 'Seeds']
   },
   {
@@ -608,7 +610,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'conventional',
     isOrganic: false,
     isGlutenFree: true,
-    image: 'images/yellowpeaflor.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779366631/yellowpeaflor_n9kx7u.webp',
     tags: ['Pulses', 'Conventional']
   },
   {
@@ -623,7 +625,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'conventional',
     isOrganic: false,
     isGlutenFree: true,
-    image: 'images/67img.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779367536/67img_thgxuy.webp',
     tags: ['Pulses', 'Gluten-Free']
   },
   {
@@ -638,7 +640,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'conventional',
     isOrganic: false,
     isGlutenFree: true,
-    image: 'images/67img.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779367536/67img_thgxuy.webp',
     tags: ['Pulses', 'Gluten-Free']
   },
   {
@@ -653,7 +655,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'conventional',
     isOrganic: false,
     isGlutenFree: true,
-    image: 'images/bluepoppyseed.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779367537/bluepoppyseed_qxaf5r.webp',
     tags: ['Seeds', 'Gluten-Free']
   },
   // Food - Organic
@@ -668,7 +670,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     packaging: '25 KG PAPER BAGS',
     type: 'organic',
     isOrganic: true,
-    image: 'images/organicgreenletten.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779367543/organicgreenletten_vev9so.webp',
     tags: ['Organic', 'Pulses']
   },
   {
@@ -682,7 +684,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     packaging: '25 KG PAPER BAGS',
     type: 'organic',
     isOrganic: true,
-    image: 'images/Buckwheat-Hulled.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779367540/Buckwheat-Hulled_tbzbxo.webp',
     tags: ['Organic', 'Pseudocereals']
   },
   {
@@ -696,7 +698,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     packaging: '25 KG BAGS',
     type: 'organic',
     isOrganic: true,
-    image: 'images/cheaseeds.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779367541/cheaseeds_qazm57.webp',
     tags: ['Organic', 'Seeds']
   },
   {
@@ -711,7 +713,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'organic',
     isOrganic: true,
     isGlutenFree: true,
-    image: 'images/organicBuckwheatflor.jpg'
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779367543/organicBuckwheatflor_ngvv4c.webp'
   },
   {
     id: 'f-o8',
@@ -725,7 +727,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'organic',
     isOrganic: true,
     isGlutenFree: true,
-    image: 'images/Golden-Flaxseed.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779367542/Golden-Flaxseed_qwayhi.webp',
     tags: ['Organic', 'Seeds']
   },
   {
@@ -740,7 +742,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'organic',
     isOrganic: true,
     isGlutenFree: true,
-    image: 'images/Brown-Flaxseed.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779367540/Brown-Flaxseed_e3lemm.webp',
     tags: ['Organic', 'Seeds']
   },
   {
@@ -755,7 +757,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'organic',
     isOrganic: true,
     isGlutenFree: true,
-    image: 'images/Brown-Flaxseed.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779367540/Brown-Flaxseed_e3lemm.webp',
     tags: ['Organic', 'Seeds']
   },
   // Food - Gluten-Free
@@ -771,7 +773,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'gluten-free',
     isOrganic: false,
     isGlutenFree: true,
-    image: 'images/111.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779368052/111_tmhbjs.webp',
     tags: ['Gluten-Free', 'Flour']
   },
   {
@@ -786,7 +788,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     type: 'gluten-free',
     isOrganic: false,
     isGlutenFree: true,
-    image: 'images/333.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779368053/333_wj2ogx.webp',
     tags: ['Gluten-Free', 'Flour']
   },
   // Digital Marketing
@@ -803,7 +805,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     name: 'Social Media Strategy',
     description: 'Comprehensive social media management and growth strategies for global brands.',
     category: 'digital',
-    image: 'images/socialmedia.png',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779368319/socialmedia_sqiyxb.webp',
     tags: ['Social', 'Growth']
   },
   {
@@ -819,7 +821,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     name: 'UI/UX Design Systems',
     description: 'Modern, accessible, and scalable design systems for digital products.',
     category: 'digital',
-    image: 'images/uiux.jpg',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779368053/uiux1_erd3xs.webp',
     tags: ['Design', 'UI/UX']
   }
 ];

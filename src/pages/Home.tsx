@@ -214,7 +214,7 @@ Helping European SMEs and enterprise teams streamline procurement, strengthen di
                 style={{ transform: "translateZ(10px)", transformStyle: "preserve-3d" }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200"
+                  src="https://res.cloudinary.com/dyelfz2ku/image/upload/v1779359937/mai_e7iltc.webp"
                   alt="Global trade and precision engineering headquarters"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
