@@ -17,13 +17,45 @@ export interface SourcingCategory {
 
 export const SOURCING_EXAMPLES: SourcingCategory[] = [
   // Electronics
-  {
-    id: 'e1',
-    name: 'Industrial Microcontrollers',
-    description: 'High-performance ARM based controllers for industrial automation and robotics.',
+    {
+    id: 'e9',
+    name: 'UAV Drone Flight Controllers',
+    description: 'F7 and H7 dual-IMU autopilot boards running ArduPilot / PX4, with redundant barometers, CAN-FD bus, 8× UART, and black-box data-logging for fixed-wing, multirotor, and VTOL platforms.',
     category: 'electronics',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800',
-    tags: ['Industrial', 'ARM']
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779286796/UAVdron_ncoa41.webp',
+    tags: ['Drone', 'Autopilot']
+  },
+   {
+    id: 'e11',
+    name: 'Thermal Imaging Camera Modules',
+    description: 'Uncooled VOx microbolometer cores at 320×256 and 640×512 resolution, NETD <50 mK, LVDS / USB3 output — suited for border surveillance, search-and-rescue, and industrial thermography payloads.',
+    category: 'electronics',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779286795/ThermalImagin_ue3pri.webp',
+    tags: ['Thermal', 'Defence']
+  },
+    {
+    id: 'e5',
+    name: 'FPGA Development Boards',
+    description: 'Advanced field-programmable gate arrays for high-speed digital signal processing.',
+    category: 'electronics',
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800',
+    tags: ['FPGA', 'Digital']
+  },
+    {
+    id: 'e14',
+    name: 'AI Edge Vision Processors',
+    description: 'NVIDIA Jetson Orin NX and Hailo-8L AI accelerator modules delivering up to 40 TOPS on-board inference for real-time object detection, target tracking, and autonomous navigation pipelines.',
+    category: 'electronics',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779292142/Aiedgevisio_vdzxas.webp',
+    tags: ['AI', 'Edge Compute']
+  },
+    {
+    id: 'e13',
+    name: 'RTK GNSS Positioning Modules',
+    description: 'Multi-band L1/L2/L5 RTK receivers achieving ±1 cm horizontal accuracy, supporting GPS, GLONASS, Galileo, and BeiDou simultaneously for precision agriculture, mapping, and defence-grade navigation.',
+    category: 'electronics',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779292138/GNS_ikdxor.webp',
+    tags: ['RTK', 'GNSS']
   },
   {
     id: 'e2',
@@ -50,14 +82,6 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     tags: ['Semiconductor', 'Silicon']
   },
   {
-    id: 'e5',
-    name: 'FPGA Development Boards',
-    description: 'Advanced field-programmable gate arrays for high-speed digital signal processing.',
-    category: 'electronics',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800',
-    tags: ['FPGA', 'Digital']
-  },
-  {
     id: 'e6',
     name: 'High-Frequency RF Modules',
     description: 'Precision radio frequency components for wireless communication systems.',
@@ -81,13 +105,13 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     image: 'https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&q=80&w=800',
     tags: ['PCB', 'Custom']
   },
-  {
-    id: 'e9',
-    name: 'UAV Drone Flight Controllers',
-    description: 'F7 and H7 dual-IMU autopilot boards running ArduPilot / PX4, with redundant barometers, CAN-FD bus, 8× UART, and black-box data-logging for fixed-wing, multirotor, and VTOL platforms.',
+    {
+    id: 'e1',
+    name: 'Industrial Microcontrollers',
+    description: 'High-performance ARM based controllers for industrial automation and robotics.',
     category: 'electronics',
-    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779286796/UAVdron_ncoa41.webp',
-    tags: ['Drone', 'Autopilot']
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800',
+    tags: ['Industrial', 'ARM']
   },
   {
     id: 'e10',
@@ -98,36 +122,12 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     tags: ['ESC', 'UAV Power']
   },
   {
-    id: 'e11',
-    name: 'Thermal Imaging Camera Modules',
-    description: 'Uncooled VOx microbolometer cores at 320×256 and 640×512 resolution, NETD <50 mK, LVDS / USB3 output — suited for border surveillance, search-and-rescue, and industrial thermography payloads.',
-    category: 'electronics',
-    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779286795/ThermalImagin_ue3pri.webp',
-    tags: ['Thermal', 'Defence']
-  },
-  {
     id: 'e12',
     name: 'Gimbal Stabilisation Systems',
     description: '3-axis brushless gimbal systems with 0.01° encoder resolution, vibration isolation damper mounts, and CAN / PWM input for full Sony, GoPro, and custom payload integration on enterprise UAVs.',
     category: 'electronics',
     image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779286787/gimba_zg0d8i.webp',
     tags: ['Gimbal', 'Stabilisation']
-  },
-  {
-    id: 'e13',
-    name: 'RTK GNSS Positioning Modules',
-    description: 'Multi-band L1/L2/L5 RTK receivers achieving ±1 cm horizontal accuracy, supporting GPS, GLONASS, Galileo, and BeiDou simultaneously for precision agriculture, mapping, and defence-grade navigation.',
-    category: 'electronics',
-    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779292138/GNS_ikdxor.webp',
-    tags: ['RTK', 'GNSS']
-  },
-  {
-    id: 'e14',
-    name: 'AI Edge Vision Processors',
-    description: 'NVIDIA Jetson Orin NX and Hailo-8L AI accelerator modules delivering up to 40 TOPS on-board inference for real-time object detection, target tracking, and autonomous navigation pipelines.',
-    category: 'electronics',
-    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779292142/Aiedgevisio_vdzxas.webp',
-    tags: ['AI', 'Edge Compute']
   },
   {
     id: 'e15',
@@ -138,6 +138,46 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     tags: ['FPV', 'Video Link']
   },
   // Mechanical
+    {
+    id: 'm6',
+    name: 'Robotic Assembly Parts',
+    description: 'Structural wrist plates, forearm links, and joint actuator mounts for 6-axis collaborative and industrial robots, manufactured in 7075-T6 aluminium with anodized coating.',
+    category: 'mechanical',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779280335/robotic_o1pert.webp',
+    tags: ['Robotics', 'Assembly']
+  },
+  {
+    id: 'm4',
+    name: 'Industrial Housings',
+    description: 'Cast-iron and die-cast aluminum bearing housings, pillow blocks, and flange units engineered to EN ISO 9001 standards for heavy-duty rotating shaft applications.',
+    category: 'mechanical',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779280335/industrialbearing_bslvon.webp',
+    tags: ['Housings', 'Industrial']
+  },
+  {
+    id: 'm8',
+    name: 'Titanium Machined Parts',
+    description: 'Grade-5 (Ti-6Al-4V) and Grade-2 commercially pure titanium components machined to aerospace and medical tolerances with MTR certificates and passivation finish.',
+    category: 'mechanical',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779281622/titanium_bo9cvz.webp',
+    tags: ['Titanium', 'Aerospace']
+  },
+    {
+    id: 'm9',
+    name: 'Precision Ball Screws',
+    description: 'Ground-class C3 and C5 ball screws with rolled or ground leads in 5–25 mm pitch, featuring preloaded double-nut assemblies for zero-backlash CNC and semiconductor stage positioning.',
+    category: 'mechanical',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779281622/indusballscrew_bqis36.webp',
+    tags: ['Ball Screws', 'Linear Motion']
+  },
+    {
+    id: 'm13',
+    name: 'Steel Structural Castings',
+    description: 'Sand-cast and investment-cast carbon-steel and ductile-iron structural parts from 0.5 kg to 500 kg, heat-treated to DIN EN 10293, with 3D-scan inspection and radiographic testing.',
+    category: 'mechanical',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779281622/steelCasting_knyhcs.webp',
+    tags: ['Castings', 'Structural']
+  },
   {
     id: 'm1',
     name: 'Servo Motor Components',
@@ -151,7 +191,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     name: 'Precision CNC Parts',
     description: 'Custom-machined aluminum, stainless-steel, and hardened-tool-steel components held to ±0.005 mm tolerances, with full dimensional inspection reports and surface finish certificates.',
     category: 'mechanical',
-    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779353897/mechanical_o3tyd8.webp',
     tags: ['CNC', 'Precision']
   },
   {
@@ -163,14 +203,6 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     tags: ['Couplings', 'Drive']
   },
   {
-    id: 'm4',
-    name: 'Industrial Housings',
-    description: 'Cast-iron and die-cast aluminum bearing housings, pillow blocks, and flange units engineered to EN ISO 9001 standards for heavy-duty rotating shaft applications.',
-    category: 'mechanical',
-    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779280335/industrialbearing_bslvon.webp',
-    tags: ['Housings', 'Industrial']
-  },
-  {
     id: 'm5',
     name: 'Automation Brackets',
     description: 'Laser-cut and press-brake-formed steel and aluminum mounting brackets for robot end-effectors, linear guides, and automation frame assemblies with zinc-plated finish.',
@@ -179,36 +211,12 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     tags: ['Automation', 'Brackets']
   },
   {
-    id: 'm6',
-    name: 'Robotic Assembly Parts',
-    description: 'Structural wrist plates, forearm links, and joint actuator mounts for 6-axis collaborative and industrial robots, manufactured in 7075-T6 aluminium with anodized coating.',
-    category: 'mechanical',
-    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779280335/robotic_o1pert.webp',
-    tags: ['Robotics', 'Assembly']
-  },
-  {
     id: 'm7',
     name: 'Sensor Components',
     description: 'Industrial-grade proximity, pressure, temperature, and flow sensors with M12 connectors, IO-Link compatibility, and IP67-rated stainless-steel housings for harsh environments.',
     category: 'mechanical',
     image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779280334/industrialsenser_bzja4d.webp',
     tags: ['Sensors', 'IO-Link']
-  },
-  {
-    id: 'm8',
-    name: 'Titanium Machined Parts',
-    description: 'Grade-5 (Ti-6Al-4V) and Grade-2 commercially pure titanium components machined to aerospace and medical tolerances with MTR certificates and passivation finish.',
-    category: 'mechanical',
-    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779281622/titanium_bo9cvz.webp',
-    tags: ['Titanium', 'Aerospace']
-  },
-  {
-    id: 'm9',
-    name: 'Precision Ball Screws',
-    description: 'Ground-class C3 and C5 ball screws with rolled or ground leads in 5–25 mm pitch, featuring preloaded double-nut assemblies for zero-backlash CNC and semiconductor stage positioning.',
-    category: 'mechanical',
-    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779281622/indusballscrew_bqis36.webp',
-    tags: ['Ball Screws', 'Linear Motion']
   },
   {
     id: 'm10',
@@ -231,18 +239,171 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     name: 'Planetary Gearboxes',
     description: 'Inline and right-angle planetary gearboxes in 3–512:1 ratio range, hardened-steel planet gears, torsional backlash <3 arcmin, for servo, stepper, and direct-drive torque multiplication.',
     category: 'mechanical',
-    image: 'https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779356214/mot_tvayvq.jpg',
     tags: ['Gearboxes', 'Planetary']
   },
+
+    // Food - New Added Products
   {
-    id: 'm13',
-    name: 'Steel Structural Castings',
-    description: 'Sand-cast and investment-cast carbon-steel and ductile-iron structural parts from 0.5 kg to 500 kg, heat-treated to DIN EN 10293, with 3D-scan inspection and radiographic testing.',
-    category: 'mechanical',
-    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779281622/steelCasting_knyhcs.webp',
-    tags: ['Castings', 'Structural']
+    id: 'f-new1',
+    name: 'Millet Flour',
+    description: 'Premium milled millet flour fortified with trace minerals including nacl chemical sodium hexaformatre, glicomin, and cordatin for enhanced industrial food processing.',
+    category: 'food',
+    subcategory: 'Flours',
+    origin: 'Europe',
+    deliveryUnit: '24 000 KG',
+    packaging: '1000 KG BIG BAG',
+    type: 'conventional',
+    isOrganic: false,
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779351658/whea_o5gxik.webp',
+    tags: ['Flours', 'Conventional']
+  },
+  {
+    id: 'f-new2',
+    name: 'Rice Flour',
+    description: 'Finely ground rice flour optimized with functional additives like nacl chemical sodium hexaformatre and cordatin to ensure consistent viscosity in commercial baking.',
+    category: 'food',
+    subcategory: 'Flours',
+    origin: 'Europe',
+    deliveryUnit: '24 000 KG',
+    packaging: '1000 KG BIG BAG',
+    type: 'conventional',
+    isOrganic: false,
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779351660/ric_hicbkm.webp',
+    tags: ['Flours', 'Gluten-Free']
+  },
+  {
+    id: 'f-new3',
+    name: 'Buckwheat Granules',
+    description: 'High-grade extruded buckwheat granules containing naturally occurring glicomin and fortified with nacl chemical sodium hexaformatre for extended shelf life.',
+    category: 'food',
+    subcategory: 'Pseudocereals',
+    origin: 'Europe',
+    deliveryUnit: '24 000 KG',
+    packaging: '1000 KG BIG BAG',
+    type: 'conventional',
+    isOrganic: false,
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779351644/buckwhea_ktxyg4.webp',
+    tags: ['Pseudocereals', 'Granules']
+  },
+  {
+    id: 'f-new4',
+    name: 'Carrot Granules',
+    description: 'Dehydrated carrot granules enriched with cordatin and glicomin, preserved using nacl chemical sodium hexaformatre for vibrant color and flavor retention.',
+    category: 'food',
+    subcategory: 'Vegetables',
+    origin: 'Europe',
+    deliveryUnit: '10 000 KG',
+    packaging: '25 KG BAGS',
+    type: 'conventional',
+    isOrganic: false,
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779351664/carro_izbwal.webp',
+    tags: ['Vegetables', 'Granules']
+  },
+  {
+    id: 'f-new5',
+    name: 'Dried Parsnip Granules',
+    description: 'Industrial-grade dried parsnip granules treated with nacl chemical sodium hexaformatre and cordatin to maintain textural integrity in soup and sauce manufacturing.',
+    category: 'food',
+    subcategory: 'Vegetables',
+    origin: 'Europe',
+    deliveryUnit: '10 000 KG',
+    packaging: '25 KG BAGS',
+    type: 'conventional',
+    isOrganic: false,
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779351660/drie_mkjxch.webp',
+    tags: ['Vegetables', 'Granules']
+  },
+  {
+    id: 'f-new6',
+    name: 'Pumpkin Granules',
+    description: 'Premium pumpkin granules standardized with glicomin and nacl chemical sodium hexaformatre, ideal for bulk nutritional supplement and food production.',
+    category: 'food',
+    subcategory: 'Vegetables',
+    origin: 'Europe',
+    deliveryUnit: '10 000 KG',
+    packaging: '25 KG BAGS',
+    type: 'conventional',
+    isOrganic: false,
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779351660/pumki_tqoehb.webp',
+    tags: ['Vegetables', 'Granules']
   },
   // Food - Conventional
+    {
+    id: 'f-c8',
+    name: 'Conventional Millet Hulled',
+    description: 'Cleaned and hulled millet from Poland, processed to European standards.',
+    category: 'food',
+    subcategory: 'Pseudocereals',
+    origin: 'Poland',
+    deliveryUnit: '24 000 KG',
+    packaging: '1000 KG BIG BAG',
+    type: 'conventional',
+    isOrganic: false,
+    isGlutenFree: true,
+    image: '/images/millet_hulled.jpg',
+    tags: ['Pseudocereals', 'Gluten-Free']
+  },
+    {
+    id: 'f-o7',
+    name: 'Organic Millet Hulled',
+    description: 'Certified organic hulled millet from Poland, processed for maximum quality.',
+    category: 'food',
+    subcategory: 'Pseudocereals',
+    origin: 'Poland',
+    deliveryUnit: '24 000 KG',
+    packaging: '1000 KG BIG BAG',
+    type: 'organic',
+    isOrganic: true,
+    isGlutenFree: true,
+    image: 'images/organic.jpg',
+    tags: ['Organic', 'Pseudocereals']
+  },
+    {
+    id: 'f-g2',
+    name: 'Gluten-Free Millet Hulled',
+    description: 'Cleaned and hulled millet, processed to ensure zero gluten contamination.',
+    category: 'food',
+    subcategory: 'Pseudocereals',
+    origin: 'Ukraine',
+    deliveryUnit: '22 000 KG',
+    packaging: '25 KG PP BAGS',
+    type: 'gluten-free',
+    isOrganic: false,
+    isGlutenFree: true,
+    image: 'images/222.jpg',
+    tags: ['Gluten-Free', 'Pseudocereals']
+  },
+    {
+    id: 'f-c20',
+    name: 'Conventional Sunflower Kernels, Bakery Grade',
+    description: 'Bakery grade sunflower kernels from Moldavia, perfect for bread and snacks.',
+    category: 'food',
+    subcategory: 'Seeds',
+    origin: 'Moldavia',
+    deliveryUnit: '48 000 KG',
+    packaging: '25 KG BAG',
+    type: 'conventional',
+    isOrganic: false,
+    isGlutenFree: true,
+    image: 'images/sunflower.jpg',
+    tags: ['Seeds', 'Conventional']
+  },
+    {
+    id: 'f-o11',
+    name: 'Organic Sunflower Kernels, Bakery Grade',
+    description: 'Bakery grade organic sunflower kernels from Bulgaria, high purity.',
+    category: 'food',
+    subcategory: 'Seeds',
+    origin: 'Bulgaria',
+    deliveryUnit: '24 000 KG',
+    packaging: '25 KG BAG',
+    type: 'organic',
+    isOrganic: true,
+    isGlutenFree: true,
+    image: 'images/sunflower.jpg',
+    tags: ['Organic', 'Seeds']
+  },
   {
     id: 'f-c1',
     name: 'Conventional Coriander Seeds Split',
@@ -343,21 +504,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     image: '/images/flaxseed_golden.jpg',
     tags: ['Seeds', 'Gluten-Free']
   },
-  {
-    id: 'f-c8',
-    name: 'Conventional Millet Hulled',
-    description: 'Cleaned and hulled millet from Poland, processed to European standards.',
-    category: 'food',
-    subcategory: 'Pseudocereals',
-    origin: 'Poland',
-    deliveryUnit: '24 000 KG',
-    packaging: '1000 KG BIG BAG',
-    type: 'conventional',
-    isOrganic: false,
-    isGlutenFree: true,
-    image: '/images/millet_hulled.jpg',
-    tags: ['Pseudocereals', 'Gluten-Free']
-  },
+
   {
     id: 'f-c9',
     name: 'Extruded Chickpea Flour',
@@ -433,21 +580,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     image: 'images/QuinoaWhite.jpg',
     tags: ['Pseudocereals', 'Seeds']
   },
-  {
-    id: 'f-c14',
-    name: 'Conventional Buckwheat Hulled Broken',
-    description: 'Broken hulled buckwheat from Poland, ideal for industrial processing.',
-    category: 'food',
-    subcategory: 'Pseudocereals',
-    origin: 'Poland',
-    deliveryUnit: '24 000 KG',
-    packaging: '1000 KG BIG BAG',
-    type: 'conventional',
-    isOrganic: false,
-    isGlutenFree: true,
-    image: 'images/BuckwheaHulled.jpg',
-    tags: ['Pseudocereals', 'Gluten-Free']
-  },
+
   {
     id: 'f-c15',
     name: 'Conventional Chia Seeds',
@@ -523,21 +656,6 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     image: 'images/bluepoppyseed.jpg',
     tags: ['Seeds', 'Gluten-Free']
   },
-  {
-    id: 'f-c20',
-    name: 'Conventional Sunflower Kernels, Bakery Grade',
-    description: 'Bakery grade sunflower kernels from Moldavia, perfect for bread and snacks.',
-    category: 'food',
-    subcategory: 'Seeds',
-    origin: 'Moldavia',
-    deliveryUnit: '48 000 KG',
-    packaging: '25 KG BAG',
-    type: 'conventional',
-    isOrganic: false,
-    isGlutenFree: true,
-    image: 'images/sunflower.jpg',
-    tags: ['Seeds', 'Conventional']
-  },
   // Food - Organic
   {
     id: 'f-o1',
@@ -596,21 +714,6 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     image: 'images/organicBuckwheatflor.jpg'
   },
   {
-    id: 'f-o7',
-    name: 'Organic Millet Hulled',
-    description: 'Certified organic hulled millet from Poland, processed for maximum quality.',
-    category: 'food',
-    subcategory: 'Pseudocereals',
-    origin: 'Poland',
-    deliveryUnit: '24 000 KG',
-    packaging: '1000 KG BIG BAG',
-    type: 'organic',
-    isOrganic: true,
-    isGlutenFree: true,
-    image: 'images/organic.jpg',
-    tags: ['Organic', 'Pseudocereals']
-  },
-  {
     id: 'f-o8',
     name: 'Organic Flaxseed Golden',
     description: 'Premium organic golden flaxseed from Kazakhstan, high oil content.',
@@ -655,21 +758,6 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     image: 'images/Brown-Flaxseed.jpg',
     tags: ['Organic', 'Seeds']
   },
-  {
-    id: 'f-o11',
-    name: 'Organic Sunflower Kernels, Bakery Grade',
-    description: 'Bakery grade organic sunflower kernels from Bulgaria, high purity.',
-    category: 'food',
-    subcategory: 'Seeds',
-    origin: 'Bulgaria',
-    deliveryUnit: '24 000 KG',
-    packaging: '25 KG BAG',
-    type: 'organic',
-    isOrganic: true,
-    isGlutenFree: true,
-    image: 'images/sunflower.jpg',
-    tags: ['Organic', 'Seeds']
-  },
   // Food - Gluten-Free
   {
     id: 'f-g1',
@@ -685,21 +773,6 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     isGlutenFree: true,
     image: 'images/111.jpg',
     tags: ['Gluten-Free', 'Flour']
-  },
-  {
-    id: 'f-g2',
-    name: 'Gluten-Free Millet Hulled',
-    description: 'Cleaned and hulled millet, processed to ensure zero gluten contamination.',
-    category: 'food',
-    subcategory: 'Pseudocereals',
-    origin: 'Ukraine',
-    deliveryUnit: '22 000 KG',
-    packaging: '25 KG PP BAGS',
-    type: 'gluten-free',
-    isOrganic: false,
-    isGlutenFree: true,
-    image: 'images/222.jpg',
-    tags: ['Gluten-Free', 'Pseudocereals']
   },
   {
     id: 'f-g3',
@@ -766,28 +839,96 @@ export interface BlogPost {
 }
 
 export const BLOG_POSTS: BlogPost[] = [
-  {
-    id: 'b1',
-    title: 'The Future of CNC Machining in Global Manufacturing',
-    excerpt: 'How automation, AI-assisted toolpaths, and advanced CNC technologies are transforming global manufacturing and tightening supply-chain tolerances.',
-    date: 'March 24, 2026',
-    image: 'https://images.unsplash.com/photo-1565034946487-077786996e27?auto=format&fit=crop&q=80&w=1200',
-    category: 'manufacturing',
-    readTime: '7 min read',
+    {
+    id: 'b7',
+    title: 'European Export Analytics Report 2025: Key Trade Corridors & Data',
+    excerpt: 'A data-rich breakdown of Europe\'s top export categories, Finland–India bilateral trade flows, container volumes, and the emerging commodity corridors reshaping B2B sourcing strategy.',
+    date: 'May 20, 2026',
+    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1200',
+    category: 'analytics',
+    readTime: '9 min read',
+    author: 'IndoEuro Trade Analytics',
+    stats: [
+      { label: 'EU Total Exports 2025', value: '€2.84 T' },
+      { label: 'Finland–India Trade', value: '€1.24 B' },
+      { label: 'Top Export: Machinery', value: '€428 B' },
+      { label: 'YoY Trade Growth', value: '+6.2 %' },
+    ],
+    content: `The European Union's total merchandise export value reached €2.84 trillion in 2025, a 6.2 % increase on 2024 driven by strong recovery in German machinery exports, record-high Finnish high-tech goods shipments, and a 14 % surge in French agri-food exports to North Africa and Asia. For procurement teams operating Indo-European supply corridors, understanding the macro flows helps anticipate capacity constraints, shipping cost cycles, and customs compliance changes before they cascade into operational disruption.\n\nMachinery and mechanical appliances remain Europe's dominant export category at €428 billion, followed by pharmaceuticals (€312 billion), vehicles (€280 billion), and electrical equipment (€196 billion). The fastest growing export category in 2025 was precision measurement instruments, expanding 22 % year-on-year as Asian manufacturing hubs invested heavily in quality-control infrastructure. This creates a direct sourcing opportunity for European exporters of CMM probes, laser trackers, and portable metrology systems.\n\nThe Finland–India bilateral trade corridor — central to IndoEuro's operational model — reached €1.24 billion in total goods trade in 2025, a 9.3 % increase on the prior year. Finnish exports to India are dominated by telecommunications equipment (Nokia infrastructure), forest industry machinery, and specialty chemicals. Conversely, India's exports to Finland — and to Europe broadly — are increasingly focused on precision-engineered mechanical components, pharmaceutical intermediates, and processed food ingredients. The average sea freight transit time from JNPT Mumbai to Port of Helsinki (via Felixstowe or Rotterdam transshipment) is 28–34 days under DDP Incoterms.\n\nContainer utilisation data from Freightos and Xeneta shows that the Europe–South Asia shipping corridor experienced a 38 % freight rate spike in Q3 2025, triggered by Red Sea rerouting around the Cape of Good Hope. This added approximately 12–14 sailing days and €1,800–€2,400 per 40ft container to procurement landed costs. Buyers who pre-positioned inventory in Q1 2025 through IndoEuro's forward-freight programme avoided this surcharge entirely — a saving of €180,000 for a typical quarterly 75-container programme.\n\nLooking at 2026 projections, the EU–India Free Trade Agreement (currently in advanced negotiation) is expected to reduce average tariff burdens on Indian mechanical components from 4.7 % to 0–1.5 % upon ratification, with food ingredients benefiting from simplified phytosanitary recognition. Procurement managers should begin mapping their bill-of-materials against the draft tariff schedules now to model the landed-cost implications. IndoEuro's trade advisory team provides quarterly tariff-scenario modelling as part of its strategic sourcing subscription.`,
+  },
+    {
+    id: 'b6',
+    title: 'The Rise of Organic Ingredients in European Food Manufacturing',
+    excerpt: 'Consumer demand, EU Farm-to-Fork targets, and retailer mandates are accelerating the shift to organic and sustainably certified ingredients across the European food-production value chain.',
+    date: 'May 15, 2026',
+    image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&q=80&w=1200',
+    category: 'provisions',
+    readTime: '5 min read',
+    author: 'IndoEuro Trade Analytics',
+    stats: [
+      { label: 'EU Organic Farmland 2025', value: '16.8 M ha' },
+      { label: 'Organic Premium (avg)', value: '+22 %' },
+      { label: 'Top Importer', value: 'Germany' },
+      { label: 'Fastest Growing Segment', value: 'Protein Seeds' },
+    ],
+    content: `Europe's organic food and ingredients sector reached a historic milestone in 2025: 16.8 million hectares of certified organic farmland — representing 10.4 % of total EU agricultural area — now produce under recognised organic certification schemes. The EU's Farm-to-Fork strategy has set a binding target of 25 % organic farmland by 2030, creating a structural demand tailwind that food manufacturers and ingredient distributors must plan for now rather than later.\n\nThe commercial dynamics are significant. Organic-certified ingredients command an average 22 % price premium over conventional equivalents across major European wholesale markets. Yet buyer willingness to absorb that premium has been demonstrated repeatedly: Germany — Europe's largest organic market — saw €15.9 billion in organic retail sales in 2025, up 11 % year-over-year, with the functional food segment (protein seeds, pseudocereals, legume flours) outpacing all other categories at 19 % growth.\n\nFor food manufacturers, the challenge is no longer consumer demand but certified supply availability. Organic quinoa from India and Paraguay, organic chia from Mexico and Paraguay, and organic green lentils from Turkey and Canada are experiencing persistent allocation pressure as EU organic processor capacity cannot keep pace with brand launch schedules. IndoEuro's forward-contract programme allows buyers to lock certified volumes 6–12 months ahead, with price protection bands that limit exposure to harvest-driven volatility.\n\nCertification compliance has also grown more complex. EU Organic Regulation (EU) 2018/848 — which came into full effect in January 2022 and has since been supplemented by three delegated regulations — introduced stricter import authorisation procedures for non-EU origin organic goods. Each consignment from countries without recognised equivalence agreements now requires an Inspection Certificate (e-CoI) issued by an EU-approved control body. Our regulatory team files e-CoI applications as part of standard import services, eliminating a major administrative burden for food manufacturers.\n\nThe protein seeds category — pumpkin kernels, sunflower kernels, hemp seeds, and watermelon seeds — is emerging as the fastest growing organic ingredient segment, driven by plant-based food brand proliferation. IndoEuro currently manages direct-sourcing relationships with organic pumpkin kernel producers in Poland and Austria rated at 480 metric tonnes per month combined capacity, with SKAL-certified chain-of-custody documentation available for each batch.`,
+  },
+    {
+    id: 'b9',
+    title: 'Drone & Defence Electronics: European Supply Chain Dynamics 2026',
+    excerpt: 'The European UAV and defence electronics market is accelerating rapidly. Here\'s how procurement teams are sourcing flight controllers, thermal cameras, and AI vision systems under new security and dual-use regulations.',
+    date: 'May 10, 2026',
+    image: 'https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&q=80&w=1200',
+    category: 'analytics',
+    readTime: '8 min read',
     author: 'IndoEuro Research Bureau',
     stats: [
-      { label: 'Downtime Reduction', value: '42 %' },
-      { label: 'Global CNC Market 2026', value: '€112 B' },
-      { label: 'Avg Tolerance Achieved', value: '±0.003 mm' },
-      { label: 'Cycle-Time Saving (AI)', value: '28 %' },
+      { label: 'EU Drone Market 2026', value: '€4.2 B' },
+      { label: 'Defence UAV Growth', value: '+34 % YoY' },
+      { label: 'AI Vision Module CAGR', value: '41 %' },
+      { label: 'Lead Time (Thermal Cores)', value: '16–28 wks' },
     ],
-    content: `Precision engineering has always been at the heart of Finnish and broader European industrial manufacturing, but 2026 marks a clear inflection point. Driven by advances in AI-assisted toolpath optimisation and multi-axis simultaneous cutting, CNC machining is faster, more precise, and more cost-effective than at any point in history.\n\nNew 5-axis machining centres equipped with embedded predictive-maintenance sensors are now capable of reducing unplanned downtime by over 42 %, ensuring that batch production remains on schedule without compromising micron-level tolerances. Facilities across India — particularly in Pune, Coimbatore, and Ahmedabad — have invested heavily in Fanuc 30iB and Heidenhain TNC 640 controllers, enabling them to compete directly on quality with established German Tier-1 suppliers at 35–50 % lower per-unit cost.\n\nAt IndoEuro Core Oy, our Finnish procurement bureau continuously evaluates machining facilities against ISO 9001:2015 and AS9100D standards. Our on-site dimensional audits use Zeiss CMM systems to verify that parts shipped to European aerospace and medical OEMs hold tolerances specified in engineering blueprints — not just sampled estimates. In Q1 2026, our mechanical division processed 1,240 tonnes of precision-machined components across 18 verified vendors.\n\nThe adoption of digital twin manufacturing — where a virtual model of the part runs alongside the physical cutting programme — has further reduced first-article failure rates by 31 % at our partner facilities. Combined with real-time SPC (Statistical Process Control) dashboards, quality teams can intervene within minutes of a process drifting toward a reject boundary.\n\nLooking ahead, the convergence of collaborative robotics (cobots) for part loading and AI vision for in-process inspection will push the boundaries even further. By 2028, analysts at Mordor Intelligence project the global CNC machine tool market will exceed €140 billion, with the highest growth concentration in South and Southeast Asia driven by European supply-chain localisation strategies.`,
+    content: `The European unmanned aerial systems (UAS) market has undergone a structural acceleration since 2024, driven by three convergent forces: the European Defence Fund's €1.1 billion UAV capability investment, commercial drone adoption across precision agriculture and infrastructure inspection, and the stark operational lessons from the conflict in Ukraine establishing drones as a decisive military technology. The combined civilian and defence European drone market reached €4.2 billion in 2026, with defence-segment procurement growing at 34 % year-on-year — the fastest rate since the sector's emergence.\n\nFrom a component sourcing perspective, this demand surge is creating significant allocation pressure across the critical electronics stack that powers modern UAV platforms. Flight controllers based on STM32H7 and RISC-V architectures running ArduPilot or PX4 firmware are experiencing 12–18 week lead times at major distributors. Uncooled thermal camera cores (320×256 and 640×512 VOx microbolometer) from FLIR, InfraTec, and emerging Chinese suppliers approved for EU non-military use are extended to 16–28 weeks. RTK GNSS modules from u-blox and Trimble have normalised to 8–12 weeks for commercial variants but remain scarce for defence-qualified specifications.\n\nDual-use regulation — specifically EU Regulation 2021/821 governing the export control of dual-use items — adds a critical compliance dimension to drone component sourcing. Many electronic components used in UAV platforms (high-accuracy GNSS receivers, encrypted video transmitters operating above 5.8 GHz, thermal imaging cores above certain sensitivity thresholds) fall under dual-use control schedules requiring export licences when sourced from non-EU origins or supplied to customers in restricted geographies. IndoEuro's compliance team maintains a classification library of 340 drone-relevant HS codes cross-referenced against EU Dual-Use Regulation Annex I, providing clients with pre-clearance assessment before purchase orders are committed.\n\nThe AI edge computing segment — NVIDIA Jetson Orin, Hailo-8L, and Google Coral TPU modules for on-board inference — represents the fastest growing demand category at 41 % CAGR. European drone OEMs are integrating these processors to enable autonomous target detection, obstacle avoidance, and real-time mapping without cloud connectivity dependency — a critical requirement for defence and public-safety applications operating in RF-contested environments. Supply allocation for these compute modules is actively managed by NVIDIA and Hailo through authorised partner tiers; IndoEuro maintains preferred-partner status with two EU-based distributors, providing clients with priority allocation access.\n\nLooking at the 12-month outlook, the commercialisation of 10 km+ digital FPV video links using OFDM frequency-hopping technology, combined with AESA (Active Electronically Scanned Array) miniaturisation for drone-mounted radar, will drive the next wave of component sourcing requirements. Procurement teams would be well advised to begin approved vendor list (AVL) qualification of alternative suppliers now, before demand spikes in H2 2026 create the allocation scenarios currently seen in thermal camera supply chains.`,
+  },
+    {
+    id: 'b10',
+    title: 'Titanium & Exotic Metals: 2026 Price Intelligence & Sourcing Strategy',
+    excerpt: 'LME price benchmarks, grade specifications, aerospace demand drivers, and procurement strategies for titanium, Inconel, and specialty alloys in European industrial supply chains.',
+    date: 'May 5, 2026',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779355203/insigh_euyvbk.jpg',
+    category: 'analytics',
+    readTime: '7 min read',
+    author: 'IndoEuro Trade Analytics',
+    stats: [
+      { label: 'Ti-6Al-4V Spot Price', value: '$38.4/kg' },
+      { label: 'Aerospace Demand Growth', value: '+18 % YoY' },
+      { label: 'EU Import Duty (Grade 5)', value: '2.7 %' },
+      { label: 'MTR Turnaround', value: '3–5 days' },
+    ],
+    content: `Titanium alloys — particularly Grade 5 (Ti-6Al-4V), the workhorse of aerospace and medical device manufacturing — are experiencing sustained price elevation in 2026, with spot prices for mill-certified bar and billet averaging $38.4 per kilogram as of Q1 2026, representing a 12 % increase from the Q1 2025 mean. The primary demand driver is commercial aerospace recovery: Airbus delivered 766 aircraft in 2025 (a record), and Boeing's production ramp on the 737 MAX and 787 programmes is consuming titanium billet at rates that have tightened global mill lead times to 16–22 weeks for aerospace-grade product.\n\nFor European precision manufacturers using titanium in medical implants, Formula 1 chassis components, defence airframe parts, and offshore valve bodies, the sourcing challenge is threefold: securing MTR (Material Test Report) certified product at a manageable landed cost, maintaining a dual-source strategy to hedge against single-mill allocation, and navigating the country-of-origin compliance requirements for defence-sector customers (who typically mandate non-Russian, non-Chinese titanium sponge pedigree).\n\nIndoEuro's materials division sources Grade 5 titanium machined components from two NADCAP-accredited Indian machining facilities in Bangalore and Pune, both of which purchase titanium billet exclusively from VSMPO-AVISMA (Russian sponge but Western tolling) and Western equivalents — currently Timet (US/UK), ATI (US), and UKTMP (Kazakhstan). All MTRs include full heat traceability, chemical composition analysis per AMS 4928, and tensile/hardness verification. We deliver MTR packages to customers within 3–5 business days of material receipt, with hard-copy CE declarations of conformity available for EU Machinery Directive compliance.\n\nInconel 625 and 718 — nickel-chromium superalloys used in jet engine hot-section components, subsea equipment, and high-temperature chemical processing — present a separate but equally important procurement challenge in 2026. Increased demand from the offshore wind sector (Inconel fasteners for subsea turbine foundations) has added a new non-aerospace demand stream that market analysts at CRU Group estimate will consume an additional 8,400 metric tonnes of Inconel 625 annually by 2028. Indian superalloy forges with VIM/VAR remelting capability — capable of aerospace-trace MTRs — represent the most cost-competitive sourcing option at 25–35 % below UK and German forge pricing for equivalent-specification product.\n\nFor procurement managers building a long-term exotic-metal sourcing strategy, the key actions in H2 2026 are: establishing blanket purchase-order frameworks with Indian-origin certified suppliers to secure pricing and allocation; defining substitute-grade qualification protocols (e.g., Grade 23 ELI versus Grade 5 for biomedical) to preserve design flexibility; and integrating MTR digital passports (PDF with QR-code traceability) into incoming goods inspection workflows. IndoEuro's materials team provides all three as packaged sourcing services.`,
+  },
+    {
+    id: 'b8',
+    title: 'India–Europe Agricultural Trade: 2026 Market Intelligence Report',
+    excerpt: 'Organic food import volumes, duty structures, certification requirements, and the emerging agricultural commodity corridors between India and the European single market.',
+    date: 'April 30, 2026',
+    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=1200',
+    category: 'trade',
+    readTime: '7 min read',
+    author: 'IndoEuro Trade Analytics',
+    stats: [
+      { label: 'India Agri Exports to EU', value: '€3.8 B' },
+      { label: 'Organic Import Growth', value: '+31 % YoY' },
+      { label: 'Avg EU Import Duty', value: '3.2–8.5 %' },
+      { label: 'Rejected Consignments', value: '1.8 %' },
+    ],
+    content: `India's agricultural exports to the European Union reached €3.8 billion in 2025, establishing the country as the EU's fifth-largest food and agri-commodity supplier by value. Sesame seeds, basmati rice, spices, organic pulses, and quinoa represent the highest-growth segments, with organic-certified agricultural exports from India expanding 31 % year-on-year — a rate that far outpaces India's overall export growth of 8.4 %.\n\nThe regulatory landscape for India–EU agri-trade is governed by a layered framework of phytosanitary requirements, MRL (Maximum Residue Level) compliance mandates, and origin-specific certification obligations. The EU's RASFF (Rapid Alert System for Food and Feed) data shows that 1.8 % of Indian agricultural consignments entering Europe were subject to border rejection or enhanced checks in 2025, primarily due to pesticide residues (41 % of rejections), aflatoxin levels in spices (28 %), and documentation non-compliance (31 %). Buyers working directly with unvetted spot-market suppliers face material risk of rejected shipments, demurrage costs, and inventory write-downs.\n\nIndoEuro's agri-sourcing model addresses this risk through a three-tier supplier qualification protocol. First, prospective Indian suppliers submit to a documentary review: FSSAI registration, third-party pesticide residue panel (EU-panel with 500+ analytes), and ISO 22000 or FSSC 22000 certification. Second, our on-ground team in Ahmedabad conducts a facility audit covering processing hygiene, storage conditions, and pest-control records. Third, a pre-shipment sample is laboratory tested in an EU-accredited laboratory (SGS or Eurofins) before container loading is authorised. This protocol has maintained IndoEuro's client-facing rejection rate at under 0.2 % over 36 months.\n\nOn the tariff front, India–EU agricultural trade operates under Most Favoured Nation (MFN) duty rates that vary substantially by HS code. Organic lentils attract 7.7 % EU import duty; sesame seeds carry 0 %; chia seeds 0 %; quinoa 0 %; spice mixes up to 15 %. However, the EU Generalised Scheme of Preferences (GSP) currently provides zero-duty access on many agricultural HS codes for Indian exporters — a benefit that requires proper Form A / REX declaration compliance from the Indian supplier, which IndoEuro's customs team manages as part of its standard import service.\n\nThe emerging opportunity in India–EU agricultural trade lies in value-added processed ingredients: extruded legume flours (chickpea, yellow pea, faba bean), protein concentrates, and shelf-stable superfood blends. These products attract lower duty rates under HS Chapter 11 and 19 versus raw commodity equivalents, and carry significantly higher margin structures for both exporter and importer. IndoEuro has identified 14 Indian FSSC-certified extrusion facilities capable of producing EU-specification functional ingredient formats, with combined monthly output capacity of 2,800 metric tonnes.`,
   },
   {
     id: 'b2',
     title: 'Sustainable Food Sourcing: From Farm to Global Markets',
     excerpt: 'How direct-farm Partnership, FSSC 22000 audits, and traceable supply chains ensure quality, safety, and environmental responsibility in bulk food procurement.',
-    date: 'April 02, 2026',
+    date: 'April 25, 2026',
     image: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&q=80&w=1200',
     category: 'provisions',
     readTime: '6 min read',
@@ -804,7 +945,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: 'b3',
     title: 'Navigating the Global Semiconductor Supply Chain in 2026',
     excerpt: 'A comprehensive guide to sourcing high-tech components and overcoming volatility in the evolving global semiconductor ecosystem.',
-    date: 'April 05, 2026',
+    date: 'April 20, 2026',
     image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200',
     category: 'semiconductors',
     readTime: '8 min read',
@@ -821,7 +962,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: 'b4',
     title: 'Why SEO Strategy is Essential for B2B Industrial Growth',
     excerpt: 'Data-driven evidence on how technical SEO, industrial content authority, and intent-mapped search strategies generate measurable B2B pipeline for manufacturers and distributors.',
-    date: 'April 06, 2026',
+    date: 'April 15, 2026',
     image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1200',
     category: 'digital',
     readTime: '5 min read',
@@ -834,11 +975,28 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     content: `Historically, European B2B industrial companies relied almost exclusively on trade shows, cold outreach, and legacy agent networks to generate business. This model — while still relevant — is now demonstrably insufficient on its own. Research by the Gartner Digital Markets division in 2025 confirmed that 77 % of B2B procurement decision-makers begin their supplier evaluation journey through organic search before engaging a vendor directly. Manufacturers and distributors who are invisible on the first SERP page for high-intent queries are systematically excluded from consideration at the earliest stage.\n\nThe economics of industrial SEO are particularly compelling when compared to paid alternatives. The average cost-per-click for industrial B2B keywords in European markets — phrases like "precision CNC machining Finland", "bulk organic quinoa Europe importer", or "UAV flight controller supplier EU" — ranges between €4.20 and €18 depending on competition and buyer intent tier. Organic rankings, once established, deliver equivalent traffic at zero marginal cost. A well-executed SEO programme for an industrial manufacturer typically achieves 680 % ROI over a 24-month horizon, based on a comparative analysis of 42 IndoEuro client implementations between 2023 and 2025.\n\nTechnical SEO for industrial sites requires a fundamentally different approach than consumer e-commerce. Core priorities include: structured product schema markup for individual component categories, hreflang configuration for multilingual European audiences (Finnish, German, English, Swedish), Core Web Vitals optimisation targeting sub-2.5 s Largest Contentful Paint, and crawl-budget management across large product catalogue architectures. Our digital team also implements FAQ-schema on technical specification pages to capture featured-snippet real estate — which, for high-specificity queries, increases click-through rates by an average of 34 %.\n\nContent authority is the second pillar of industrial B2B SEO. Long-form technical articles — addressing topics like ISO certification requirements, material grade comparisons, or incoterms for DDP mechanical components — attract authoritative backlinks from trade publications and engineering communities. These links function as domain authority multipliers, compounding the ranking power of the entire site over time. IndoEuro's content team publishes one new piece of original market intelligence per fortnight, a cadence that has grown our domain rating from 18 to 54 over 30 months.`,
   },
+    {
+    id: 'b1',
+    title: 'The Future of CNC Machining in Global Manufacturing',
+    excerpt: 'How automation, AI-assisted toolpaths, and advanced CNC technologies are transforming global manufacturing and tightening supply-chain tolerances.',
+    date: 'April 10, 2026',
+    image: 'https://images.unsplash.com/photo-1565034946487-077786996e27?auto=format&fit=crop&q=80&w=1200',
+    category: 'manufacturing',
+    readTime: '7 min read',
+    author: 'IndoEuro Research Bureau',
+    stats: [
+      { label: 'Downtime Reduction', value: '42 %' },
+      { label: 'Global CNC Market 2026', value: '€112 B' },
+      { label: 'Avg Tolerance Achieved', value: '±0.003 mm' },
+      { label: 'Cycle-Time Saving (AI)', value: '28 %' },
+    ],
+    content: `Precision engineering has always been at the heart of Finnish and broader European industrial manufacturing, but 2026 marks a clear inflection point. Driven by advances in AI-assisted toolpath optimisation and multi-axis simultaneous cutting, CNC machining is faster, more precise, and more cost-effective than at any point in history.\n\nNew 5-axis machining centres equipped with embedded predictive-maintenance sensors are now capable of reducing unplanned downtime by over 42 %, ensuring that batch production remains on schedule without compromising micron-level tolerances. Facilities across India — particularly in Pune, Coimbatore, and Ahmedabad — have invested heavily in Fanuc 30iB and Heidenhain TNC 640 controllers, enabling them to compete directly on quality with established German Tier-1 suppliers at 35–50 % lower per-unit cost.\n\nAt IndoEuro Core Oy, our Finnish procurement bureau continuously evaluates machining facilities against ISO 9001:2015 and AS9100D standards. Our on-site dimensional audits use Zeiss CMM systems to verify that parts shipped to European aerospace and medical OEMs hold tolerances specified in engineering blueprints — not just sampled estimates. In Q1 2026, our mechanical division processed 1,240 tonnes of precision-machined components across 18 verified vendors.\n\nThe adoption of digital twin manufacturing — where a virtual model of the part runs alongside the physical cutting programme — has further reduced first-article failure rates by 31 % at our partner facilities. Combined with real-time SPC (Statistical Process Control) dashboards, quality teams can intervene within minutes of a process drifting toward a reject boundary.\n\nLooking ahead, the convergence of collaborative robotics (cobots) for part loading and AI vision for in-process inspection will push the boundaries even further. By 2028, analysts at Mordor Intelligence project the global CNC machine tool market will exceed €140 billion, with the highest growth concentration in South and Southeast Asia driven by European supply-chain localisation strategies.`,
+  },
   {
     id: 'b5',
     title: 'Innovations in Industrial Automation & Hydraulic Systems',
     excerpt: 'The latest advances in electro-hydraulic actuation, smart manifolds, and Industry 4.0 integration are reshaping how European plants source and specify motion control components.',
-    date: 'April 07, 2026',
+    date: 'April 5, 2026',
     image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200',
     category: 'manufacturing',
     readTime: '6 min read',
@@ -852,27 +1010,10 @@ export const BLOG_POSTS: BlogPost[] = [
     content: `Industrial motion control relies heavily on the power density and precise controllability of hydraulic systems. In demanding environments — mining extraction, offshore platform actuation, heavy-press manufacturing — conventional centralised hydraulic architectures with long pipe runs and shared reservoirs have served industry for decades. However, those systems carry persistent disadvantages: complex sealing maintenance, energy losses exceeding 30 % through heat generation, and catastrophic single-point failure risk when a central pump fails.\n\nElectro-hydraulic actuators (EHAs) represent the most significant architectural shift in motion control in two decades. By integrating the hydraulic pump, reservoir, and servo valve into a single self-contained unit mounted directly to the load, EHAs eliminate the kilometres of pipework found in traditional systems. Manufacturers adopting EHAs report maintenance cost reductions averaging 35 % in the first operational year, driven by the elimination of hydraulic fitting leak inspections and pipe flushing intervals.\n\nOur sourcing team regularly procures bore-diameter-matched EHA cartridges from verified Indian manufacturers in the Pune MIDC and Rajkot industrial corridors, rated to 350 bar operating pressure with Hallite and Parker sealing configurations. These units undergo pre-shipment pressure cycling at 1.3× rated operating pressure, helium leak detection, and surface-hardness verification on chrome-plated bores before container loading. DDP delivery to European customers is achieved in 6–10 weeks from confirmed purchase order.\n\nThe convergence of hydraulic actuation with IoT sensor integration — what Bosch Rexroth terms the "Connected Hydraulics" architecture — is creating new procurement requirements. Modern EHAs now include embedded pressure transducers, temperature sensors, and CAN-bus interfaces that feed directly into SCADA and MES platforms. Sourcing these digitally-integrated components requires vendors with software validation capabilities alongside traditional mechanical manufacturing expertise. IndoEuro screens for both during supplier qualification.\n\nThe global electro-hydraulic actuator market is projected to grow at 9.1 % CAGR through 2030, driven by green-energy infrastructure (wind turbine pitch control), defence vehicle systems, and agricultural machinery electrification. European buyers are advised to establish dual-source supply agreements now, before demand escalation in 2027 creates the allocation pressures currently seen in the servo-drive segment.`,
   },
   {
-    id: 'b6',
-    title: 'The Rise of Organic Ingredients in European Food Manufacturing',
-    excerpt: 'Consumer demand, EU Farm-to-Fork targets, and retailer mandates are accelerating the shift to organic and sustainably certified ingredients across the European food-production value chain.',
-    date: 'April 07, 2026',
-    image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&q=80&w=1200',
-    category: 'provisions',
-    readTime: '5 min read',
-    author: 'IndoEuro Trade Analytics',
-    stats: [
-      { label: 'EU Organic Farmland 2025', value: '16.8 M ha' },
-      { label: 'Organic Premium (avg)', value: '+22 %' },
-      { label: 'Top Importer', value: 'Germany' },
-      { label: 'Fastest Growing Segment', value: 'Protein Seeds' },
-    ],
-    content: `Europe's organic food and ingredients sector reached a historic milestone in 2025: 16.8 million hectares of certified organic farmland — representing 10.4 % of total EU agricultural area — now produce under recognised organic certification schemes. The EU's Farm-to-Fork strategy has set a binding target of 25 % organic farmland by 2030, creating a structural demand tailwind that food manufacturers and ingredient distributors must plan for now rather than later.\n\nThe commercial dynamics are significant. Organic-certified ingredients command an average 22 % price premium over conventional equivalents across major European wholesale markets. Yet buyer willingness to absorb that premium has been demonstrated repeatedly: Germany — Europe's largest organic market — saw €15.9 billion in organic retail sales in 2025, up 11 % year-over-year, with the functional food segment (protein seeds, pseudocereals, legume flours) outpacing all other categories at 19 % growth.\n\nFor food manufacturers, the challenge is no longer consumer demand but certified supply availability. Organic quinoa from India and Paraguay, organic chia from Mexico and Paraguay, and organic green lentils from Turkey and Canada are experiencing persistent allocation pressure as EU organic processor capacity cannot keep pace with brand launch schedules. IndoEuro's forward-contract programme allows buyers to lock certified volumes 6–12 months ahead, with price protection bands that limit exposure to harvest-driven volatility.\n\nCertification compliance has also grown more complex. EU Organic Regulation (EU) 2018/848 — which came into full effect in January 2022 and has since been supplemented by three delegated regulations — introduced stricter import authorisation procedures for non-EU origin organic goods. Each consignment from countries without recognised equivalence agreements now requires an Inspection Certificate (e-CoI) issued by an EU-approved control body. Our regulatory team files e-CoI applications as part of standard import services, eliminating a major administrative burden for food manufacturers.\n\nThe protein seeds category — pumpkin kernels, sunflower kernels, hemp seeds, and watermelon seeds — is emerging as the fastest growing organic ingredient segment, driven by plant-based food brand proliferation. IndoEuro currently manages direct-sourcing relationships with organic pumpkin kernel producers in Poland and Austria rated at 480 metric tonnes per month combined capacity, with SKAL-certified chain-of-custody documentation available for each batch.`,
-  },
-  {
     id: 'b7',
     title: 'European Export Analytics Report 2025: Key Trade Corridors & Data',
     excerpt: 'A data-rich breakdown of Europe\'s top export categories, Finland–India bilateral trade flows, container volumes, and the emerging commodity corridors reshaping B2B sourcing strategy.',
-    date: 'April 15, 2026',
+    date: 'March 30, 2026',
     image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1200',
     category: 'analytics',
     readTime: '9 min read',
@@ -886,61 +1027,10 @@ export const BLOG_POSTS: BlogPost[] = [
     content: `The European Union's total merchandise export value reached €2.84 trillion in 2025, a 6.2 % increase on 2024 driven by strong recovery in German machinery exports, record-high Finnish high-tech goods shipments, and a 14 % surge in French agri-food exports to North Africa and Asia. For procurement teams operating Indo-European supply corridors, understanding the macro flows helps anticipate capacity constraints, shipping cost cycles, and customs compliance changes before they cascade into operational disruption.\n\nMachinery and mechanical appliances remain Europe's dominant export category at €428 billion, followed by pharmaceuticals (€312 billion), vehicles (€280 billion), and electrical equipment (€196 billion). The fastest growing export category in 2025 was precision measurement instruments, expanding 22 % year-on-year as Asian manufacturing hubs invested heavily in quality-control infrastructure. This creates a direct sourcing opportunity for European exporters of CMM probes, laser trackers, and portable metrology systems.\n\nThe Finland–India bilateral trade corridor — central to IndoEuro's operational model — reached €1.24 billion in total goods trade in 2025, a 9.3 % increase on the prior year. Finnish exports to India are dominated by telecommunications equipment (Nokia infrastructure), forest industry machinery, and specialty chemicals. Conversely, India's exports to Finland — and to Europe broadly — are increasingly focused on precision-engineered mechanical components, pharmaceutical intermediates, and processed food ingredients. The average sea freight transit time from JNPT Mumbai to Port of Helsinki (via Felixstowe or Rotterdam transshipment) is 28–34 days under DDP Incoterms.\n\nContainer utilisation data from Freightos and Xeneta shows that the Europe–South Asia shipping corridor experienced a 38 % freight rate spike in Q3 2025, triggered by Red Sea rerouting around the Cape of Good Hope. This added approximately 12–14 sailing days and €1,800–€2,400 per 40ft container to procurement landed costs. Buyers who pre-positioned inventory in Q1 2025 through IndoEuro's forward-freight programme avoided this surcharge entirely — a saving of €180,000 for a typical quarterly 75-container programme.\n\nLooking at 2026 projections, the EU–India Free Trade Agreement (currently in advanced negotiation) is expected to reduce average tariff burdens on Indian mechanical components from 4.7 % to 0–1.5 % upon ratification, with food ingredients benefiting from simplified phytosanitary recognition. Procurement managers should begin mapping their bill-of-materials against the draft tariff schedules now to model the landed-cost implications. IndoEuro's trade advisory team provides quarterly tariff-scenario modelling as part of its strategic sourcing subscription.`,
   },
   {
-    id: 'b8',
-    title: 'India–Europe Agricultural Trade: 2026 Market Intelligence Report',
-    excerpt: 'Organic food import volumes, duty structures, certification requirements, and the emerging agricultural commodity corridors between India and the European single market.',
-    date: 'April 22, 2026',
-    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=1200',
-    category: 'trade',
-    readTime: '7 min read',
-    author: 'IndoEuro Trade Analytics',
-    stats: [
-      { label: 'India Agri Exports to EU', value: '€3.8 B' },
-      { label: 'Organic Import Growth', value: '+31 % YoY' },
-      { label: 'Avg EU Import Duty', value: '3.2–8.5 %' },
-      { label: 'Rejected Consignments', value: '1.8 %' },
-    ],
-    content: `India's agricultural exports to the European Union reached €3.8 billion in 2025, establishing the country as the EU's fifth-largest food and agri-commodity supplier by value. Sesame seeds, basmati rice, spices, organic pulses, and quinoa represent the highest-growth segments, with organic-certified agricultural exports from India expanding 31 % year-on-year — a rate that far outpaces India's overall export growth of 8.4 %.\n\nThe regulatory landscape for India–EU agri-trade is governed by a layered framework of phytosanitary requirements, MRL (Maximum Residue Level) compliance mandates, and origin-specific certification obligations. The EU's RASFF (Rapid Alert System for Food and Feed) data shows that 1.8 % of Indian agricultural consignments entering Europe were subject to border rejection or enhanced checks in 2025, primarily due to pesticide residues (41 % of rejections), aflatoxin levels in spices (28 %), and documentation non-compliance (31 %). Buyers working directly with unvetted spot-market suppliers face material risk of rejected shipments, demurrage costs, and inventory write-downs.\n\nIndoEuro's agri-sourcing model addresses this risk through a three-tier supplier qualification protocol. First, prospective Indian suppliers submit to a documentary review: FSSAI registration, third-party pesticide residue panel (EU-panel with 500+ analytes), and ISO 22000 or FSSC 22000 certification. Second, our on-ground team in Ahmedabad conducts a facility audit covering processing hygiene, storage conditions, and pest-control records. Third, a pre-shipment sample is laboratory tested in an EU-accredited laboratory (SGS or Eurofins) before container loading is authorised. This protocol has maintained IndoEuro's client-facing rejection rate at under 0.2 % over 36 months.\n\nOn the tariff front, India–EU agricultural trade operates under Most Favoured Nation (MFN) duty rates that vary substantially by HS code. Organic lentils attract 7.7 % EU import duty; sesame seeds carry 0 %; chia seeds 0 %; quinoa 0 %; spice mixes up to 15 %. However, the EU Generalised Scheme of Preferences (GSP) currently provides zero-duty access on many agricultural HS codes for Indian exporters — a benefit that requires proper Form A / REX declaration compliance from the Indian supplier, which IndoEuro's customs team manages as part of its standard import service.\n\nThe emerging opportunity in India–EU agricultural trade lies in value-added processed ingredients: extruded legume flours (chickpea, yellow pea, faba bean), protein concentrates, and shelf-stable superfood blends. These products attract lower duty rates under HS Chapter 11 and 19 versus raw commodity equivalents, and carry significantly higher margin structures for both exporter and importer. IndoEuro has identified 14 Indian FSSC-certified extrusion facilities capable of producing EU-specification functional ingredient formats, with combined monthly output capacity of 2,800 metric tonnes.`,
-  },
-  {
-    id: 'b9',
-    title: 'Drone & Defence Electronics: European Supply Chain Dynamics 2026',
-    excerpt: 'The European UAV and defence electronics market is accelerating rapidly. Here\'s how procurement teams are sourcing flight controllers, thermal cameras, and AI vision systems under new security and dual-use regulations.',
-    date: 'April 28, 2026',
-    image: 'https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&q=80&w=1200',
-    category: 'analytics',
-    readTime: '8 min read',
-    author: 'IndoEuro Research Bureau',
-    stats: [
-      { label: 'EU Drone Market 2026', value: '€4.2 B' },
-      { label: 'Defence UAV Growth', value: '+34 % YoY' },
-      { label: 'AI Vision Module CAGR', value: '41 %' },
-      { label: 'Lead Time (Thermal Cores)', value: '16–28 wks' },
-    ],
-    content: `The European unmanned aerial systems (UAS) market has undergone a structural acceleration since 2024, driven by three convergent forces: the European Defence Fund's €1.1 billion UAV capability investment, commercial drone adoption across precision agriculture and infrastructure inspection, and the stark operational lessons from the conflict in Ukraine establishing drones as a decisive military technology. The combined civilian and defence European drone market reached €4.2 billion in 2026, with defence-segment procurement growing at 34 % year-on-year — the fastest rate since the sector's emergence.\n\nFrom a component sourcing perspective, this demand surge is creating significant allocation pressure across the critical electronics stack that powers modern UAV platforms. Flight controllers based on STM32H7 and RISC-V architectures running ArduPilot or PX4 firmware are experiencing 12–18 week lead times at major distributors. Uncooled thermal camera cores (320×256 and 640×512 VOx microbolometer) from FLIR, InfraTec, and emerging Chinese suppliers approved for EU non-military use are extended to 16–28 weeks. RTK GNSS modules from u-blox and Trimble have normalised to 8–12 weeks for commercial variants but remain scarce for defence-qualified specifications.\n\nDual-use regulation — specifically EU Regulation 2021/821 governing the export control of dual-use items — adds a critical compliance dimension to drone component sourcing. Many electronic components used in UAV platforms (high-accuracy GNSS receivers, encrypted video transmitters operating above 5.8 GHz, thermal imaging cores above certain sensitivity thresholds) fall under dual-use control schedules requiring export licences when sourced from non-EU origins or supplied to customers in restricted geographies. IndoEuro's compliance team maintains a classification library of 340 drone-relevant HS codes cross-referenced against EU Dual-Use Regulation Annex I, providing clients with pre-clearance assessment before purchase orders are committed.\n\nThe AI edge computing segment — NVIDIA Jetson Orin, Hailo-8L, and Google Coral TPU modules for on-board inference — represents the fastest growing demand category at 41 % CAGR. European drone OEMs are integrating these processors to enable autonomous target detection, obstacle avoidance, and real-time mapping without cloud connectivity dependency — a critical requirement for defence and public-safety applications operating in RF-contested environments. Supply allocation for these compute modules is actively managed by NVIDIA and Hailo through authorised partner tiers; IndoEuro maintains preferred-partner status with two EU-based distributors, providing clients with priority allocation access.\n\nLooking at the 12-month outlook, the commercialisation of 10 km+ digital FPV video links using OFDM frequency-hopping technology, combined with AESA (Active Electronically Scanned Array) miniaturisation for drone-mounted radar, will drive the next wave of component sourcing requirements. Procurement teams would be well advised to begin approved vendor list (AVL) qualification of alternative suppliers now, before demand spikes in H2 2026 create the allocation scenarios currently seen in thermal camera supply chains.`,
-  },
-  {
-    id: 'b10',
-    title: 'Titanium & Exotic Metals: 2026 Price Intelligence & Sourcing Strategy',
-    excerpt: 'LME price benchmarks, grade specifications, aerospace demand drivers, and procurement strategies for titanium, Inconel, and specialty alloys in European industrial supply chains.',
-    date: 'May 02, 2026',
-    image: 'https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?auto=format&fit=crop&q=80&w=1200',
-    category: 'analytics',
-    readTime: '7 min read',
-    author: 'IndoEuro Trade Analytics',
-    stats: [
-      { label: 'Ti-6Al-4V Spot Price', value: '$38.4/kg' },
-      { label: 'Aerospace Demand Growth', value: '+18 % YoY' },
-      { label: 'EU Import Duty (Grade 5)', value: '2.7 %' },
-      { label: 'MTR Turnaround', value: '3–5 days' },
-    ],
-    content: `Titanium alloys — particularly Grade 5 (Ti-6Al-4V), the workhorse of aerospace and medical device manufacturing — are experiencing sustained price elevation in 2026, with spot prices for mill-certified bar and billet averaging $38.4 per kilogram as of Q1 2026, representing a 12 % increase from the Q1 2025 mean. The primary demand driver is commercial aerospace recovery: Airbus delivered 766 aircraft in 2025 (a record), and Boeing's production ramp on the 737 MAX and 787 programmes is consuming titanium billet at rates that have tightened global mill lead times to 16–22 weeks for aerospace-grade product.\n\nFor European precision manufacturers using titanium in medical implants, Formula 1 chassis components, defence airframe parts, and offshore valve bodies, the sourcing challenge is threefold: securing MTR (Material Test Report) certified product at a manageable landed cost, maintaining a dual-source strategy to hedge against single-mill allocation, and navigating the country-of-origin compliance requirements for defence-sector customers (who typically mandate non-Russian, non-Chinese titanium sponge pedigree).\n\nIndoEuro's materials division sources Grade 5 titanium machined components from two NADCAP-accredited Indian machining facilities in Bangalore and Pune, both of which purchase titanium billet exclusively from VSMPO-AVISMA (Russian sponge but Western tolling) and Western equivalents — currently Timet (US/UK), ATI (US), and UKTMP (Kazakhstan). All MTRs include full heat traceability, chemical composition analysis per AMS 4928, and tensile/hardness verification. We deliver MTR packages to customers within 3–5 business days of material receipt, with hard-copy CE declarations of conformity available for EU Machinery Directive compliance.\n\nInconel 625 and 718 — nickel-chromium superalloys used in jet engine hot-section components, subsea equipment, and high-temperature chemical processing — present a separate but equally important procurement challenge in 2026. Increased demand from the offshore wind sector (Inconel fasteners for subsea turbine foundations) has added a new non-aerospace demand stream that market analysts at CRU Group estimate will consume an additional 8,400 metric tonnes of Inconel 625 annually by 2028. Indian superalloy forges with VIM/VAR remelting capability — capable of aerospace-trace MTRs — represent the most cost-competitive sourcing option at 25–35 % below UK and German forge pricing for equivalent-specification product.\n\nFor procurement managers building a long-term exotic-metal sourcing strategy, the key actions in H2 2026 are: establishing blanket purchase-order frameworks with Indian-origin certified suppliers to secure pricing and allocation; defining substitute-grade qualification protocols (e.g., Grade 23 ELI versus Grade 5 for biomedical) to preserve design flexibility; and integrating MTR digital passports (PDF with QR-code traceability) into incoming goods inspection workflows. IndoEuro's materials team provides all three as packaged sourcing services.`,
-  },
-  {
     id: 'b11',
     title: 'Digital Transformation in B2B Procurement: ROI Data & Platform Analysis',
     excerpt: 'E-procurement adoption rates, measurable ROI figures, platform comparison data, and implementation roadmaps for industrial buyers digitising their procurement workflows.',
-    date: 'May 06, 2026',
+    date: 'March 25, 2026',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200',
     category: 'digital',
     readTime: '6 min read',
@@ -957,7 +1047,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: 'b12',
     title: 'Nordic Food Market Entry: Regulations, Retail Landscape & Opportunity Map',
     excerpt: 'A practical guide to navigating Finnish and Swedish food import regulations, labelling requirements, the Nordic retail landscape, and identifying high-growth category entry points for international food exporters.',
-    date: 'May 10, 2026',
+    date: 'March 20, 2026',
     image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1200',
     category: 'trade',
     readTime: '7 min read',
@@ -974,7 +1064,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: 'b13',
     title: 'CNC Machining Cost Benchmarks 2026: Per-Unit Pricing, Tolerances & Material Indices',
     excerpt: 'Detailed per-unit machining cost data, tolerance-tier pricing differentials, material cost index trends, and strategies for European buyers to achieve target landed cost on precision-machined components.',
-    date: 'May 14, 2026',
+    date: 'March 15, 2026',
     image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=1200',
     category: 'manufacturing',
     readTime: '8 min read',
@@ -991,7 +1081,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: 'b14',
     title: 'Supply Chain Resilience Report 2026: Lead Times, Dual-Sourcing & European Nearshoring',
     excerpt: 'Empirical lead-time data across key component categories, dual-sourcing ROI analysis, and a strategic framework for European manufacturers building supply chain resilience in an era of persistent geopolitical disruption.',
-    date: 'May 18, 2026',
+    date: 'March 10, 2026',
     image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200',
     category: 'trade',
     readTime: '9 min read',

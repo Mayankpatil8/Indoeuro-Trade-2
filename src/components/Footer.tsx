@@ -36,11 +36,11 @@ export const Footer = () => {
           <nav aria-label="Solutions navigation">
             <h4 className="font-bold mb-8 text-sm uppercase tracking-widest">Solutions</h4>
             <ul className="space-y-4 text-sm text-white/50">
-              <li><Link to="/electronics" className="hover:text-white transition-colors">Electronic Parts</Link></li>
-              <li><Link to="/mechanical" className="hover:text-white transition-colors">Mechanical Components</Link></li>
+              <li><Link to="/food" className="hover:text-white transition-colors">Food</Link></li>
+              <li><Link to="/digital" className="hover:text-white transition-colors">Digital</Link></li>
+              <li><Link to="/mechanical" className="hover:text-white transition-colors">Mechanical</Link></li>
               <li><Link to="/mechanical" className="hover:text-white transition-colors">Custom Manufacturing</Link></li>
-              <li><Link to="/food" className="hover:text-white transition-colors">Premium Food Products</Link></li>
-              <li><Link to="/digital" className="hover:text-white transition-colors">Digital Marketing</Link></li>
+              <li><Link to="/electronics" className="hover:text-white transition-colors">Electronic</Link></li>
             </ul>
           </nav>
 

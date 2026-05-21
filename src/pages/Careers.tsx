@@ -26,11 +26,9 @@ import { PageTransition } from '@/components/PageTransition';
 interface Job {
   id: string;
   title: string;
-  department: 'sourcing' | 'tech' | 'marketing' | 'quality';
+  department: 'sales' | 'sourcing' | 'logistics' | 'admin';
   deptLabel: string;
-  //location: string;
   type: string;
-  //salary: string;
   overview: string;
   responsibilities: string[];
   requirements: string[];
@@ -40,120 +38,134 @@ interface Job {
 const JOBS_DATA: Job[] = [
   {
     id: 'ie-job-001',
-    title: 'Global Sourcing Specialist',
-    department: 'sourcing',
-    deptLabel: 'Sourcing & Logistics',
-    //location: 'Helsinki, Finland (Hybrid)',
+    title: 'Sales Country Head (1 Vacancy)',
+    department: 'sales',
+    deptLabel: 'Sales & Business Development',
     type: 'Full-time',
-    //salary: '€4,200 – €5,600 / month',
-    overview:
-      'Coordinate complex B2B procurement specifications with our vetted manufacturers in Southeast Asia & India. Validate custom CNC components, castings, and raw materials against strict European industrial standards.',
+    overview: 'Lead the national sales strategy and drive enterprise procurement partnerships within your assigned country. You will be responsible for expanding our B2B client base and managing regional sales executives.',
     responsibilities: [
-      'Manage end-to-end supplier relations and negotiate SLAs across active trans-continental supply corridors.',
-      'Audit custom material specifications and coordinate product verification programs with engineering teams.',
-      'Supervise compliance checks, customs documentation, and coordinate DDP delivery logistics for Nordic clients.',
-      'Develop long-term risk-mitigation buffers and safety stock protocols for key industrial accounts.',
+      'Develop and execute localized sales strategies to secure new enterprise clients.',
+      'Lead negotiations and close high-value B2B procurement and supply contracts.',
+      'Manage and mentor a regional team of EU Sales Executives.',
+      'Analyze market trends to identify new sourcing and supply chain opportunities.'
     ],
     requirements: [
-      '3+ years of experience in industrial procurement, contract manufacturing, or mechanical supply chains.',
-      'Strong ability to read GD&T engineering blueprints, tolerance guidelines, and material grade certificates.',
-      'Exceptional negotiation skills and a process-driven approach to vendor quality assurance.',
-      'Full professional fluency in English. Finnish, Swedish, or German is highly advantageous.',
+      '5+ years of B2B sales leadership experience in industrial or procurement sectors.',
+      'Proven track record of closing six-figure enterprise contracts.',
+      'Strong regional network of manufacturing and industrial connections.',
+      'Excellent negotiation and strategic planning skills.'
     ],
     benefits: [
-      'Hybrid workflow: 3 days office, 2 remote',
-      'Premium private healthcare & phone benefit',
-      'Annual certification development stipend',
-      'Bi-annual supplier audit trips abroad',
+      'Competitive base salary + uncapped commission',
+      'Executive car allowance & travel budget',
+      'Health insurance & wellness benefits',
+      'Annual global leadership retreat'
     ],
   },
   {
     id: 'ie-job-002',
-    title: 'B2B Integration Platform Engineer',
-    department: 'tech',
-    deptLabel: 'Engineering & Tech',
-    //location: 'Helsinki, Finland / Remote',
+    title: 'Sales Executive (1 Vacancy per EU Country)',
+    department: 'sales',
+    deptLabel: 'Sales & Business Development',
     type: 'Full-time',
-    //salary: '€5,000 – €6,800 / month',
-    overview:
-      'Architect and scale the IndoEuro Trade Portal — our core enterprise coordination platform. Develop high-fidelity dashboards, secure API layers, and automated supplier request systems to eliminate friction in international sourcing.',
+    overview: 'Drive outbound sales and B2B client acquisition across the EU. We are hiring one dedicated Sales Executive per EU country to build local relationships and expand our procurement network.',
     responsibilities: [
-      'Build responsive client interfaces and performant admin consoles using React, TypeScript, and modern CSS architectures.',
-      'Design secure backend endpoints for handling private RFQ files, supplier scores, and tracking telemetry.',
-      'Optimize database search matrices to index thousands of custom components and verified factories.',
-      'Maintain extreme build quality, 100% test coverage for critical paths, and sub-100ms loading speeds.',
+      'Identify and prospect potential B2B clients within your assigned EU country.',
+      'Conduct product presentations and pitch supply chain solutions to key decision-makers.',
+      'Maintain CRM hygiene and build a robust sales pipeline.',
+      'Collaborate with the Country Head to meet and exceed quarterly revenue targets.'
     ],
     requirements: [
-      '4+ years of professional experience building complex, accessible web applications and B2B systems.',
-      'Expertise in TypeScript, React, Vite, Node.js, and modern tailwind or vanilla CSS token setups.',
-      'Strong background in relational databases (PostgreSQL / MySQL), Redis caching, and AWS serverless models.',
-      'High appreciation for premium aesthetics, layout precision, and fluid micro-animations.',
+      '2+ years of B2B sales or account management experience.',
+      'Native fluency in the language of your assigned EU country, plus professional English.',
+      'Strong communication, presentation, and relationship-building skills.',
+      'Familiarity with industrial supply chains or procurement is a plus.'
     ],
     benefits: [
-      'Fully remote, hybrid, or office — your choice',
-      'Latest M-series MacBook Pro or custom workstation',
-      'European tech conference budget & retreats',
-      'Stock options for early engineering hires',
+      'Competitive base salary + performance bonuses',
+      'Remote/Hybrid work environment',
+      'Comprehensive sales training program',
+      'Opportunity for rapid career progression'
     ],
   },
   {
     id: 'ie-job-003',
-    title: 'Enterprise B2B Growth Lead',
-    department: 'marketing',
-    deptLabel: 'Marketing & Growth',
-    //location: 'Helsinki, Finland (Hybrid)',
+    title: 'Sourcing Specialist (1 Vacancy)',
+    department: 'sourcing',
+    deptLabel: 'Sourcing & Supply Chain',
     type: 'Full-time',
-    //salary: '€4,000 – €5,200 / month',
-    overview:
-      "Take full ownership of IndoEuro Hub's digital presence, B2B lead generation infrastructure, and industrial authority funnels across Northern Europe.",
+    overview: 'Manage the procurement lifecycle by sourcing high-quality industrial materials, electronics, and mechanical parts from verified global manufacturers while ensuring strict adherence to EU standards.',
     responsibilities: [
-      'Design and deploy targeted B2B content programs and LinkedIn authority campaigns aimed at enterprise directors.',
-      'Conduct rigorous keyword research and technical SEO optimisations for industrial sourcing keywords.',
-      'Create high-converting landing experiences, whitepapers, and dynamic case studies in collaboration with designers.',
-      'Optimise our CRM and outbound prospecting stack to scale qualified enterprise inquiries.',
+      'Identify, vet, and onboard reliable manufacturing partners and suppliers.',
+      'Negotiate pricing, SLAs, and lead times to ensure optimal cost-efficiency.',
+      'Conduct regular audits and compliance checks on incoming materials.',
+      'Work closely with logistics and sales to ensure smooth product delivery.'
     ],
     requirements: [
-      '3+ years leading growth or performance marketing in B2B tech, industrial sectors, or consultancies.',
-      'Outstanding editorial and copywriting skills with a deep understanding of professional business audiences.',
-      'Mastery of Hubspot / Salesforce, analytical tracking, and cold outreach engines.',
-      'Self-starter mindset with a track record of driving measurable pipeline and ROI.',
+      '3+ years of experience in global sourcing or supply chain management.',
+      'Strong understanding of EU import regulations and quality standards (ISO).',
+      'Excellent analytical and negotiation skills.',
+      'Fluent in English; additional languages are advantageous.'
     ],
     benefits: [
-      'Uncapped performance commission on pipeline',
-      'Direct access to executive coaching',
-      'Subsidised transport & wellness vouchers',
-      'Ergonomic home & office workstation setup',
+      'Hybrid workflow options',
+      'International travel opportunities for supplier audits',
+      'Premium private healthcare',
+      'Continuous professional development budget'
     ],
   },
   {
     id: 'ie-job-004',
-    title: 'Senior Quality & Material Auditor',
-    department: 'quality',
-    deptLabel: 'Quality Assurance',
-    //location: 'Helsinki Hub / Travel',
+    title: 'Logistics Coordinator (1 Vacancy)',
+    department: 'logistics',
+    deptLabel: 'Logistics & Operations',
     type: 'Full-time',
-    //salary: '€4,800 – €6,200 / month',
-    overview:
-      "Enforce IndoEuro's absolute zero-defect guarantee. Direct physical factory audits, material testing verifications, and compliance programs globally to shield European SMEs from supply disruptions.",
+    overview: 'Ensure seamless, end-to-end movement of goods across borders. You will oversee DDP shipping, customs clearance, and warehouse distribution to guarantee our clients receive their orders on time.',
     responsibilities: [
-      'Conduct pre-dispatch inspections and dimensional verifications on precision CNC, sheet metal, and cast hardware.',
-      'Formulate comprehensive QA checklists and training frameworks for offshore supplier plants.',
-      'Manage compliance processes for ISO 9001, ISO 14001, RoHS, and CE product declarations.',
-      'Lead fast-response root-cause analysis (8D) in case of manufacturing anomalies.',
+      'Coordinate international freight (air, sea, and land) with 3PL partners.',
+      'Manage all customs documentation, tariffs, and import/export compliance.',
+      'Monitor shipments in real-time and proactively resolve any transit delays.',
+      'Optimize freight routes to reduce transportation costs and lead times.'
     ],
     requirements: [
-      'Degree in Mechanical Engineering, Metallurgy, Material Science, or equivalent industrial discipline.',
-      '5+ years of QC experience, including expertise with precision measurement tools (CMM, spectrometry).',
-      'Certified Lead Auditor (ISO 9001) with extensive offshore factory auditing experience.',
-      'High independence and willingness to travel internationally (up to 30% of the year).',
+      '2+ years of experience in international logistics, freight forwarding, or customs.',
+      'Deep knowledge of European import/export regulations and DDP terms.',
+      'Strong organizational skills and ability to manage multiple shipments simultaneously.',
+      'Proficiency in logistics tracking software and ERP systems.'
     ],
     benefits: [
-      'Business class upgrades for long-haul audits',
-      'Direct impact on global quality frameworks',
-      'Extensive family-oriented healthcare coverage',
-      'Paid buffer leave after intensive travel cycles',
+      'Competitive salary and performance incentives',
+      'Flexible working hours',
+      'Comprehensive health coverage',
+      'Dynamic and fast-paced operational environment'
     ],
   },
+  {
+    id: 'ie-job-005',
+    title: 'Admin, Accounting & Finance Officer (1 Vacancy)',
+    department: 'admin',
+    deptLabel: 'Administration & Finance',
+    type: 'Full-time',
+    overview: 'Maintain the financial and administrative backbone of our operations. You will handle accounting, payroll, general administration, and ensure our shipment financial records are perfectly updated.',
+    responsibilities: [
+      'Manage daily accounting tasks, including invoicing, accounts payable/receivable, and payroll.',
+      'Update shipment financial ledgers and reconcile cross-border transaction costs.',
+      'Oversee general office administration and internal HR compliance.',
+      'Prepare monthly financial reports and assist with annual audits.'
+    ],
+    requirements: [
+      'Degree in Accounting, Finance, or Business Administration.',
+      '3+ years of experience in corporate accounting or financial administration.',
+      'Proficiency in modern accounting software (e.g., Xero, QuickBooks, or SAP).',
+      'High attention to detail and strong ethical standards.'
+    ],
+    benefits: [
+      'Stable, predictable working hours',
+      'Generous paid time off',
+      'Health and wellness allowances',
+      'Supportive and collaborative team culture'
+    ],
+  }
 ];
 
 /* ─── Application Drawer Portal ─────────────────────────────────────── */
@@ -582,7 +594,7 @@ export const Careers = () => {
   });
 
   const [activeCategory, setActiveCategory] = useState<
-    'all' | 'sourcing' | 'tech' | 'marketing' | 'quality'
+    'all' | 'sales' | 'sourcing' | 'logistics' | 'admin'
   >('all');
   const [expandedJobId, setExpandedJobId] = useState<string | null>(null);
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
@@ -592,10 +604,10 @@ export const Careers = () => {
 
   const filterCategories: { label: string; value: typeof activeCategory }[] = [
     { label: 'All Openings', value: 'all' },
-    { label: 'Sourcing & Logistics', value: 'sourcing' },
-    { label: 'Engineering & Tech', value: 'tech' },
-    { label: 'Marketing & Growth', value: 'marketing' },
-    { label: 'Quality Assurance', value: 'quality' },
+    { label: 'Sales & Business', value: 'sales' },
+    { label: 'Sourcing', value: 'sourcing' },
+    { label: 'Logistics', value: 'logistics' },
+    { label: 'Admin & Finance', value: 'admin' },
   ];
 
   const filteredJobs =
@@ -774,27 +786,31 @@ export const Careers = () => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, scale: 0.97 }}
                           transition={{ duration: 0.35 }}
-                          className={`bg-white rounded-3xl border transition-all duration-300 ${
+                          className={`relative overflow-hidden rounded-3xl border transition-all duration-500 group ${
                             isExpanded
-                              ? 'border-terracotta/70 shadow-md ring-1 ring-terracotta/20'
-                              : 'border-beige hover:border-terracotta/25 soft-shadow'
+                              ? 'bg-white border-terracotta/60 shadow-xl ring-2 ring-terracotta/10 scale-[1.01]'
+                              : 'bg-white/80 backdrop-blur-xl border-beige/60 hover:border-terracotta/30 hover:shadow-2xl hover:shadow-terracotta/10 hover:-translate-y-1'
                           }`}
                         >
+                          {/* Ambient hover glow */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-terracotta/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                           {/* Card header */}
                           <div
                             onClick={() => toggleExpand(job.id)}
-                            className="p-6 lg:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-5 cursor-pointer select-none"
+                            className="relative p-6 lg:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-5 cursor-pointer select-none z-10"
                           >
-                            <div className="space-y-2 flex-1 min-w-0">
-                              <div className="flex flex-wrap items-center gap-2">
-                                <span className="text-[10px] font-bold uppercase tracking-widest text-terracotta bg-terracotta/10 px-3 py-1 rounded-full">
+                            <div className="space-y-3 flex-1 min-w-0">
+                              <div className="flex flex-wrap items-center gap-3">
+                                <span className="text-[10px] font-bold uppercase tracking-widest text-terracotta bg-terracotta/10 border border-terracotta/20 px-3.5 py-1.5 rounded-full shadow-sm">
                                   {job.deptLabel}
                                 </span>
-                                <span className="text-xs text-nordic-grey flex items-center gap-1">
-                                  <Clock size={11} /> {job.type}
+                                <span className="text-xs text-nordic-grey font-medium flex items-center gap-1.5 bg-white/60 px-3 py-1 rounded-full border border-beige/40">
+                                  <Clock size={12} className="text-nordic-black/40" /> {job.type}
                                 </span>
                               </div>
-                              <h3 className="text-xl font-bold text-nordic-black">{job.title}</h3>
+                              <h3 className="text-2xl font-extrabold text-nordic-black tracking-tight group-hover:text-terracotta transition-colors duration-300">
+                                {job.title}
+                              </h3>
                               <div className="flex flex-wrap items-center gap-4 text-sm text-nordic-grey">
                                 <span className="flex items-center gap-1">
                                   {/* <MapPin size={13} /> {job.location} */}
@@ -811,15 +827,15 @@ export const Careers = () => {
                                   e.stopPropagation();
                                   setSelectedJob(job);
                                 }}
-                                className="px-5 py-2.5 bg-nordic-black text-white hover:bg-terracotta text-[11px] font-bold uppercase tracking-wider rounded-full transition-all"
+                                className="px-7 py-3.5 bg-gradient-to-r from-nordic-black to-nordic-black/90 text-white hover:from-terracotta hover:to-terracotta/90 text-[11px] font-bold uppercase tracking-[0.2em] rounded-full shadow-lg hover:shadow-terracotta/30 transition-all duration-300"
                               >
                                 Apply Now
                               </button>
                               <div
-                                className={`w-9 h-9 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                                className={`w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-500 ${
                                   isExpanded
-                                    ? 'rotate-180 border-terracotta text-terracotta bg-terracotta/5'
-                                    : 'border-beige text-nordic-black'
+                                    ? 'rotate-180 border-terracotta text-terracotta bg-terracotta/10 shadow-inner'
+                                    : 'border-beige text-nordic-black group-hover:border-terracotta/30 group-hover:bg-white'
                                 }`}
                               >
                                 <ChevronDown size={16} />

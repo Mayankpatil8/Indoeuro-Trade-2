@@ -10,14 +10,14 @@ export const Contact = () => {
   const [showAllFaqs, setShowAllFaqs] = useState(false);
 
   const faqs = [
-    { q: 'What quality assurance and ISO standards do your manufacturers follow?', a: 'All our manufacturing partners are rigorously vetted to comply with European ISO 9001 and ISO 14001 standards. We conduct centralized QA testing at our Finland HQ before any batch is dispatched to ensure zero defect rates.' },
-    { q: 'How do you handle European import duties and customs clearance?', a: 'We manage the entire logistics pipeline. Our quotes are typically delivered DDP (Delivered Duty Paid) for EU clients, meaning we handle all customs documentation, tariffs, and direct-to-warehouse logistics without hidden fees.' },
-    { q: 'Can you provide custom CNC machining prototypes before bulk orders?', a: 'Yes. For precision mechanical parts, we highly recommend prototyping. We can deliver CNC machined prototypes within 10-14 days for your engineering team to validate before initiating high-volume production.' },
-    { q: 'What are your standard payment terms for enterprise clients?', a: 'For verified European SMEs and enterprise clients, we typically offer NET 30 or NET 60 terms after a successful credit assessment. Initial trial orders may require standard milestone payments.' },
-    { q: 'Do you offer localized warehousing in the Nordic region?', a: 'Yes. To mitigate supply chain disruptions, we offer buffer stock and localized warehousing solutions in Finland, allowing for just-in-time (JIT) delivery to your facilities across Northern Europe.' },
-    { q: 'What is the minimum order quantity (MOQ) for electronic components?', a: 'MOQs depend strictly on the component type. Standard active/passive components often require reel-level quantities, while specialized industrial sensors and relays can be sourced in lower volumes tailored to your production run.' },
-    { q: 'How does your digital division track ROI for B2B lead generation?', a: 'Our digital growth systems are directly integrated with your CRM. We track closed-won revenue from LinkedIn authority campaigns, rather than just vanity metrics, ensuring a measurable impact on your sales pipeline.' },
-    { q: 'How quickly can you scale production for sudden demand spikes?', a: 'Because we consolidate multiple pre-vetted vendors, we can dynamically shift capacity across our manufacturing network to absorb sudden volume spikes without compromising lead times or quality.' }
+    { q: 'What services does IndoEuro Core Oy provide?', a: 'We specialize in B2B industrial procurement, sourcing mechanical and electronic components, food-grade materials, and providing digital marketing services.' },
+    { q: 'Where is your company located?', a: 'Our headquarters is located in Finland, serving as our central hub for European operations and quality control.' },
+    { q: 'How can I request a quote for my project?', a: 'You can use the secure request form on this contact page or email us directly at contact@indoeurocore.fi. We aim to respond within 24 hours.' },
+    { q: 'Do you offer international shipping?', a: 'Yes, we manage logistics and coordinate deliveries to clients across Europe and internationally.' },
+    { q: 'How do you ensure the quality of the products you source?', a: 'We partner with trusted suppliers and perform strict quality checks to ensure all items meet industry standards before dispatch.' },
+    { q: 'Can I place a small initial trial order?', a: 'Yes, we understand that new partnerships take time to build. We are open to discussing smaller trial orders depending on the product type and availability.' },
+    { q: 'Do you provide digital marketing services?', a: 'Yes! Beyond procurement, our digital division helps B2B companies grow their online presence and generate leads through modern SEO and LinkedIn strategies.' },
+    { q: 'What is the typical process after I submit a request?', a: 'Once we receive your inquiry, our team will review your requirements, contact you to clarify any details, and then provide a tailored sourcing or digital strategy proposal.' }
   ];
 
   useSEO({
@@ -76,7 +76,7 @@ export const Contact = () => {
                 {
                   icon: MapPin,
                   title: 'Finland Headquarters',
-                  content: 'Mannerheimintie 12, 00100 Finland , Finland',
+                  content: 'Mannerheimintie 12, 00100 Helsinki, Finland',
                   sub: 'Central hub for European operations'
                 },
                 {
@@ -88,7 +88,7 @@ export const Contact = () => {
                 {
                   icon: Phone,
                   title: 'Direct Line',
-                  content: '+358 9 123 4567',
+                  content: '+358 40 8500302',
                   sub: 'Available 08:00 - 18:00 EET'
                 }
               ].map((item, i) => (
@@ -128,28 +128,62 @@ export const Contact = () => {
             </div>
 
             <form className="space-y-6">
+              <p className="text-sm font-bold text-terracotta mb-2 bg-terracotta/10 px-4 py-2 rounded-lg inline-block">
+                * Please note that all fields are required to submit this form.
+              </p>
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Full Name / Company</label>
+                  <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Full Name *</label>
                   <input
                     type="text"
-                    placeholder="e.g. John Doe, Acme Corp"
+                    required
+                    placeholder="e.g. John Doe"
                     className="w-full px-5 py-4 bg-beige/50 border border-beige rounded-xl focus:outline-none focus:border-terracotta focus:bg-white transition-all text-nordic-black"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Corporate Email</label>
+                  <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Company Name *</label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. Acme Corp"
+                    className="w-full px-5 py-4 bg-beige/50 border border-beige rounded-xl focus:outline-none focus:border-terracotta focus:bg-white transition-all text-nordic-black"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Corporate Email *</label>
                   <input
                     type="email"
+                    required
                     placeholder="john@acmecorp.eu"
+                    className="w-full px-5 py-4 bg-beige/50 border border-beige rounded-xl focus:outline-none focus:border-terracotta focus:bg-white transition-all text-nordic-black"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Contact Number *</label>
+                  <input
+                    type="tel"
+                    required
+                    placeholder="+44 20 7123 4567"
+                    className="w-full px-5 py-4 bg-beige/50 border border-beige rounded-xl focus:outline-none focus:border-terracotta focus:bg-white transition-all text-nordic-black"
+                  />
+                </div>
+                <div className="space-y-2 md:col-span-2">
+                  <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Country *</label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. Germany"
                     className="w-full px-5 py-4 bg-beige/50 border border-beige rounded-xl focus:outline-none focus:border-terracotta focus:bg-white transition-all text-nordic-black"
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Department</label>
-                <select className="w-full px-5 py-4 bg-beige/50 border border-beige rounded-xl focus:outline-none focus:border-terracotta focus:bg-white transition-all text-nordic-black appearance-none">
+                <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Department *</label>
+                <select required className="w-full px-5 py-4 bg-beige/50 border border-beige rounded-xl focus:outline-none focus:border-terracotta focus:bg-white transition-all text-nordic-black appearance-none">
+                  <option value="" disabled selected>Select a department</option>
                   <option>Industrial Procurement & Sourcing</option>
                   <option>Food-Grade Industrial Materials</option>
                   <option>Digital Growth & SEO Strategy</option>
@@ -161,8 +195,9 @@ export const Contact = () => {
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Project Details & Requirements</label>
+                <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Project Details & Requirements *</label>
                 <textarea
+                  required
                   rows={5}
                   placeholder="Provide specifications, target volumes, or digital growth objectives..."
                   className="w-full px-5 py-4 bg-beige/50 border border-beige rounded-xl focus:outline-none focus:border-terracotta focus:bg-white transition-all text-nordic-black resize-none"

@@ -151,7 +151,7 @@ From microcontrollers and precision sensors to RF and industrial electronic comp
           <div className="mb-12 flex items-end justify-between border-b border-beige pb-6">
             <div>
               <span className="text-terracotta text-xs font-bold uppercase tracking-widest mb-3 block">Active Catalog</span>
-              <h3 className="text-3xl font-bold">Vetted Semiconductor Categories</h3>
+              <h3 className="text-3xl font-bold">Vetted Electronic Categories</h3>
             </div>
             <p className="text-nordic-grey max-w-sm text-sm hidden md:block">
               Indicative listing of components regularly sourced, packaged, and distributed under our global supply agreements.

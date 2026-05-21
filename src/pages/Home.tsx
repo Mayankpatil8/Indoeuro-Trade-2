@@ -335,30 +335,30 @@ Helping European SMEs and enterprise teams streamline procurement, strengthen di
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                title: 'Electronic Parts',
+                title: 'Electronic',
                 path: '/electronics',
-                img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800',
+                img: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779353898/ele_tksfks.webp',
                 desc: 'PCB Components, Sensors & Relays, and advanced power systems for reliable operations.',
                 linkText: 'View Specifications'
               },
               {
-                title: 'Mechanical Parts',
+                title: 'Mechanical',
                 path: '/mechanical',
-                img: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=800',
+                img: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779353896/mexhpag_zy91lf.webp',
                 desc: 'CNC Machined Components, Industrial Fasteners, Bearings & Couplings, and Stainless Steel Components.',
                 linkText: 'View Specifications'
               },
               {
-                title: 'Food-Grade Materials',
+                title: 'Food Materials',
                 path: '/food',
-                img: 'food.png',
+                img: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779353897/foo_eudgxi.webp',
                 desc: 'Compliant food-grade materials and premium ingredients sourced with strict quality control.',
                 linkText: 'View Specifications'
               },
               {
-                title: 'Digital Marketing',
+                title: 'Digital',
                 path: '/digital',
-                img: 'digital1.png',
+                img: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779353896/photo-collage.pn_pabzng.webp',
                 desc: 'Comprehensive business growth systems, LinkedIn authority strategies, founder branding, and robust lead-generation infrastructure.',
                 linkText: 'Explore Growth Systems'
               }

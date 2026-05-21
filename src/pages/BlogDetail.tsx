@@ -172,7 +172,7 @@ export const BlogDetail = () => {
           {/* Divider */}
           <div className="border-t border-beige mt-14 mb-12" />
 
-          {/* Author tag */}
+          {/* Author tag
           <div className="flex items-center gap-4 mb-14">
             <div className="w-12 h-12 rounded-full bg-terracotta/10 flex items-center justify-center shrink-0">
               <BookOpen size={20} className="text-terracotta" />
@@ -181,7 +181,7 @@ export const BlogDetail = () => {
               <div className="text-xs font-bold uppercase tracking-widest text-nordic-grey mb-0.5">Written by</div>
               <div className="text-sm font-bold text-nordic-black">{post.author}</div>
             </div>
-          </div>
+          </div> */}
 
           {/* CTA Card */}
           <motion.div

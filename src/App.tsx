@@ -3,6 +3,7 @@ import { AnimatePresence } from 'framer-motion';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { BreadcrumbSchema } from './components/BreadcrumbSchema';
+import { WhatsAppButton } from './components/WhatsAppButton';
 import { Home } from './pages/Home';
 import { Electronics } from './pages/Electronics';
 import { Mechanical } from './pages/Mechanical';
@@ -45,6 +46,7 @@ export default function App() {
   return (
     <Router>
       <BreadcrumbSchema />
+      <WhatsAppButton />
       <div className="min-h-screen flex flex-col">
         <AnimatedAppContent />
       </div>
