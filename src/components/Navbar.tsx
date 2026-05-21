@@ -55,7 +55,7 @@ export const Navbar = () => {
             aria-label="IndoEuro Trade Hub — Home"
           >
             <img
-              src="/logo_@.png"
+              src="images/logo_@.png"
               alt="IndoEuro Hub"
               className={cn(
                 "w-auto object-contain transition-all duration-500",

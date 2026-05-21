@@ -19,7 +19,7 @@ export const Footer = () => {
     aria-label="IndoEuro Trade Hub — Home"
   >
     <img
-      src="/looo.png"
+      src="images/looo.png"
       alt="IndoEuro Core Oy"
       className="h-20 md:h-28 w-auto object-contain"
     />
