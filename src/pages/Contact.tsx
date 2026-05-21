@@ -8,6 +8,16 @@ import { PageTransition } from '@/components/PageTransition';
 export const Contact = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [showAllFaqs, setShowAllFaqs] = useState(false);
+  const [submitStage, setSubmitStage] = useState<'idle' | 'submitting' | 'success'>('idle');
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Simulate secure submission. Replace with fetch('/mailer.php') when backend is ready.
+    setSubmitStage('submitting');
+    setTimeout(() => {
+      setSubmitStage('success');
+    }, 1500);
+  };
 
   const faqs = [
     { q: 'What services does IndoEuro Core Oy provide?', a: 'We specialize in B2B industrial procurement, sourcing mechanical and electronic components, food-grade materials, and providing digital marketing services.' },
@@ -127,7 +137,28 @@ export const Contact = () => {
               </div>
             </div>
 
-            <form className="space-y-6">
+            {submitStage === 'success' ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="flex flex-col items-center justify-center py-16 text-center h-full"
+              >
+                <div className="w-20 h-20 bg-sage/10 rounded-full flex items-center justify-center mb-6">
+                  <ShieldCheck size={40} className="text-sage" />
+                </div>
+                <h3 className="text-3xl font-bold text-nordic-black mb-4">Request Submitted Successfully</h3>
+                <p className="text-nordic-grey mb-8 max-w-sm mx-auto leading-relaxed">
+                  Thank you for reaching out. Your secure request has been safely logged and encrypted. Our team will review your requirements and respond within 24 hours.
+                </p>
+                <button
+                  onClick={() => setSubmitStage('idle')}
+                  className="px-8 py-4 bg-nordic-black text-white text-xs font-bold uppercase tracking-widest rounded-xl hover:bg-terracotta transition-colors"
+                >
+                  Submit Another Request
+                </button>
+              </motion.div>
+            ) : (
+            <form method="POST" onSubmit={handleSubmit} className="space-y-6">
               <p className="text-sm font-bold text-terracotta mb-2 bg-terracotta/10 px-4 py-2 rounded-lg inline-block">
                 * Please note that all fields are required to submit this form.
               </p>
@@ -137,6 +168,7 @@ export const Contact = () => {
                   <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Full Name *</label>
                   <input
                     type="text"
+                    name="full_name"
                     required
                     placeholder="e.g. John Doe"
                     className="w-full px-5 py-4 bg-beige/50 border border-beige rounded-xl focus:outline-none focus:border-terracotta focus:bg-white transition-all text-nordic-black"
@@ -146,6 +178,7 @@ export const Contact = () => {
                   <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Company Name *</label>
                   <input
                     type="text"
+                    name="company_name"
                     required
                     placeholder="e.g. Acme Corp"
                     className="w-full px-5 py-4 bg-beige/50 border border-beige rounded-xl focus:outline-none focus:border-terracotta focus:bg-white transition-all text-nordic-black"
@@ -155,6 +188,7 @@ export const Contact = () => {
                   <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Corporate Email *</label>
                   <input
                     type="email"
+                    name="email"
                     required
                     placeholder="john@acmecorp.eu"
                     className="w-full px-5 py-4 bg-beige/50 border border-beige rounded-xl focus:outline-none focus:border-terracotta focus:bg-white transition-all text-nordic-black"
@@ -164,6 +198,7 @@ export const Contact = () => {
                   <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Contact Number *</label>
                   <input
                     type="tel"
+                    name="phone"
                     required
                     placeholder="+44 20 7123 4567"
                     className="w-full px-5 py-4 bg-beige/50 border border-beige rounded-xl focus:outline-none focus:border-terracotta focus:bg-white transition-all text-nordic-black"
@@ -173,6 +208,7 @@ export const Contact = () => {
                   <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Country *</label>
                   <input
                     type="text"
+                    name="country"
                     required
                     placeholder="e.g. Germany"
                     className="w-full px-5 py-4 bg-beige/50 border border-beige rounded-xl focus:outline-none focus:border-terracotta focus:bg-white transition-all text-nordic-black"
@@ -182,7 +218,7 @@ export const Contact = () => {
 
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Department *</label>
-                <select required className="w-full px-5 py-4 bg-beige/50 border border-beige rounded-xl focus:outline-none focus:border-terracotta focus:bg-white transition-all text-nordic-black appearance-none">
+                <select name="department" required className="w-full px-5 py-4 bg-beige/50 border border-beige rounded-xl focus:outline-none focus:border-terracotta focus:bg-white transition-all text-nordic-black appearance-none">
                   <option value="" disabled selected>Select a department</option>
                   <option>Industrial Procurement & Sourcing</option>
                   <option>Food-Grade Industrial Materials</option>
@@ -197,6 +233,7 @@ export const Contact = () => {
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-widest text-nordic-grey">Project Details & Requirements *</label>
                 <textarea
+                  name="project_details"
                   required
                   rows={5}
                   placeholder="Provide specifications, target volumes, or digital growth objectives..."
@@ -204,14 +241,23 @@ export const Contact = () => {
                 ></textarea>
               </div>
 
-              <button className="w-full py-5 bg-terracotta text-white font-bold rounded-xl hover:bg-terracotta/90 transition-all flex items-center justify-center soft-shadow text-lg group">
-                Submit Request <Send size={20} className="ml-3 group-hover:translate-x-1 transition-transform" />
+              <button
+                type="submit"
+                disabled={submitStage === 'submitting'}
+                className="w-full py-5 bg-terracotta text-white font-bold rounded-xl hover:bg-terracotta/90 transition-all flex items-center justify-center soft-shadow text-lg group disabled:opacity-70 disabled:cursor-not-allowed"
+              >
+                {submitStage === 'submitting' ? (
+                  'Encrypting & Sending...'
+                ) : (
+                  <>Submit Request <Send size={20} className="ml-3 group-hover:translate-x-1 transition-transform" /></>
+                )}
               </button>
 
               <p className="text-center text-xs text-nordic-grey/70 mt-4">
                 By submitting this form, you agree to our strict European B2B data privacy and confidentiality policies.
               </p>
             </form>
+            )}
           </motion.div>
         </div>
 

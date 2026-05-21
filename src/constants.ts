@@ -297,7 +297,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     packaging: '25 KG BAGS',
     type: 'conventional',
     isOrganic: false,
-    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779351664/carro_izbwal.webp',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779358420/ca_uz6plh.webp',
     tags: ['Vegetables', 'Granules']
   },
   {
@@ -311,7 +311,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     packaging: '25 KG BAGS',
     type: 'conventional',
     isOrganic: false,
-    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779351660/drie_mkjxch.webp',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779358420/drie_aarwqp.webp',
     tags: ['Vegetables', 'Granules']
   },
   {
@@ -325,7 +325,7 @@ export const SOURCING_EXAMPLES: SourcingCategory[] = [
     packaging: '25 KG BAGS',
     type: 'conventional',
     isOrganic: false,
-    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779351660/pumki_tqoehb.webp',
+    image: 'https://res.cloudinary.com/dyelfz2ku/image/upload/v1779358420/pumki_pvua08.webp',
     tags: ['Vegetables', 'Granules']
   },
   // Food - Conventional
